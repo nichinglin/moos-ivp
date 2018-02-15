@@ -19,7 +19,7 @@ using namespace std;
 PrimeFactor::PrimeFactor()
 {
   m_mun_valse = "0";
-  m_out_result = "";
+  m_start_calculate = false;
 }
 
 //---------------------------------------------------------
@@ -49,6 +49,8 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
 
     // get msg NAV_X and NAV_Y (Subscriber)
     if(key == "NUM_VALUE") {
+      if(sval != m_mun_valse)
+        m_start_calculate = true;
       m_mun_valse = sval;
     }
    }
@@ -77,13 +79,21 @@ bool PrimeFactor::OnConnectToServer()
 bool PrimeFactor::Iterate()
 {
   uint64_t value = string2uint64();
+  if(m_start_calculate){
+  m_start_calculate = false;
+
+  double tic,toc;
+  tic = MOOSTime();
   
   string prime_ans = PrimeFactorCalculate(value);
   Notify("PRIME_RESULT", prime_ans); //publish msg
+
+  toc = MOOSTime();  
   //m_out_result = "orig=" + m_mun_valse + ",received=" + "?" + ",calculated=" + "?" + ",solve_time=" + "?" + ",primes=" + m_out_valse + ",username=monica";
 
   //Notify("PRIME_RESULT_VALID", m_out_result); //publish msg
-  Notify("MOOS_TIME", MOOSTime()); //publish msg
+  Notify("CALCULATE_TIME", toc-tic); //publish msg
+  }
   return(true);
 }
 
@@ -113,9 +123,16 @@ void PrimeFactor::EvenOddCalculate(uint64_t inumber)
 string PrimeFactor::PrimeFactorCalculate(uint64_t inumber)
 {
   stringstream ss("");
+  if(inumber<3) {
+    ss << inumber;
+    return ss.str();
+  }
   for(uint64_t x=2; x<=inumber; x++) {
     while(inumber%x == 0) {
-      ss << x << "*";
+      if(inumber/x != 1)
+        ss << x << "*";
+      else
+        ss << x;
       inumber /= x;
     }
   }

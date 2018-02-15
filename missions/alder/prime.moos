@@ -12,6 +12,7 @@ ProcessConfig = ANTLER
 
   Run = MOOSDB		@ NewConsole = false
   Run = pPrimeFactor	@ NewConsole = false
+  //Run = uTimerScript    @ NewConsole = false
 }
 
 //------------------------------------------
@@ -22,3 +23,25 @@ ProcessConfig = pPrimeFactor
   AppTick	= 2
   CommsTick	= 2
 }
+
+/*
+ProcessConfig = uTimerScript
+{
+
+  paused = false
+
+  event  = var=NUM_VALUE, val=0,  time=0 
+  event  = var=NUM_VALUE, val=1,  time=0.5 
+  event  = var=NUM_VALUE, val=2,  time=1.0
+  event  = var=NUM_VALUE, val=3,  time=1.5 
+  event  = var=NUM_VALUE, val=4,  time=2.0 
+  event  = var=NUM_VALUE, val=5,  time=2.5 
+  event  = var=NUM_VALUE, val=6,  time=3.0 
+  event  = var=NUM_VALUE, val=7,  time=3.5 
+  event  = var=NUM_VALUE, val=8,  time=4.0 
+  event  = var=NUM_VALUE, val=9,  time=4.5 
+  event  = var=NUM_VALUE, val=10, time=5.0 
+  
+  reset_max  = nolimit
+  reset_time = all-posted
+}*/

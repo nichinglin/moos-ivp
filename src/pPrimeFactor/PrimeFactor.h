@@ -31,10 +31,9 @@ class PrimeFactor : public CMOOSApp
 
  private: // Configuration variables
    std::string m_mun_valse;
-   std::string m_out_valse;
-   std::string m_out_result;
  
  private: // State variables
+   bool m_start_calculate;
 };
 
 #endif 
