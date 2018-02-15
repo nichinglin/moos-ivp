@@ -12,7 +12,8 @@ ProcessConfig = ANTLER
 
   Run = MOOSDB		@ NewConsole = false
   Run = pPrimeFactor	@ NewConsole = false
-  //Run = uTimerScript    @ NewConsole = false
+  Run = uTimerScript    @ NewConsole = false
+  Run = pLogger    @ NewConsole = false
 }
 
 //------------------------------------------
@@ -20,28 +21,40 @@ ProcessConfig = ANTLER
 
 ProcessConfig = pPrimeFactor
 {
-  AppTick	= 2
-  CommsTick	= 2
+  AppTick	= 10
+  CommsTick	= 10
 }
 
+//------------------------------------------
+// uTimerScript config block
 
 ProcessConfig = uTimerScript
 {
 
   paused = false
 
-  event  = var=NUM_RAN, val="0",  time=0 
-  event  = var=NUM_RAN, val="1",  time=0.5 
-  event  = var=NUM_RAN, val="2",  time=1.0
-  event  = var=NUM_RAN, val="10",  time=1.5 
-  event  = var=NUM_RAN, val="1024537",  time=2.0 
-  event  = var=NUM_RAN, val="68425831015",  time=2.5 
-  event  = var=NUM_RAN, val="123456789",  time=3.0 
-  event  = var=NUM_RAN, val="666666666666666",  time=3.5 
-  event  = var=NUM_RAN, val="1111111111111111",  time=4.0 
-  event  = var=NUM_RAN, val="5674032334252535",  time=4.5 
-  event  = var=NUM_RAN, val="1000000000000000", time=5.0 
+  event  = var=NUM_VALUE, val="0",  time=0 
+  event  = var=NUM_VALUE, val="1",  time=0.5 
+  event  = var=NUM_VALUE, val="2",  time=1.0
+  event  = var=NUM_VALUE, val="10",  time=1.5 
+  event  = var=NUM_VALUE, val="1024537",  time=2.0 
+  event  = var=NUM_VALUE, val="68425831015",  time=2.5 
+  event  = var=NUM_VALUE, val="123456789",  time=3.0 
+  event  = var=NUM_VALUE, val="666666666666666",  time=3.5 
+  event  = var=NUM_VALUE, val="1111111111111111",  time=4.0 
+  event  = var=NUM_VALUE, val="5674032334252535",  time=4.5 
+  event  = var=NUM_VALUE, val="1000000000000000", time=5.0 
   
   reset_max  = nolimit
   reset_time = all-posted
+}
+
+//------------------------------------------
+// pLogger config block
+
+ProcessConfig = pLogger
+{
+  AsyncLog = true
+  WildCardLogging = true
+  WildCardOmitPattern = *_STATUS
 }

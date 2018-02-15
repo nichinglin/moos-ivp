@@ -93,6 +93,10 @@ bool PrimeFactor::Iterate()
 
     //Notify("PRIME_RESULT_VALID", m_out_result); //publish msg
     Notify("CALCULATE_TIME", toc-tic); //publish msg
+
+    stringstream ss;
+    ss << m_mun_valse << " = " << prime_ans << " (" << toc-tic << ")";
+    Notify("RESULT_REPO", ss.str());
   }
   return(true);
 }
@@ -155,9 +159,6 @@ bool PrimeFactor::OnStartUp()
       string param = stripBlankEnds(toupper(biteString(*p, '=')));
       string value = stripBlankEnds(*p);
       
-      if(param == "NUM_RAN") {
-        m_mun_valse = value;
-      }
     }
   }
   
