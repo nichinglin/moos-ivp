@@ -19,7 +19,6 @@ using namespace std;
 PrimeFactor::PrimeFactor()
 {
   m_mun_valse = "0";
-  m_out_valse = "";
   m_out_result = "";
 }
 
@@ -77,21 +76,51 @@ bool PrimeFactor::OnConnectToServer()
 
 bool PrimeFactor::Iterate()
 {
+  uint64_t value = string2uint64();
+  
+  string prime_ans = PrimeFactorCalculate(value);
+  Notify("PRIME_RESULT", prime_ans); //publish msg
+  //m_out_result = "orig=" + m_mun_valse + ",received=" + "?" + ",calculated=" + "?" + ",solve_time=" + "?" + ",primes=" + m_out_valse + ",username=monica";
+
+  //Notify("PRIME_RESULT_VALID", m_out_result); //publish msg
+  Notify("MOOS_TIME", MOOSTime()); //publish msg
+  return(true);
+}
+
+uint64_t PrimeFactor::string2uint64()
+{
   // string to uint64_t
-  uint64_t value;
+  uint64_t inumber;
   std::istringstream iss(m_mun_valse);
-  iss >> value;
-  //prime
-  for(uint64_t x=2; x<=value; x++) {
-    while(value%x == 0) {
-      m_out_valse += x + "*";
+  iss >> inumber;
+  return inumber;
+}
+
+//even/odd calcutation
+void PrimeFactor::EvenOddCalculate(uint64_t inumber)
+{
+  string s = "";
+  if(inumber%2)
+    s = "even";
+  else
+    s = "odd";
+  stringstream ss("");
+  ss << inumber << ", " << s;
+  Notify("ODD_EVEN", ss.str());
+}
+
+//prime factor calcutation
+string PrimeFactor::PrimeFactorCalculate(uint64_t inumber)
+{
+  stringstream ss("");
+  for(uint64_t x=2; x<=inumber; x++) {
+    while(inumber%x == 0) {
+      ss << x << "*";
+      inumber /= x;
     }
   }
-  m_out_result = "orig=" + m_mun_valse + ",received=" + "?" + ",calculated=" + "?" + ",solve_time=" + "?" + ",primes=" + m_out_valse + ",username=monica";
-
-  Notify("PRIME_RESULT", m_out_valse); //publish msg
-  Notify("PRIME_RESULT__", 0.0); //publish msg
-  return(true);
+  //Notify("PRIME_RESULT", ss.str()); //publish msg
+  return ss.str();
 }
 
 //---------------------------------------------------------

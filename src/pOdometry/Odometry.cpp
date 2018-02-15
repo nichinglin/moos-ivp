@@ -151,5 +151,9 @@ bool Odometry::buildReport()
   m_msgs << "NAV_X: " << m_current_x << endl;
   m_msgs << "NAV_Y: " << m_current_y << endl;
   m_msgs << "ODOMETRY_DIST: " << m_odometry_dis <<endl;
+
+  std::ostringstream iss;
+  iss << m_odometry_dis;
+  reportEvent("ODOMETRY_DIST" + iss.str());
   return(true);
 }

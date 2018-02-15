@@ -1,0 +1,24 @@
+// Level 2 Configuration file: M. Benjamin
+
+ServerHost = localhost
+ServerPort = 9000
+Simulator  = true
+
+//------------------------------------------
+// Antler configuration  block
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+
+  Run = MOOSDB		@ NewConsole = false
+  Run = pPrimeFactor	@ NewConsole = false
+}
+
+//------------------------------------------
+// pNodeReporter config block
+
+ProcessConfig = pPrimeFactor
+{
+  AppTick	= 2
+  CommsTick	= 2
+}

@@ -24,11 +24,15 @@ class PrimeFactor : public CMOOSApp
 
  protected:
    void RegisterVariables();
+
+   uint64_t string2uint64();
+   void EvenOddCalculate(uint64_t inumber);
+   std::string PrimeFactorCalculate(uint64_t inumber);
+
+ private: // Configuration variables
    std::string m_mun_valse;
    std::string m_out_valse;
    std::string m_out_result;
-
- private: // Configuration variables
  
  private: // State variables
 };
