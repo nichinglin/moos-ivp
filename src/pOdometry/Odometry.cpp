@@ -47,7 +47,7 @@ bool Odometry::OnNewMail(MOOSMSG_LIST &NewMail)
     string key   = msg.m_sKey;
     double ddata = msg.m_dfVal;
 
-    // get msg NAV_X and NAV_Y (Subscriber)
+    // ----------Get Subscriber msg --------------
     if(key == "NAV_X") {
       m_previous_x = m_current_x;
       m_current_x = ddata;
@@ -80,6 +80,7 @@ bool Odometry::OnConnectToServer()
 // Procedure: Iterate()
 //            happens AppTick times per second
 
+  //-------------- update fuction ----------------
 bool Odometry::Iterate()
 {
   double dx = m_current_x - m_previous_x;
@@ -89,7 +90,8 @@ bool Odometry::Iterate()
     odometry_dis = 0.0;
   }
   odometry_dis += sqrt(dx*dx + dy*dy);
-  Notify("ODOMETRY_DIST", odometry_dis); //publish ODEMETRY_DIST msg
+   //------------ publish ODEMETRY_DIST msg ---------------
+  Notify("ODOMETRY_DIST", odometry_dis);
   return(true);
 }
 
@@ -106,8 +108,12 @@ bool Odometry::OnStartUp()
     for(p=sParams.begin(); p!=sParams.end(); p++) {
       string original_line = *p;
       string param = stripBlankEnds(toupper(biteString(*p, '=')));
+      //string param = MOOSChomp(original_line, "=");
       string value = stripBlankEnds(*p);
       
+
+      //----------- Get parm ------------
+      //if(MOOSStrCmp(param, "FOO")) {
       if(param == "FOO") {
         //handled
       }
@@ -126,7 +132,7 @@ bool Odometry::OnStartUp()
 
 void Odometry::RegisterVariables()
 {
-  // Subscribe msg register
+  // ------------ Subscribe ------------
   // Register("FOOBAR", 0);
   Register("NAV_X", 0);
   Register("NAV_Y", 0);
