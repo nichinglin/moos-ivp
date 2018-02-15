@@ -80,19 +80,19 @@ bool PrimeFactor::Iterate()
 {
   uint64_t value = string2uint64();
   if(m_start_calculate){
-  m_start_calculate = false;
+    m_start_calculate = false;
 
-  double tic,toc;
-  tic = MOOSTime();
-  
-  string prime_ans = PrimeFactorCalculate(value);
-  Notify("PRIME_RESULT", prime_ans); //publish msg
+    double tic,toc;
+    tic = MOOSTime();
+    
+    string prime_ans = PrimeFactorCalculate(value);
+    Notify("PRIME_RESULT", prime_ans); //publish msg
 
-  toc = MOOSTime();  
-  //m_out_result = "orig=" + m_mun_valse + ",received=" + "?" + ",calculated=" + "?" + ",solve_time=" + "?" + ",primes=" + m_out_valse + ",username=monica";
+    toc = MOOSTime();  
+    //m_out_result = "orig=" + m_mun_valse + ",received=" + "?" + ",calculated=" + "?" + ",solve_time=" + "?" + ",primes=" + m_out_valse + ",username=monica";
 
-  //Notify("PRIME_RESULT_VALID", m_out_result); //publish msg
-  Notify("CALCULATE_TIME", toc-tic); //publish msg
+    //Notify("PRIME_RESULT_VALID", m_out_result); //publish msg
+    Notify("CALCULATE_TIME", toc-tic); //publish msg
   }
   return(true);
 }
@@ -155,11 +155,8 @@ bool PrimeFactor::OnStartUp()
       string param = stripBlankEnds(toupper(biteString(*p, '=')));
       string value = stripBlankEnds(*p);
       
-      if(param == "FOO") {
-        //handled
-      }
-      else if(param == "BAR") {
-        //handled
+      if(param == "NUM_RAN") {
+        m_mun_valse = value;
       }
     }
   }
