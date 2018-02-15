@@ -94,12 +94,13 @@ void showInterfaceAndExit()
   blk("                                                                ");
   blk("SUBSCRIPTIONS:                                                  ");
   blk("------------------------------------                            ");
-  blk("  NODE_MESSAGE = src_node=alpha,dest_node=bravo,var_name=FOO,   ");
-  blk("                 string_val=BAR                                 ");
+  blk("  NAV_X = 112.3                                                 ");
+  blk("  NAV_Y = -99.1                                                 ");
   blk("                                                                ");
   blk("PUBLICATIONS:                                                   ");
   blk("------------------------------------                            ");
   blk("  Publications are determined by the node message content.      ");
+  blk("  ODOMETRY_DIST  = calculate the distence it goes.              ");
   blk("                                                                ");
   exit(0);
 }

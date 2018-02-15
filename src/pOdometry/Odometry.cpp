@@ -24,7 +24,7 @@ Odometry::Odometry()
    m_previous_x = 0;
    m_previous_y = 0;
 
-   odometry_dis = 0;
+   m_odometry_dis = 0;
 }
 
 //---------------------------------------------------------
@@ -39,6 +39,7 @@ Odometry::~Odometry()
 
 bool Odometry::OnNewMail(MOOSMSG_LIST &NewMail)
 {
+  AppCastingMOOSApp::OnNewMail(NewMail);        // Add this line to show info on screen
   MOOSMSG_LIST::iterator p;
    
   for(p=NewMail.begin(); p!=NewMail.end(); p++) {
@@ -83,15 +84,17 @@ bool Odometry::OnConnectToServer()
   //-------------- update fuction ----------------
 bool Odometry::Iterate()
 {
+  AppCastingMOOSApp::Iterate();                  // Add this line to show info on screen
   double dx = m_current_x - m_previous_x;
   double dy = m_current_y - m_previous_y;
   if(m_first_reading == true) {
     m_first_reading = false;
-    odometry_dis = 0.0;
+    m_odometry_dis = 0.0;
   }
-  odometry_dis += sqrt(dx*dx + dy*dy);
+  m_odometry_dis += sqrt(dx*dx + dy*dy);
    //------------ publish ODEMETRY_DIST msg ---------------
-  Notify("ODOMETRY_DIST", odometry_dis);
+  Notify("ODOMETRY_DIST", m_odometry_dis);
+  AppCastingMOOSApp::PostReport();               // Add this line to show info on screen
   return(true);
 }
 
@@ -101,6 +104,7 @@ bool Odometry::Iterate()
 
 bool Odometry::OnStartUp()
 {
+  AppCastingMOOSApp::OnStartUp();               // Add this line to show info on screen
   list<string> sParams;
   m_MissionReader.EnableVerbatimQuoting(false);
   if(m_MissionReader.GetConfiguration(GetAppName(), sParams)) {
@@ -132,9 +136,20 @@ bool Odometry::OnStartUp()
 
 void Odometry::RegisterVariables()
 {
+  AppCastingMOOSApp::RegisterVariables();      // Add this line to show info on screen
   // ------------ Subscribe ------------
   // Register("FOOBAR", 0);
   Register("NAV_X", 0);
   Register("NAV_Y", 0);
 }
 
+//---------------------------------------------------------
+// Procedure: buildReport
+
+bool Odometry::buildReport()
+{
+  m_msgs << "NAV_X: " << m_current_x << endl;
+  m_msgs << "NAV_Y: " << m_current_y << endl;
+  m_msgs << "ODOMETRY_DIST: " << m_odometry_dis <<endl;
+  return(true);
+}
