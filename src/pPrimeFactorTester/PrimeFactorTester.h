@@ -1,20 +1,20 @@
 /************************************************************/
 /*    NAME: Monica Lin                                              */
 /*    ORGN: MIT                                             */
-/*    FILE: PrimeFactor.h                                          */
+/*    FILE: PrimeFactorTester.h                                          */
 /*    DATE:                                                 */
 /************************************************************/
 
-#ifndef PrimeFactor_HEADER
-#define PrimeFactor_HEADER
+#ifndef PrimeFactorTester_HEADER
+#define PrimeFactorTester_HEADER
 
 #include "MOOS/libMOOS/MOOSLib.h"
 
-class PrimeFactor : public CMOOSApp
+class PrimeFactorTester : public CMOOSApp
 {
  public:
-   PrimeFactor();
-   ~PrimeFactor();
+   PrimeFactorTester();
+   ~PrimeFactorTester();
 
  protected: // Standard MOOSApp functions to overload  
    bool OnNewMail(MOOSMSG_LIST &NewMail);
@@ -24,12 +24,9 @@ class PrimeFactor : public CMOOSApp
 
  protected:
    void RegisterVariables();
-   std::string m_mun_valse;
-   std::string m_out_valse;
-   std::string m_out_result;
 
  private: // Configuration variables
- 
+
  private: // State variables
 };
 

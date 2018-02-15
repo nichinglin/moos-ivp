@@ -1,57 +1,50 @@
 /************************************************************/
 /*    NAME: Monica Lin                                              */
 /*    ORGN: MIT                                             */
-/*    FILE: PrimeFactor.cpp                                        */
+/*    FILE: PrimeFactorTester.cpp                                        */
 /*    DATE:                                                 */
 /************************************************************/
 
 #include <iterator>
-#include <iostream>
-#include <stdlib.h>     /* atoi */
 #include "MBUtils.h"
-#include "PrimeFactor.h"
+#include "PrimeFactorTester.h"
 
 using namespace std;
 
 //---------------------------------------------------------
 // Constructor
 
-PrimeFactor::PrimeFactor()
+PrimeFactorTester::PrimeFactorTester()
 {
-  m_mun_valse = "0";
-  m_out_valse = "";
-  m_out_result = "";
 }
 
 //---------------------------------------------------------
 // Destructor
 
-PrimeFactor::~PrimeFactor()
+PrimeFactorTester::~PrimeFactorTester()
 {
 }
 
 //---------------------------------------------------------
 // Procedure: OnNewMail
 
-bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
+bool PrimeFactorTester::OnNewMail(MOOSMSG_LIST &NewMail)
 {
   MOOSMSG_LIST::iterator p;
    
   for(p=NewMail.begin(); p!=NewMail.end(); p++) {
     CMOOSMsg &msg = *p;
 
+#if 0 // Keep these around just for template
     string key   = msg.GetKey();
-    //double ddata = msg.m_dfVal;
-    string sval  = msg.GetString();
-
-
-    //string key   = msg.m_sKey;
-    //string sdata = msg.m_sVal;
-
-    // get msg NAV_X and NAV_Y (Subscriber)
-    if(key == "NUM_VALUE") {
-      m_mun_valse = sval;
-    }
+    string comm  = msg.GetCommunity();
+    double dval  = msg.GetDouble();
+    string sval  = msg.GetString(); 
+    string msrc  = msg.GetSource();
+    double mtime = msg.GetTime();
+    bool   mdbl  = msg.IsDouble();
+    bool   mstr  = msg.IsString();
+#endif
    }
 	
    return(true);
@@ -60,7 +53,7 @@ bool PrimeFactor::OnNewMail(MOOSMSG_LIST &NewMail)
 //---------------------------------------------------------
 // Procedure: OnConnectToServer
 
-bool PrimeFactor::OnConnectToServer()
+bool PrimeFactorTester::OnConnectToServer()
 {
    // register for variables here
    // possibly look at the mission file?
@@ -75,22 +68,8 @@ bool PrimeFactor::OnConnectToServer()
 // Procedure: Iterate()
 //            happens AppTick times per second
 
-bool PrimeFactor::Iterate()
+bool PrimeFactorTester::Iterate()
 {
-  // string to uint64_t
-  uint64_t value;
-  std::istringstream iss(m_mun_valse);
-  iss >> value;
-  //prime
-  for(uint64_t x=2; x<=value; x++) {
-    while(value%x == 0) {
-      m_out_valse += x + "*";
-    }
-  }
-  m_out_result = "orig=" + m_mun_valse + ",received=" + "?" + ",calculated=" + "?" + ",solve_time=" + "?" + ",primes=" + m_out_valse + ",username=monica";
-
-  Notify("PRIME_RESULT", m_out_valse); //publish msg
-  Notify("PRIME_RESULT__", 0.0); //publish msg
   return(true);
 }
 
@@ -98,7 +77,7 @@ bool PrimeFactor::Iterate()
 // Procedure: OnStartUp()
 //            happens before connection is open
 
-bool PrimeFactor::OnStartUp()
+bool PrimeFactorTester::OnStartUp()
 {
   list<string> sParams;
   m_MissionReader.EnableVerbatimQuoting(false);
@@ -125,9 +104,8 @@ bool PrimeFactor::OnStartUp()
 //---------------------------------------------------------
 // Procedure: RegisterVariables
 
-void PrimeFactor::RegisterVariables()
+void PrimeFactorTester::RegisterVariables()
 {
   // Register("FOOBAR", 0);
-  Register("NUM_VALUE", 0);
 }
 

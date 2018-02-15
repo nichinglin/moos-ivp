@@ -1,4 +1,4 @@
-//--------    FILE: alder.bhv   -------------
+//--------    FILE: alder_lab4.bhv   -------------
 
 initialize   DEPLOY = false
 initialize   RETURN = false
@@ -10,7 +10,8 @@ Behavior = BHV_SimpleWaypoint
   pwt       = 100
   condition = RETURN = false
   condition = DEPLOY = true
-  endflag   = RETURN = true
+  condition = ODOMETRY_DIST < 50
+  //endflag   = RETURN = true
 
   speed      = 2.0   // meters per second
   radius     = 8.0
@@ -23,7 +24,8 @@ Behavior = BHV_SimpleWaypoint
 {
   name       = waypt_return
   pwt        = 100
-  condition  = (RETURN = true)
+  condition = (RETURN = true) or (ODOMETRY_DIST >= 50)
+  //condition  = (RETURN = true)
   condition  = (DEPLOY = true)
 
   speed      = 2.0
