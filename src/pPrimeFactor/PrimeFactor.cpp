@@ -95,7 +95,7 @@ bool PrimeFactor::Iterate()
     Notify("CALCULATE_TIME", toc-tic); //publish msg
 
     stringstream ss;
-    ss << m_mun_valse << " = " << prime_ans << " (" << toc-tic << ")";
+    ss << "orig=" << m_mun_valse  << ",solve_time=" << toc-tic << ",primes=" << prime_ans << ",username=monica";
     Notify("RESULT_REPO", ss.str());
   }
   return(true);
@@ -125,6 +125,27 @@ void PrimeFactor::EvenOddCalculate(uint64_t inumber)
 
 //prime factor calcutation
 string PrimeFactor::PrimeFactorCalculate(uint64_t inumber)
+{
+  stringstream ss("");
+  if(inumber<3) {
+    ss << inumber;
+    return ss.str();
+  }
+  for(uint64_t x=2; x<=inumber; x++) {
+    while(inumber%x == 0) {
+      if(inumber/x != 1)
+        ss << x << ":";
+      else
+        ss << x;
+      inumber /= x;
+    }
+  }
+  //Notify("PRIME_RESULT", ss.str()); //publish msg
+  return ss.str();
+}
+
+//prime factor recursion
+string PrimeFactor::PrimeFactorRecursion(uint64_t inumber)
 {
   stringstream ss("");
   if(inumber<3) {

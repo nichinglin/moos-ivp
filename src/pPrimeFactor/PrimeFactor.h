@@ -28,6 +28,7 @@ class PrimeFactor : public CMOOSApp
    uint64_t string2uint64();
    void EvenOddCalculate(uint64_t inumber);
    std::string PrimeFactorCalculate(uint64_t inumber);
+   std::string PrimeFactorRecursion(uint64_t inumber);
 
  private: // Configuration variables
    std::string m_mun_valse;
