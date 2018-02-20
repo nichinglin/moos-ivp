@@ -21,8 +21,8 @@ ProcessConfig = ANTLER
 
 ProcessConfig = pPrimeFactor
 {
-  AppTick	= 10
-  CommsTick	= 10
+  AppTick   = 4
+  CommsTick = 4
 }
 
 //------------------------------------------
@@ -30,9 +30,35 @@ ProcessConfig = pPrimeFactor
 
 ProcessConfig = uTimerScript
 {
+  AppTick   = 4
+  CommsTick = 4
 
-  paused = false
 
+   paused     = false
+   event      = var=NUM_VALUE, val="$(15)", time=0.25
+   event      = var=NUM_VALUE, val="$(9)", time=0.50
+   event      = var=NUM_VALUE, val="$(7)", time=0.75
+   event      = var=NUM_VALUE, val="$(5)", time=1.00
+
+
+  reset_max  = nolimit //0
+  reset_time = all-posted
+}
+/*  
+  event  = var=NUM_VALUE, val="112582705942171", time=0.25
+  event  = var=NUM_VALUE, val="115797848077099", time=0.50
+  event  = var=NUM_VALUE, val="117463495419967", time=0.75
+
+  event  = var=NUM_VALUE, val="125", time=1.00
+  event  = var=NUM_VALUE, val="225", time=1.25
+  event  = var=NUM_VALUE, val="325", time=1.50
+
+  event  = var=NUM_VALUE, val="123939877913659", time=1.75
+  event  = var=NUM_VALUE, val="126794093929207", time=2.00
+  event  = var=NUM_VALUE, val="129263144299543", time=2.25
+*/
+
+/*
   event  = var=NUM_VALUE, val="0",  time=0 
   event  = var=NUM_VALUE, val="1",  time=0.5 
   event  = var=NUM_VALUE, val="2",  time=1.0
@@ -44,11 +70,7 @@ ProcessConfig = uTimerScript
   event  = var=NUM_VALUE, val="1111111111111111",  time=4.0 
   event  = var=NUM_VALUE, val="5674032334252535",  time=4.5 
   event  = var=NUM_VALUE, val="1000000000000000", time=5.0 
-  
-  reset_max  = nolimit
-  reset_time = all-posted
-}
-
+*/ 
 //------------------------------------------
 // pLogger config block
 
