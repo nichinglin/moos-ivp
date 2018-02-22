@@ -21,6 +21,7 @@ ADD_SUBDIRECTORY(pPrimeFactor)
 ADD_SUBDIRECTORY(pPrimeFactor_monica)
 #ADD_SUBDIRECTORY(pFoobar)
 ADD_SUBDIRECTORY(pOdometry)
+ADD_SUBDIRECTORY(pTest)
 
 ##############################################################################
 #                           END of CMakeLists.txt

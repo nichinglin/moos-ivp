@@ -1,0 +1,49 @@
+// Level 2 Configuration file: M. Benjamin
+
+ServerHost = localhost
+ServerPort = 9000
+Simulator  = true
+
+//------------------------------------------
+// Antler configuration  block
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+
+  Run = MOOSDB			@ NewConsole = false // true to pop out a windows
+  Run = pTest			@ NewConsole = false
+  Run = uTimerScript    @ NewConsole = false
+  //Run = pLogger    		@ NewConsole = false
+}
+
+//------------------------------------------
+// uTimerScript config block
+
+ProcessConfig = uTimerScript
+{
+  AppTick   = 4
+  CommsTick = 4
+
+
+   paused     = false
+
+   event  = var=IN_MSG, val=5, time=1.0
+   event  = var=IN_MSG, val=0.25, time=2.0
+   event  = var=IN_MSG, val=200, time=3.0   
+
+  reset_max  = 0 //nolimit
+  reset_time = all-posted
+}
+
+//------------------------------------------
+// pLogger config block
+
+ProcessConfig = pLogger
+{
+  AsyncLog = true
+  WildCardLogging = true
+  WildCardOmitPattern = *_STATUS
+
+  LOG = IN_MSG @ 0 // get all data, without this you might lost data
+  LOG = OUT_DATA @ 0
+}
