@@ -1,0 +1,9 @@
+//------------------------------------------------
+// pPrimeFactor_monica config block
+
+ProcessConfig = pPrimeFactor_monica
+{
+   AppTick   = 4
+   CommsTick = 4
+}
+
