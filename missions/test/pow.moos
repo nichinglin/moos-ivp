@@ -13,7 +13,7 @@ ProcessConfig = ANTLER
   Run = MOOSDB			@ NewConsole = false // true to pop out a windows
   Run = pTest			@ NewConsole = false
   Run = uTimerScript    @ NewConsole = false
-  //Run = pLogger    		@ NewConsole = false
+  Run = pLogger    		@ NewConsole = false
 }
 
 //------------------------------------------
@@ -29,7 +29,8 @@ ProcessConfig = uTimerScript
 
    event  = var=IN_MSG, val=5, time=1.0
    event  = var=IN_MSG, val=0.25, time=2.0
-   event  = var=IN_MSG, val=200, time=3.0   
+   event  = var=IN_MSG, val=300, time=3.0  
+   event  = var=IN_MSG, val=5.5, time=4.0    
 
   reset_max  = 0 //nolimit
   reset_time = all-posted
