@@ -8,9 +8,13 @@ ServerPort   = 9000
 Community    = alpha
 MOOSTimeWarp = 1
 
+// Bamboo Lake NCTU
+LatOrigin  = 24.789108
+LongOrigin = 120.999990 
+
 // Forest Lake
-LatOrigin  = 43.825300 
-LongOrigin = -70.330400 
+//LatOrigin  = 43.825300 
+//LongOrigin = -70.330400 
 
 // MIT Sailing Pavilion (use this one)
 // LatOrigin  = 42.358456 
@@ -23,7 +27,7 @@ ProcessConfig = ANTLER
   MSBetweenLaunches = 200
 
   Run = MOOSDB          @ NewConsole = false
-  Run = pLogger         @ NewConsole = false
+  //Run = pLogger         @ NewConsole = false
   Run = uSimMarine	    @ NewConsole = false
   Run = pMarinePID      @ NewConsole = false
   Run = pHelmIvP        @ NewConsole = false
@@ -145,12 +149,13 @@ ProcessConfig = pMarineViewer
   AppTick    = 4
   CommsTick  = 4
 
-  tiff_file            = forrest19.tif
-	//tiff_file            = MIT_SP.tif
+  tiff_file            = /home/lin/moos-ivp-monica/missions/bamboolake/bambooLake.tif //change this to your .tif location
+  //tiff_file          = forrest19.tif
+	//tiff_file          = MIT_SP.tif
 
   set_pan_x            = -90
   set_pan_y            = -280
-  zoom                 = 0.65
+  zoom                 = 0.35
   vehicle_shape_scale  = 1.5
   hash_delta           = 50
   hash_shade           = 0.22
