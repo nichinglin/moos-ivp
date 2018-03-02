@@ -1,0 +1,202 @@
+//--------    FILE: bravo.bhv   -------------
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+initialize   BIG_TRUN = true
+
+//----------------------------------------------
+Behavior = BHV_Timer
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = bhv_timer_go            // default
+  condition = RETURN = false
+  condition = DEPLOY = true
+  endflag      = DEPLOY = false       // example
+  updates      = TIMER_UPDATES        // example
+
+  perpetual = true
+  duration     = 200
+
+  endflag   = TIME_RESET = false
+  duration_reset = TIME_RESET = true
+  duration_status =  DURATION_TIME_BIG
+}
+
+//----------------------------------------------
+Behavior = BHV_Timer
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = bhv_timer_stop           // default
+  condition = RETURN = false
+  condition = DEPLOY = false
+  endflag      = DEPLOY = true          // example
+  updates      = TIMER_UPDATES        // example
+
+  perpetual = true
+  duration     = 60
+
+  endflag   = TIME_RESET = true
+  duration_reset = TIME_RESET = false
+  duration_status = DURATION_TIME_SMALL
+}
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+{
+  name         = loiter_big               // example
+  pwt          = 100                   // default
+  updates      = LOITER_UPDATES        // example
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = true
+  endflag   = BIG_TRUN = false
+
+  endflag   = RESET = false
+  duration_reset = RESET = true
+
+  perpetual = true
+  duration   = 150
+
+      acquire_dist = 10               // default
+    capture_radius = 5.0              // defssault  
+   center_activate = false            // default
+         clockwise = best
+       slip_radius = 15               // default
+             speed = 2.5              // meters per second
+     spiral_factor = -2               // default
+
+           polygon = radial:: x=100,y=-75,radius=30,pts=8,label=loiter_big  // example
+
+      //visual_hints = label        = loiter_big
+}
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+{
+  name         = loiter_small               // example
+  pwt          = 150                   // default
+  updates      = LOITER_UPDATES        // example
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = false
+  endflag   = BIG_TRUN = true
+
+  endflag   = RESET = true
+  duration_reset = RESET = false
+
+  perpetual = true
+  duration   = 150
+
+      acquire_dist = 10               // default
+    capture_radius = 5.0              // default  
+   center_activate = false            // default
+         clockwise = best
+       slip_radius = 15               // default
+             speed = 2.5              // meters per second
+     spiral_factor = -2               // default
+
+           polygon = radial:: x=160,y=-50,radius=20,pts=8,label=loiter_small  // example
+
+}
+
+Behavior = BHV_ConstantDepth
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = const_dep_survey_big   // example
+  pwt          = 100                // default
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = true
+  updates      = CONST_DEP_UPDATES  // example
+
+  // Parameters specific to this behavior
+  // ------------------------------------
+          basewidth = 100          // default
+              depth = 30
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
+
+Behavior = BHV_ConstantDepth
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = const_dep_survey_small   // example
+  pwt          = 100                // default
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = false
+  updates      = CONST_DEP_UPDATES  // example
+
+  // Parameters specific to this behavior
+  // ------------------------------------
+          basewidth = 100          // default
+              depth = 10
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
+
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+
+  updates    = RETURN_UPDATE
+  perpetual  = true
+  
+           speed = 2.0
+  capture_radius = 2.0
+     slip_radius = 8.0
+          points = 0,-20
+ }
+
+Behavior = BHV_ConstantDepth
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = const_dep_survey_return   // example
+  pwt          = 100                // default
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  updates      = CONST_DEP_UPDATES  // example
+
+  // Parameters specific to this behavior
+  // ------------------------------------
+          basewidth = 100          // default
+              depth = 0
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
+
+//----------------------------------------------
+Behavior=BHV_ConstantSpeed
+{
+  name       = const_speed
+  pwt        = 200
+  condition  = SPD=true
+  condition  = DEPLOY = true
+  perpetual  = true
+  updates    = SPEED_UPDATE
+  endflag    = SPD = false
+
+     speed = 0.5
+     duration = 10
+     duration_reset = CONST_SPD_RESET=true
+  
+}
