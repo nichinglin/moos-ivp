@@ -31,18 +31,21 @@ Behavior = BHV_Loiter
      spiral_factor = -2               // default
 
            polygon = radial:: x=100,y=-75,radius=30,pts=8,label=loiter_big  // example
+
+      //visual_hints = label        = loiter_big
 }
 
 //----------------------------------------------
 Behavior = BHV_Loiter
 {
   name         = loiter_small               // example
-  pwt          = 100                   // default
+  pwt          = 150                   // default
   updates      = LOITER_UPDATES        // example
   condition = RETURN = false
   condition = DEPLOY = true
   condition = BIG_TRUN = false
   endflag   = BIG_TRUN = true
+  duration_reset = true
 
   endflag   = BIG_RESET = true
   duration_reset = BIG_RESET = false
@@ -60,6 +63,49 @@ Behavior = BHV_Loiter
      spiral_factor = -2               // default
 
            polygon = radial:: x=160,y=-50,radius=20,pts=8,label=loiter_small  // example
+
+}
+
+Behavior = BHV_ConstantDepth
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = const_dep_survey_big   // example
+  pwt          = 100                // default
+  condition = RETURN == false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = true
+  updates      = CONST_DEP_UPDATES  // example
+
+  // Parameters specific to this behavior
+  // ------------------------------------
+          basewidth = 100          // default
+              depth = 30
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
+
+Behavior = BHV_ConstantDepth
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = const_dep_survey_small   // example
+  pwt          = 100                // default
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = false
+  updates      = CONST_DEP_UPDATES  // example
+
+  // Parameters specific to this behavior
+  // ------------------------------------
+          basewidth = 100          // default
+              depth = 10
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
 }
 
 //----------------------------------------------
@@ -82,6 +128,26 @@ Behavior=BHV_Waypoint
      slip_radius = 8.0
           points = 0,-20
  }
+
+Behavior = BHV_ConstantDepth
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = const_dep_survey_return   // example
+  pwt          = 100                // default
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  updates      = CONST_DEP_UPDATES  // example
+
+  // Parameters specific to this behavior
+  // ------------------------------------
+          basewidth = 100          // default
+              depth = 0
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
 
 //----------------------------------------------
 Behavior=BHV_ConstantSpeed
