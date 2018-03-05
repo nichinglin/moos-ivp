@@ -1,0 +1,50 @@
+ServerHost = localhost
+ServerPort = 9000
+
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+  
+  Run = pTest     @ NewConsole = false
+  Run = MOOSDB			@ NewConsole = false // true to pop out a windows
+  Run = uTimerScript    @ NewConsole = false
+  Run = pLogger    		@ NewConsole = false
+}
+
+ProcessConfig = pTest
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  PARAM_STR = "hello"
+  PARAM_DOU = 5
+}
+
+ProcessConfig = uTimerScript
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  paused     = false
+
+  event  = var=INPUT_MSG, val=5, time=1.0
+  event  = var=INPUT_MSG, val=0.25, time=2.0
+  event  = var=INPUT_MSG, val=300, time=3.0  
+  event  = var=INPUT_MSG, val=5.5, time=4.0    
+
+  reset_max  = 0  //nolimit
+  reset_time = all-posted
+}
+
+ProcessConfig = pLogger
+{
+  AsyncLog = true
+  WildCardLogging = true
+  WildCardOmitPattern = *_STATUS
+
+  LOG = INPUT_MSG @ 0 // get all data, without this you might lost data
+  LOG = CHATTER @ 0
+  LOG = POW_OUT @ 0
+  LOG = LISTENER @ 0
+  LOG = REPO @ 0
+}

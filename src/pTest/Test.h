@@ -25,11 +25,10 @@ class Test : public CMOOSApp
  protected:
    void RegisterVariables();
 
-   double m_data;
-
- private: // Configuration variables
-
- private: // State variables
+   double m_sub_double;     // sub double msg
+   double m_param_double;    //paremete double
+   std::string m_sub_string; // sub string msg
+   std::string m_param_str;  //paremete string
 };
 
 #endif 
