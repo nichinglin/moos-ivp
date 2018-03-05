@@ -1,0 +1,101 @@
+//--------    FILE: bravo.bhv   -------------
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+initialize   BIG_TRUN = true
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+{
+  name         = loiter_big               // example
+  pwt          = 100                   // default
+  updates      = LOITER_UPDATES_BIG        // example
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = true
+  endflag   = BIG_TRUN = false
+
+  endflag   = BIG_RESET = false
+  duration_reset = BIG_RESET = true
+
+  perpetual = true
+  duration   = 150
+  duration_status = DURATION_TIME_BIG
+
+      acquire_dist = 10               // default
+    capture_radius = 5.0              // defssault  
+   center_activate = false            // default
+         clockwise = best
+       slip_radius = 15               // default
+             speed = 2.5              // meters per second
+     spiral_factor = -2               // default
+
+           polygon = radial:: x=100,y=-75,radius=30,pts=8,label=loiter_big  // example
+}
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+{
+  name         = loiter_small               // example
+  pwt          = 100                   // default
+  updates      = LOITER_UPDATES_SMALL        // example
+  condition = RETURN = false
+  condition = DEPLOY = true
+  condition = BIG_TRUN = false
+  endflag   = BIG_TRUN = true
+
+  endflag   = BIG_RESET = true
+  duration_reset = BIG_RESET = false
+
+  perpetual = true
+  duration   = 150
+  duration_status = DURATION_TIME_SMALL
+
+      acquire_dist = 10               // default
+    capture_radius = 5.0              // default  
+   center_activate = false            // default
+         clockwise = best
+       slip_radius = 15               // default
+             speed = 2.5              // meters per second
+     spiral_factor = -2               // default
+
+           polygon = radial:: x=160,y=-50,radius=20,pts=8,label=loiter_small  // example
+}
+
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+
+  updates    = RETURN_UPDATE
+  perpetual  = true
+  
+           speed = 2.0
+  capture_radius = 2.0
+     slip_radius = 8.0
+          points = 0,-20
+ }
+
+//----------------------------------------------
+Behavior=BHV_ConstantSpeed
+{
+  name       = const_speed
+  pwt        = 200
+  condition  = SPD=true
+  condition  = DEPLOY = true
+  perpetual  = true
+  updates    = SPEED_UPDATE
+  endflag    = SPD = false
+
+     speed = 0.5
+     duration = 10
+     duration_reset = CONST_SPD_RESET=true
+  
+}
