@@ -185,14 +185,14 @@ ProcessConfig = pMarineViewer
   
   //RETURN_UPDATES = "points=50,50 # speed = 1.5"
   left_context[view_point]   = RETURN_UPDATE = point = $(XPOS),$(YPOS)
+  left_context[view_point] = RETURN=true
   left_context[view_point]   = VIEW_POINT = x=$(XPOS),y=$(YPOS),label=return_point
-  left_context[survey-point] = RETURN=true
 
   right_context[return] = DEPLOY=true
   right_context[return] = MOOS_MANUAL_OVERRIDE=false
   right_context[return] = RETURN=false
   
-  //scope  = RETURN
+  scope  = RETURN
   //scope  = WPT_STAT
   //scope  = VIEW_SEGLIST
   //scope  = VIEW_POINT
