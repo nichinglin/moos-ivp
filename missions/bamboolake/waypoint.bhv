@@ -1,4 +1,4 @@
-//--------    FILE: alpha.bhv   -------------
+//--------    FILE: waypoint.bhv   -------------
 
 initialize   DEPLOY = false
 initialize   RETURN = false
