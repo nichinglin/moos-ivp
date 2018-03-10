@@ -18,7 +18,7 @@ Processconfig = ANTLER
   Run = pShare          @ NewConsole = false
   Run = pHostInfo       @ NewConsole = false
   Run = uFldShoreBroker @ NewConsole = false
-  Run = uXMS            @ NewConsole = true
+  //Run = uXMS            @ NewConsole = true
 }
 
 #include plug_pShare.moos
