@@ -14,11 +14,11 @@ Processconfig = ANTLER
 
   Run = MOOSDB          @ NewConsole = false
   Run = pMarineViewer   @ NewConsole = false
-  Run = pLogger         @ NewConsole = false
+  //Run = pLogger         @ NewConsole = false
   Run = pShare          @ NewConsole = false
   Run = pHostInfo       @ NewConsole = false
   Run = uFldShoreBroker @ NewConsole = false
-  //Run = uXMS            @ NewConsole = true
+  Run = uXMS            @ NewConsole = true
 }
 
 #include plug_pShare.moos
@@ -32,7 +32,11 @@ ProcessConfig = uXMS
 	CommsTick = 4
 
 	var = RETURN_ALL, DEPLOY_ALL, REFUEL_NEEDED_ALL, STATION_KEEP_ALL
-	var = DURATION_TIME
+	var = DURATION_TIME_henry, REFUEL_henry
+  var = DURATION_TIME_gilda, REFUEL_gilda
+
+  color_map = henry, green
+  color_map = gilda, blue
 }
 
 //--------------------------------------------------

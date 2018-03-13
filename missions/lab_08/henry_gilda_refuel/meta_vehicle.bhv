@@ -5,7 +5,7 @@ initialize   DEPLOY  = true
 initialize   RETURN  = false
 initialize   STATION_KEEP = false
 initialize   LOITER  = true
-initialize   STOP = false
+initialize   REFUEL = no
 
 set MODE = ACTIVE {
   DEPLOY = true
@@ -30,20 +30,38 @@ set MODE = LOITERING {
 Behavior = BHV_Timer
 {
    name      = bhv_fulloil
-   condition = STOP = true
+   condition = REFUEL = refueling
    condition = REFUEL_NEEDED=true
    endflag   = RETURN=false
    endflag   = STATION_KEEP=false
    endflag   = LOITER=true
-   endflag   = STOP = false
+   endflag   = REFUEL = no
    updates      = TIMER_UPDATES        // example
 
-   duration_reset = STOP = false
+   duration_reset = REFUEL = no
 
    perpetual = true
    duration  = 60
    duration_status =  DURATION_TIME
  }
+
+
+//----------------------------------------------
+Behavior = BHV_Waypoint
+{
+  name      = waypt_refuel
+  pwt       = 100
+  condition = MODE==RETURNING
+  condition = REFUEL_NEEDED=true
+  endflag   = REFUEL = refueling
+  perpetual = true
+
+      speed = 1.3
+     radius = 3.0
+  nm_radius = 15.0
+     points = $(START_POS)
+       lead = 8
+}
 
 //----------------------------------------------
 Behavior = BHV_Loiter
@@ -72,7 +90,6 @@ Behavior = BHV_Waypoint
   pwt       = 100
   condition = MODE==RETURNING
   endflag   = STATION_KEEP = true
-  endflag   = STOP = true
   perpetual = true
 
       speed = 1.3
@@ -81,6 +98,7 @@ Behavior = BHV_Waypoint
      points = $(START_POS)
        lead = 8
 }
+
 
 //----------------------------------------------
 Behavior = BHV_StationKeep
