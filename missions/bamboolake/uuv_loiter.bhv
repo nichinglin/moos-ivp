@@ -1,0 +1,42 @@
+//--------    FILE: waypoint.bhv   -------------
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+{
+  // General Behavior Parameters
+  // ---------------------------
+  name         = transit               // example
+  pwt          = 100                   // default
+  condition = RETURN = false
+  condition = DEPLOY = true
+  endflag   = RETURN = true
+  updates      = LOITER_UPDATES        // example
+  perpetual = true
+
+  speed = 2.5              // meters per second
+
+  polygon = radial:: x=20,y=-40,radius=25,pts=8,label=bravo_loiter  // example
+
+}
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  perpetual  = true
+  updates    = RETURN_UPDATE
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+	
+           speed = 2.0
+  capture_radius = 2.0
+     slip_radius = 8.0
+          points = 0,-20
+ }
+
