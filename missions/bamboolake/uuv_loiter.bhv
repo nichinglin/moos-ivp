@@ -21,6 +21,23 @@ Behavior = BHV_Loiter
   polygon = radial:: x=20,y=-40,radius=25,pts=8,label=bravo_loiter  // example
 
 }
+
+Behavior = BHV_ConstantDepth
+{
+  name         = const_dep_loiter   // example
+  pwt          = 100                // default
+  condition = RETURN == false
+  condition = DEPLOY = true
+  updates      = CONST_DEP_UPDATES  // example
+
+          basewidth = 100          // default
+              depth = 15
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
+
 //----------------------------------------------
 Behavior=BHV_Waypoint
 {
@@ -39,4 +56,20 @@ Behavior=BHV_Waypoint
      slip_radius = 8.0
           points = 0,-20
  }
+
+Behavior = BHV_ConstantDepth
+{
+  name         = const_dep_return   // example
+  pwt          = 100                // default
+  condition = RETURN = true
+  condition = DEPLOY = true
+  updates      = CONST_DEP_UPDATES  // example
+
+          basewidth = 100          // default
+              depth = 0
+  depth_mismatch_var = DEPTH_DIFF   // example
+           duration = no-time-limit
+          peakwidth = 3            // default
+        summitdelta = 50           // default
+}
 

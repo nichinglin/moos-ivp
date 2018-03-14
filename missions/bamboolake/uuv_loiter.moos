@@ -38,12 +38,18 @@ ProcessConfig = uSimMarine
   start_y       = -20
   start_heading = 180
   start_speed   = 0
+  start_depth   = 0  // set init depth
 
   prefix        = NAV
 
   turn_rate     = 40
   thrust_map    = 0:0, 20:1, 40:2, 60:3, 80:4, 100:5
   thrust_reflect = true
+
+  buoyancy_rate        = 0.15
+  max_depth_rate       = 5
+  max_depth_rate_speed = 2.0
+  default_water_depth  = 400
 }
 
 //------------------------------------------
@@ -59,6 +65,7 @@ ProcessConfig = pHelmIvP
   behaviors  = uuv_loiter.bhv
   domain     = course:0:359:360
   domain     = speed:0:4:41
+  domain     = depth:0:1000:1001
 }
 
 //------------------------------------------
@@ -70,7 +77,7 @@ ProcessConfig = pMarinePID
   CommsTick  = 20
 
   verbose       = true
-  depth_control = false
+  depth_control = true  // true for under water
 
   // SIM_INSTABILITY = 20
 
@@ -86,9 +93,23 @@ ProcessConfig = pMarinePID
   speed_pid_ki     = 0.0
   speed_pid_integral_limit = 0.07
 
+  //Pitch PID controller 
+  pitch_pid_kp             = 1.5 
+  Pitch_pid_kd             = 0.3
+  Pitch_pid_ki             = 0.004
+  Pitch_pid_integral_limit = 0
+
+  //ZPID controller
+  z_to_pitch_pid_kp             = 0.12
+  z_to_pitch_pid_kd             = 0.1
+  z_to_pitch_pid_ki             = 0.004 
+  z_to_pitch_pid_integral_limit = 0.05
+
   //MAXIMUMS
   maxrudder    = 100
   maxthrust    = 100
+  maxpitch     = 15 
+  maxelevator  = 13
 
   // A non-zero SPEED_FACTOR overrides use of SPEED_PID
   // Will set DESIRED_THRUST = DESIRED_SPEED * SPEED_FACTOR
@@ -103,7 +124,10 @@ ProcessConfig = pMarineViewer
   AppTick    = 4
   CommsTick  = 4
 
-  tiff_file            = bambooLake.tif //change this to your .tif location
+  vehicles_name_mode    = names+depth
+
+  tiff_file            = bambooLake.tif
+  //tiff_file            = MIT_SP.tif
 
   set_pan_x            = 0
   set_pan_y            = 0
@@ -123,6 +147,10 @@ ProcessConfig = pMarineViewer
   nodes_font_size      = medium
   procs_font_size      = medium
   appcast_font_size    = small
+
+  // left_context[survey-point] = DEPLOY=true
+  // left_context[survey-point] = MOOS_MANUAL_OVERRIDE=false
+  // left_context[survey-point] = RETURN=false
 
   right_context[return] = DEPLOY=true
   right_context[return] = MOOS_MANUAL_OVERRIDE=false
@@ -154,7 +182,7 @@ ProcessConfig = pNodeReporter
   AppTick    = 2
   CommsTick  = 2
 
-  platform_type   = kayak
-  platform_color  = yellow
+  platform_type   = uuv
+  platform_color  = red
   platform_length = 4
 }
