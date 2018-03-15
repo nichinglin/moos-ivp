@@ -32,10 +32,10 @@ ProcessConfig = uXMS
 	CommsTick = 4
 
 	var = RETURN_ALL, DEPLOY_ALL, REFUEL_NEEDED_ALL, STATION_KEEP_ALL
-	var = DURATION_TIME_fulloil_henry, DURATION_TIME_refuel_henry
-  var = DURATION_TIME_fulloil_gilda, DURATION_TIME_refuel_gilda
+	var = REFUEL_START_henry, REFUEL_END_henry, TIME_refueling_henry, TIME_running_henry//, RETURN_henry, REFUEL_NEEDED_henry
+  //var = DURATION_TIME_gilda, REFUEL_gilda
 
-  color_map = henry, red
+  color_map = henry, green
   color_map = gilda, blue
 }
 
@@ -54,6 +54,7 @@ ProcessConfig = uFldShoreBroker
   BRIDGE   = src=RETURN_ALL, alias=RETURN
   BRIDGE   = src=RETURN_$V,  alias=RETURN
   BRIDGE   = src=REFUEL_NEEDED_ALL,  alias=REFUEL_NEEDED
+  BRIDGE   = src=REFUEL_TIME_RESET_ALL, alias=REFUEL_TIME_RESET
 }
 
 //--------------------------------------------------------
@@ -83,16 +84,14 @@ ProcessConfig = pMarineViewer
   BUTTON_ONE   = DEPLOY  # DEPLOY_ALL=true 
   BUTTON_ONE   = MOOS_MANUAL_OVERRIDE_ALL=false 
   BUTTON_ONE   = RETURN_ALL=false # STATION_KEEP_ALL=false
-  BUTTON_ONE   = REFUEL_NEEDED_ALL=false
 
   BUTTON_TWO   = RETURN  # RETURN_ALL=true
   BUTTON_TWO   = STATION_KEEP_ALL=false
   BUTTON_TWO   = REFUEL_NEEDED_ALL=false
 
   BUTTON_THREE = STATION  # STATION_KEEP_ALL=true
-  BUTTON_THREE   = REFUEL_NEEDED_ALL=false
+  BUTTON_THREE = REFUEL_NEEDED_ALL=false
 
-  BUTTON_FOUR = REFUEL  # REFUEL_NEEDED_ALL=true
-  BUTTON_FOUR = RETURN_ALL=true
-  BUTTON_FOUR = STATION_KEEP_ALL=false
+  BUTTON_FOUR = REFUEL_NEED  # REFUEL_NEEDED_ALL=true
+  BUTTON_FOUR = RETURN_ALL=false # STATION_KEEP_ALL=false # LOITER_ALL=false # REFUEL_TIME_RESET_ALL=refueling
 }
