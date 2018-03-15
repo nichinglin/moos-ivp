@@ -32,8 +32,8 @@ ProcessConfig = uXMS
 	CommsTick = 4
 
 	var = RETURN_ALL, DEPLOY_ALL, REFUEL_NEEDED_ALL, STATION_KEEP_ALL
-	var = REFUEL_START_henry, REFUEL_END_henry, TIME_refueling_henry, TIME_running_henry//, RETURN_henry, REFUEL_NEEDED_henry
-  //var = DURATION_TIME_gilda, REFUEL_gilda
+	var = henry_REFUEL_START, henry_REFUEL_END, henry_TIME_refueling, henry_TIME_running
+  var = gilda_REFUEL_START, gilda_REFUEL_END, gilda_TIME_refueling, gilda_TIME_running
 
   color_map = henry, green
   color_map = gilda, blue
