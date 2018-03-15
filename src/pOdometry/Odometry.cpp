@@ -19,12 +19,12 @@ Odometry::Odometry()
 {
    //init
    m_first_reading = true;
-   m_current_x = 0;
-   m_current_y = 0;
-   m_previous_x = 0;
-   m_previous_y = 0;
+   m_current_x = 0.0;
+   m_current_y = 0.0;
+   m_previous_x = 0.0;
+   m_previous_y = 0.0;
 
-   m_odometry_dis = 0;
+   m_odometry_dis = 0.0;
 }
 
 //---------------------------------------------------------
@@ -50,11 +50,11 @@ bool Odometry::OnNewMail(MOOSMSG_LIST &NewMail)
 
     // ----------Get Subscriber msg --------------
     if(key == "NAV_X") {
-      m_previous_x = m_current_x;
+      //m_previous_x = m_current_x;
       m_current_x = ddata;
     }
     else if(key == "NAV_Y") {
-      m_previous_y = m_current_y;
+      //m_previous_y = m_current_y;
       m_current_y = ddata;
     }
    }
@@ -85,13 +85,17 @@ bool Odometry::OnConnectToServer()
 bool Odometry::Iterate()
 {
   AppCastingMOOSApp::Iterate();                  // Add this line to show info on screen
-  double dx = m_current_x - m_previous_x;
-  double dy = m_current_y - m_previous_y;
   if(m_first_reading == true) {
     m_first_reading = false;
     m_odometry_dis = 0.0;
   }
-  m_odometry_dis += sqrt(dx*dx + dy*dy);
+  if(m_first_reading == false) {
+    double dx = m_current_x - m_previous_x;
+    double dy = m_current_y - m_previous_y;
+    m_odometry_dis += sqrt(dx*dx + dy*dy);
+    m_previous_x = m_current_x;
+    m_previous_y = m_current_y;
+  }
    //------------ publish ODEMETRY_DIST msg ---------------
   Notify("ODOMETRY_DIST", m_odometry_dis);
   AppCastingMOOSApp::PostReport();               // Add this line to show info on screen
