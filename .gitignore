@@ -7,4 +7,5 @@ lib/*
 
 # file
 *.moos++
-*LastOpenedMOOSLogDirectory
+*.LastOpenedMOOSLogDirectory
+*targ_*
