@@ -75,6 +75,23 @@ Behavior = BHV_Timer
   duration_status =  DURATION_TIME_refueling
  }
 
+//----------------------------------------------
+Behavior = BHV_StationKeep
+{
+  name      = station_keep_refuel
+  pwt       = 100
+  condition = MODE==REFUELING
+  condition = REFUEL_START=true
+
+   center_activate = true
+      inner_radius = 5
+      outer_radius = 10 
+       outer_speed = 1.0
+     transit_speed = 1.3
+        swing_time = 7
+      visual_hints = vertex_size=0, edge_color=gray50
+}
+
 
 //----------------------------------------------
 Behavior = BHV_Waypoint
@@ -135,7 +152,7 @@ Behavior = BHV_Waypoint
 //----------------------------------------------
 Behavior = BHV_StationKeep
 {
-  name      = station-keep
+  name      = station_keep_return
   pwt       = 100
   condition = MODE==STATION-KEEPING
 
