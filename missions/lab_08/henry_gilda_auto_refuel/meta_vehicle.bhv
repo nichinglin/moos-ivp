@@ -7,7 +7,6 @@ initialize   STATION_KEEP = false
 initialize   LOITER  = true
 initialize   REFUEL_NEEDED = false
 initialize   REFUEL_START = false
-initialize   REFUEL_END = true
 initialize   REFUEL_TIME_RESET = none
 
 set MODE = ACTIVE {
@@ -17,6 +16,7 @@ set MODE = ACTIVE {
 set MODE = STATION-KEEPING {
   MODE = ACTIVE
   STATION_KEEP = true
+  REFUEL_NEEDED = false
 }        
 
 set MODE = REFUELING {
@@ -27,11 +27,13 @@ set MODE = REFUELING {
 set MODE = RETURNING {
   MODE = ACTIVE
   RETURN = true
+  REFUEL_NEEDED = false
 }
 
 set MODE = LOITERING {
   MODE = ACTIVE
   LOITER = true
+  REFUEL_NEEDED = false
 }     
 
 //----------------------------------------------
@@ -39,10 +41,10 @@ Behavior = BHV_Timer
 {
   name      = bhv_running
   condition = ((MODE==RETURNING) or (MODE==LOITERING))
+  condition = MODE!=STATION-KEEPING
   endflag   = LOITER=false
   endflag   = REFUEL_NEEDED=true
   endflag   = REFUEL_START=false
-  endflag   = REFUEL_END=true
   endflag   = REFUEL_TIME_RESET=running
   updates   = TIMER_UPDATES        // example
 
@@ -59,12 +61,9 @@ Behavior = BHV_Timer
   name      = bhv_fulloil
   condition = MODE==REFUELING
   condition = REFUEL_START=true
-  endflag   = LOITER=true
-  endflag   = RETURN=false
-  endflag   = STATION_KEEP=false
   endflag   = REFUEL_NEEDED=false
   endflag   = REFUEL_START=false
-  endflag   = REFUEL_END=true
+  endflag   = LOITER=true
   endflag   = REFUEL_TIME_RESET=refueling
   endflag   = REFUEL_TIME_RESET=running
   updates   = TIMER_UPDATES        // example
@@ -85,7 +84,6 @@ Behavior = BHV_Waypoint
   condition = MODE==REFUELING
   condition = REFUEL_START = false
   endflag   = REFUEL_START = true
-  endflag   = REFUEL_END = false
   endflag   = REFUEL_TIME_RESET=refueling
 
   perpetual = true
@@ -123,7 +121,6 @@ Behavior = BHV_Waypoint
   name      = waypt_return
   pwt       = 100
   condition = MODE==RETURNING
-  condition = REFUEL_NEEDED=false
   endflag   = STATION_KEEP = true
   perpetual = true
 
