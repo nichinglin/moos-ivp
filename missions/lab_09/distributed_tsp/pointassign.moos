@@ -1,0 +1,67 @@
+//*******************************************************
+// ShoreSide Configuration File
+
+ServerHost = localhost
+ServerPort = 9000
+Community  = pointassign
+  
+//--------------------------------------------------------
+Processconfig = ANTLER
+{
+  MSBetweenLaunches = 100
+
+  Run = MOOSDB          @ NewConsole = false
+  Run = uTimerScript    @ NewConsole = false
+  Run = pPointAssign    @ NewConsole = false
+  //Run = pLogger         @ NewConsole = false
+  //Run = uXMS            @ NewConsole = false
+}
+
+//--------------------------------------------------
+ProcessConfig = uXMS
+{
+	AppTick   = 4
+	CommsTick = 4
+
+	var = RETURN_ALL, DEPLOY_ALL, REFUEL_NEEDED_ALL, STATION_KEEP_ALL
+	var = henry_REFUEL_START, henry_REFUEL_END, henry_TIME_refueling, henry_TIME_running
+  var = gilda_REFUEL_START, gilda_REFUEL_END, gilda_TIME_refueling, gilda_TIME_running
+
+  color_map = henry, green
+  color_map = gilda, blue
+}
+
+ProcessConfig = uTimerScript
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  randvar = varname=RANDOM_X, min=-25, max=200, key=at_post
+  randvar = varname=RANDOM_Y, min=-175, max=-25, key=at_post
+
+  event = var=VISIT_POINT, val="firstpoint", time=0
+  event = var=VISIT_POINT, val="x=$[RANDOM_X], y=$[RANDOM_Y], id=$[TCOUNT]", amt=100
+  event = var=VISIT_POINT, val="lastpoint", time=0
+
+}
+
+ProcessConfig = pPointAssign
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  ASSIGN_BY_REGION=true
+  VNAME1=henry
+  VNAME2=gilda
+}
+
+ProcessConfig = pLogger
+{
+  AsyncLog = true
+  WildCardLogging = true
+  WildCardOmitPattern = *_STATUS
+
+  LOG = VISIT_POINT @0
+  LOG = VISIT_POINT_HENRY @0
+  LOG = VISIT_POINT_GILDA @0
+}

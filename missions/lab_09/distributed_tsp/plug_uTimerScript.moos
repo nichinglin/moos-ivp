@@ -1,0 +1,18 @@
+//--------------------------------------------------
+// uFldNodeBroker configuration block from plugin
+
+ProcessConfig = uTimerScript
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  // reset_var =
+  // paused =
+
+  randvar = varname=RANDOM_X, min=-25, max=200, key=at_post
+  randvar = varname=RANDOM_Y, min=-175, max=-25, key=at_post
+
+  event = var=VISIT_POINT, val="firstpoint", time=0
+  event = var=VISIT_POINT, val="x=$[RANDOM_X], y=$[RANDOM_Y], id=$[TCOUNT]", amt=100
+  event = var=VISIT_POINT, val="lastpoint", time=0
+}
