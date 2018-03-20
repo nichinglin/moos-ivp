@@ -16,15 +16,15 @@ public:
 	XYPointView(double x, double y);
 	~XYPointView(){}
 
-	void set_label(std::string v) {m_label=v;}
+	//void set_label(std::string v) {m_label=v;}
 	void set_color(std::string v) {m_color=v;}
-	void set_param(std::string v) {m_size=v;}
+	void set_id(int v) {m_id=v;}
 	std::string get_spec();
 
 protected:
 	double m_x;
 	double m_y;
-	std::string m_label;
+    int m_id;
 	std::string m_color;
 	std::string m_size;
 };

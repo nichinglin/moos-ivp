@@ -30,11 +30,12 @@ class PointAssign : public AppCastingMOOSApp
    void registerVariables();
    void assignByRegion();
    void assignByEvenOdd();
-   void postViewPoint(double x, double y, std::string label, std::string color);
+   void postViewPoint(double x, double y, int id, std::string color);
 
    std::string m_vname[2];
    bool m_assign_by_region;
    std::deque<std::string> m_visit_point_list;
+   int m_cnt;
 
 
  private: // Configuration variables

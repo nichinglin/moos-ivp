@@ -77,10 +77,13 @@ bool PointAssign::OnConnectToServer()
 bool PointAssign::Iterate()
 {
   AppCastingMOOSApp::Iterate();
-  deque<string>::iterator it;
+  //vector<string>::iterator it;
   // get all point one by one from front
-  for (it=m_visit_point_list.begin(); it!=m_visit_point_list.end(); ++it) {
-    vector<string> contenor = parseString(m_visit_point_list.front(), ',');
+  //for (it=m_visit_point_list.begin(); it!=m_visit_point_list.end(); ++it) {
+  while(m_visit_point_list.size()){
+    string visit_point = m_visit_point_list.front();
+    //string &visit_point = *it;
+    vector<string> contenor = parseString(visit_point, ',');
     stringstream view_point_msg;
     double x, y;
     int id;
@@ -100,13 +103,6 @@ bool PointAssign::Iterate()
         handled = true;
         id = atoi(value.c_str());
       }
-      else if(tolower(param) == "firstpoint" || tolower(param) == "lastpoint") {
-        for(int i=0; i<2; i++) {
-          stringstream ss;
-          ss << "VISIT_POINT_" << toupper(m_vname[i]);
-          Notify(ss.str(),m_visit_point_list.front());
-        }
-      }
     }
     // send view point to pMarineViewer and split point into two vehicles msg
     if(handled) {
@@ -123,98 +119,36 @@ bool PointAssign::Iterate()
         color = "pink";
       else
         color = "red";
-      postViewPoint(x, y, "test", color);
-      // view_point_msg << "x=" << x << "," \
-      //                << "y=" << y << "," \
-      //                << "label=(" << x << "|" << y << ")," \
-      //                << "vertex_color=" << color << "," \
-      //                << "vertex_size=5";
-      // Notify("VIEW_POINT", view_point_msg.str());
+      postViewPoint(x, y, id, color);
+
       stringstream ss;
       ss << "VISIT_POINT_" << toupper(veh);
-      Notify(ss.str(),m_visit_point_list.front());
+      Notify(ss.str(),visit_point);
+      m_cnt++;
+    }
+    else {
+      for(int i=0; i<2; i++) {
+        stringstream ss;
+        ss << "VISIT_POINT_" << toupper(m_vname[i]);
+        Notify(ss.str(),visit_point);
+      }
     }
     m_visit_point_list.pop_front();
-
-    // if(m_visit_point_list.size()){
-    //   if(m_assign_by_region)
-    //     assignByRegion();
-    //   else
-    //     assignByEvenOdd();
-    // }
   }
+  //}
   // Do your thing here!
   Notify("TEST", 0.0);
-  // string str = "x=5,y=25,label=home,vertex_size=2";  // Not recommended
-  // Notify("VIEW_POINT", str);
+  Notify("Z_CNT", m_cnt);
   AppCastingMOOSApp::PostReport();
   return(true);
 }
 
-// void PointAssign::assignByRegion() {
-//   vector<string> contenor = parseString(m_visit_point_list.front(), ',');
-//   for(int i=0; i<contenor.size(); i++) {
-//     //if(DEBUG) cout << "contenor[" << i << "]: " << contenor[i] << endl;
-//     string param = biteStringX(contenor[i], '=');
-//     //if(DEBUG) cout << "param: " << param << endl;
-//     string value = contenor[i];
-//     int dval = atof(value.c_str());
-
-//     if(tolower(param) == "x") {
-//       stringstream ss;
-//       if(dval < 83)
-//         ss << "VISIT_POINT_" << toupper(m_vname[0]);
-//       else
-//         ss << "VISIT_POINT_" << toupper(m_vname[1]);
-
-//       if(DEBUG) cout << ss.str() << "||" << m_visit_point_list.front() << endl;
-//       Notify(ss.str(),m_visit_point_list.front());
-//       m_visit_point_list.pop_front();
-//     }
-//     else if (tolower(param) == "firstpoint" || tolower(param) ==  "lastpoint") {
-//       if(DEBUG) cout << "==============" << param << "===============" << endl;
-//       for(int i=0; i<2; i++) {
-//         stringstream ss;
-//         ss << "VISIT_POINT_" << toupper(m_vname[i]);
-//         Notify(ss.str(),m_visit_point_list.front());
-//       }
-//       m_visit_point_list.pop_front();
-//     }
-//   }
-// }
-
-// void PointAssign::assignByEvenOdd() {
-//   vector<string> contenor = parseString(m_visit_point_list.front(), ',');
-//   for(int i=0; i<contenor.size(); i++) {
-//     string param = biteStringX(contenor[i], '=');
-//     string value = contenor[i];
-//     int dval = atof(value.c_str());
-
-//     if(tolower(param) == "id") {
-//       stringstream ss;
-//       ss << "VISIT_POINT_" << toupper(m_vname[dval%2]);
-//       //if(DEBUG) cout << ss.str() << "||" << m_visit_point_list.front() << endl;
-//       Notify(ss.str(),m_visit_point_list.front());
-//       m_visit_point_list.pop_front();
-//     }
-//     else if (tolower(param) == "firstpoint" || tolower(param) ==  "lastpoint") {
-//       //if(DEBUG) cout << "==============" << param << "===============" << endl;
-//       for(int i=0; i<2; i++) {
-//         stringstream ss;
-//         ss << "VISIT_POINT_" << toupper(m_vname[i]);
-//         Notify(ss.str(),m_visit_point_list.front());
-//       }
-//       m_visit_point_list.pop_front();
-//     }
-//   }
-// }
-
-void PointAssign::postViewPoint(double x, double y, string label, string color)
+void PointAssign::postViewPoint(double x, double y, int id, string color)
 {
   XYPointView point(x,y);
-  point.set_label(label);
+  //point.set_label(label);
   point.set_color(color);
-  //point.set_param("5");
+  point.set_id(id);
 
   string spec = point.get_spec();
   Notify("VIEW_POINT", spec);
