@@ -7,8 +7,7 @@ ProcessConfig = uTimerScript
   CommsTick = 4
 
   paused=false
-  condition = (TEST == 0)
-  //pause_var=UTS_PAUSE=
+  condition = (TEST == 0.0)
   
   randvar = varname=RANDOM_X, min=$(REGION_X_MIN), max=$(REGION_X_MAX), key=at_post
   randvar = varname=RANDOM_Y, min=$(REGION_Y_MIN), max=$(REGION_Y_MAX), key=at_post

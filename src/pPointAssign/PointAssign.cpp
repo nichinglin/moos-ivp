@@ -77,35 +77,35 @@ bool PointAssign::OnConnectToServer()
 bool PointAssign::Iterate()
 {
   AppCastingMOOSApp::Iterate();
-  //vector<string>::iterator it;
   // get all point one by one from front
-  //for (it=m_visit_point_list.begin(); it!=m_visit_point_list.end(); ++it) {
-  while(m_visit_point_list.size()){
+  while(!m_visit_point_list.empty()){
     string visit_point = m_visit_point_list.front();
-    //string &visit_point = *it;
     vector<string> contenor = parseString(visit_point, ',');
     stringstream view_point_msg;
     double x, y;
     int id;
     string veh, color;
-    bool handled = false;
+    int param_cnt =0;
     // spilt point msg into x, y, id, firstpoint, or lastpoint
     for(int i=0; i<contenor.size(); i++) {
       string param = biteStringX(contenor[i], '=');
       string value = contenor[i];
       if(tolower(param) == "x") {
-        handled = setDoubleOnString(x, value);
+        setDoubleOnString(x, value);
+        param_cnt++;
       }
       else if(tolower(param) == "y") {
-        handled = setDoubleOnString(y, value);
+        setDoubleOnString(y, value);
+        param_cnt++;
       }
       else if(tolower(param) == "id") {
-        handled = true;
         id = atoi(value.c_str());
+        param_cnt++;
       }
     }
     // send view point to pMarineViewer and split point into two vehicles msg
-    if(handled) {
+    if(param_cnt == 3) {
+      // set which vehicle to publish
       if(m_assign_by_region) {
         if(x < 87.5)
           veh = toupper(m_vname[0]);
@@ -115,16 +115,17 @@ bool PointAssign::Iterate()
       else {
         veh = toupper(m_vname[id%2]);
       }
+      // set point color
       if(veh == toupper(m_vname[0]))
         color = "pink";
       else
         color = "red";
+
       postViewPoint(x, y, id, color);
 
       stringstream ss;
       ss << "VISIT_POINT_" << toupper(veh);
       Notify(ss.str(),visit_point);
-      m_cnt++;
     }
     else {
       for(int i=0; i<2; i++) {
@@ -135,10 +136,8 @@ bool PointAssign::Iterate()
     }
     m_visit_point_list.pop_front();
   }
-  //}
   // Do your thing here!
   Notify("TEST", 0.0);
-  Notify("Z_CNT", m_cnt);
   AppCastingMOOSApp::PostReport();
   return(true);
 }
