@@ -6,13 +6,16 @@ ProcessConfig = uTimerScript
   AppTick   = 4
   CommsTick = 4
 
-  // reset_var =
-  // paused =
-
-  randvar = varname=RANDOM_X, min=-25, max=200, key=at_post
-  randvar = varname=RANDOM_Y, min=-175, max=-25, key=at_post
+  paused=false
+  condition = (TEST == 0)
+  //pause_var=UTS_PAUSE=
+  
+  randvar = varname=RANDOM_X, min=$(REGION_X_MIN), max=$(REGION_X_MAX), key=at_post
+  randvar = varname=RANDOM_Y, min=$(REGION_Y_MIN), max=$(REGION_Y_MAX), key=at_post
 
   event = var=VISIT_POINT, val="firstpoint", time=0
-  event = var=VISIT_POINT, val="x=$[RANDOM_X], y=$[RANDOM_Y], id=$[TCOUNT]", amt=100
+  event = var=VISIT_POINT, val="x=$[RANDOM_X], y=$[RANDOM_Y], id=$[TCOUNT]", amt=$(RANDOM_POINT)
   event = var=VISIT_POINT, val="lastpoint", time=0
+
+  //reset_max  = 0
 }

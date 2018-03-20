@@ -1,0 +1,924 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       ./LOG_SHORESIDE_20_3_2018_____16_37_09/LOG_SHORESIDE_20_3_2018_____16_37_09.alog
+%% FILE OPENED ON  Wed Dec 31 19:00:00 1969
+%% LOGSTART               1521578228.89
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0.649           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+0.653           LOGGER_DIRECTORY     pLogger         ./LOG_SHORESIDE_20_3_2018_____16_37_09 
+0.777           DB_EVENT             MOOSDB_shoreside connected=uXMS_966 
+0.801           APPCAST              pPointAssign    proc=pPointAssign!@#iter=1!@#node=shoreside!@#iter=1!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+0.850           APPCAST_REQ          uMAC_4550       node=shoreside,app=all,duration=0.1,key=uMAC_4550startup,thresh=any 
+1.075           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=1!@#node=shoreside!@#iter=1!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  0!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       3!@Draw Count Rate:  12.9468!@Curr Time:        1521578229.96!@Time Warp:        1.000!@Elapsed:          0.00000!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.075           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=0.1,key=pMarineViewerstartup,thresh=any 
+1.076           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=0.1,key=pMarineViewerstartup,thresh=any 
+1.081           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.081           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.250           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+1.250           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+1.301           APPCAST              pPointAssign    proc=pPointAssign!@#iter=3!@#node=shoreside!@#iter=3!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.326           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+1.326           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+1.326           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.326           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.454           VISIT_POINT          uTimerScript    firstpoint 
+1.454           VISIT_POINT          uTimerScript    x=190.865,y=-120.055,id=1 
+1.454           VISIT_POINT          uTimerScript    x=142.535,y=-99.955,id=2 
+1.454           VISIT_POINT          uTimerScript    x=58.835,y=-94.255,id=3 
+1.454           VISIT_POINT          uTimerScript    x=113.892,y=-144.565,id=4 
+1.454           VISIT_POINT          uTimerScript    x=112.632,y=-157.75,id=5 
+1.454           VISIT_POINT          uTimerScript    x=43.4,y=-48.235,id=6 
+1.454           VISIT_POINT          uTimerScript    x=66.867,y=-33.61,id=7 
+1.454           VISIT_POINT          uTimerScript    x=183.868,y=-44.575,id=8 
+1.454           VISIT_POINT          uTimerScript    x=116.615,y=-99.235,id=9 
+1.454           VISIT_POINT          uTimerScript    x=128.472,y=-137.275,id=10 
+1.454           VISIT_POINT          uTimerScript    x=107.502,y=-57.49,id=11 
+1.454           VISIT_POINT          uTimerScript    x=153.493,y=-62.8,id=12 
+1.454           VISIT_POINT          uTimerScript    x=164.607,y=-53.59,id=13 
+1.455           VISIT_POINT          uTimerScript    x=104.15,y=-161.815,id=14 
+1.455           VISIT_POINT          uTimerScript    x=32.195,y=-74.755,id=15 
+1.455           VISIT_POINT          uTimerScript    x=184.363,y=-141.82,id=16 
+1.455           VISIT_POINT          uTimerScript    x=131.938,y=-143.62,id=17 
+1.455           VISIT_POINT          uTimerScript    x=-13.547,y=-26.845,id=18 
+1.455           VISIT_POINT          uTimerScript    x=128.607,y=-153.415,id=19 
+1.455           VISIT_POINT          uTimerScript    x=78.117,y=-153.46,id=20 
+1.455           VISIT_POINT          uTimerScript    x=71.322,y=-57.64,id=21 
+1.455           VISIT_POINT          uTimerScript    x=109.46,y=-126.94,id=22 
+1.455           VISIT_POINT          uTimerScript    x=130.093,y=-168.07,id=23 
+1.455           VISIT_POINT          uTimerScript    x=113.578,y=-69.235,id=24 
+1.455           VISIT_POINT          uTimerScript    x=41.892,y=-33.805,id=25 
+1.455           VISIT_POINT          uTimerScript    x=55.19,y=-139.885,id=26 
+1.455           VISIT_POINT          uTimerScript    x=60.275,y=-169.75,id=27 
+1.455           VISIT_POINT          uTimerScript    x=142.422,y=-94.42,id=28 
+1.455           VISIT_POINT          uTimerScript    x=133.58,y=-43.045,id=29 
+1.455           VISIT_POINT          uTimerScript    x=-21.67,y=-98.845,id=30 
+1.455           VISIT_POINT          uTimerScript    x=-15.01,y=-47.83,id=31 
+1.456           VISIT_POINT          uTimerScript    x=107.165,y=-97.48,id=32 
+1.456           VISIT_POINT          uTimerScript    x=-9.228,y=-26.065,id=33 
+1.456           VISIT_POINT          uTimerScript    x=121.903,y=-63.67,id=34 
+1.456           VISIT_POINT          uTimerScript    x=-20.905,y=-27.25,id=35 
+1.456           VISIT_POINT          uTimerScript    x=16.715,y=-126.115,id=36 
+1.456           VISIT_POINT          uTimerScript    x=-10.825,y=-39.355,id=37 
+1.456           VISIT_POINT          uTimerScript    x=177.455,y=-72.55,id=38 
+1.456           VISIT_POINT          uTimerScript    x=158.465,y=-119.71,id=39 
+1.456           VISIT_POINT          uTimerScript    x=77.578,y=-163.42,id=40 
+1.456           VISIT_POINT          uTimerScript    x=74.945,y=-119.77,id=41 
+1.456           VISIT_POINT          uTimerScript    x=147.237,y=-112.81,id=42 
+1.456           VISIT_POINT          uTimerScript    x=161.165,y=-64.63,id=43 
+1.456           VISIT_POINT          uTimerScript    x=77.218,y=-124.945,id=44 
+1.456           VISIT_POINT          uTimerScript    x=66.282,y=-170.665,id=45 
+1.456           VISIT_POINT          uTimerScript    x=169.963,y=-103.945,id=46 
+1.456           VISIT_POINT          uTimerScript    x=54.763,y=-112.45,id=47 
+1.456           VISIT_POINT          uTimerScript    x=154.28,y=-69.385,id=48 
+1.456           VISIT_POINT          uTimerScript    x=16.535,y=-128.98,id=49 
+1.457           VISIT_POINT          uTimerScript    x=22.16,y=-156.34,id=50 
+1.457           VISIT_POINT          uTimerScript    x=19.932,y=-98.65,id=51 
+1.457           VISIT_POINT          uTimerScript    x=15.275,y=-109.645,id=52 
+1.457           VISIT_POINT          uTimerScript    x=60.972,y=-123.85,id=53 
+1.457           VISIT_POINT          uTimerScript    x=158.982,y=-45.115,id=54 
+1.457           VISIT_POINT          uTimerScript    x=114.613,y=-65.92,id=55 
+1.457           VISIT_POINT          uTimerScript    x=186.973,y=-99.91,id=56 
+1.457           VISIT_POINT          uTimerScript    x=166.947,y=-106.855,id=57 
+1.457           VISIT_POINT          uTimerScript    x=131.735,y=-151.405,id=58 
+1.457           VISIT_POINT          uTimerScript    x=-7.315,y=-135.52,id=59 
+1.457           VISIT_POINT          uTimerScript    x=34.445,y=-159.64,id=60 
+1.457           VISIT_POINT          uTimerScript    x=35.57,y=-139.135,id=61 
+1.457           VISIT_POINT          uTimerScript    x=-12.94,y=-80.59,id=62 
+1.457           VISIT_POINT          uTimerScript    x=152.525,y=-145.645,id=63 
+1.457           VISIT_POINT          uTimerScript    x=158.06,y=-35.44,id=64 
+1.457           VISIT_POINT          uTimerScript    x=-1.15,y=-165.19,id=65 
+1.457           VISIT_POINT          uTimerScript    x=52.355,y=-108.955,id=66 
+1.457           VISIT_POINT          uTimerScript    x=91.887,y=-93.205,id=67 
+1.458           VISIT_POINT          uTimerScript    x=48.08,y=-25.195,id=68 
+1.458           VISIT_POINT          uTimerScript    x=78.927,y=-52.45,id=69 
+1.458           VISIT_POINT          uTimerScript    x=140.42,y=-60.025,id=70 
+1.458           VISIT_POINT          uTimerScript    x=64.865,y=-131.53,id=71 
+1.458           VISIT_POINT          uTimerScript    x=117.065,y=-143.095,id=72 
+1.458           VISIT_POINT          uTimerScript    x=55.91,y=-173.95,id=73 
+1.458           VISIT_POINT          uTimerScript    x=124.94,y=-53.455,id=74 
+1.458           VISIT_POINT          uTimerScript    x=67.137,y=-95.905,id=75 
+1.458           VISIT_POINT          uTimerScript    x=121.183,y=-35.44,id=76 
+1.458           VISIT_POINT          uTimerScript    x=174.778,y=-84.325,id=77 
+1.458           VISIT_POINT          uTimerScript    x=196.827,y=-89.11,id=78 
+1.458           VISIT_POINT          uTimerScript    x=-4.435,y=-71.245,id=79 
+1.458           VISIT_POINT          uTimerScript    x=192.665,y=-167.8,id=80 
+1.458           VISIT_POINT          uTimerScript    x=171.583,y=-155.275,id=81 
+1.458           VISIT_POINT          uTimerScript    x=92.585,y=-59.395,id=82 
+1.458           VISIT_POINT          uTimerScript    x=148.633,y=-82.6,id=83 
+1.458           VISIT_POINT          uTimerScript    x=18.402,y=-72.13,id=84 
+1.458           VISIT_POINT          uTimerScript    x=8.008,y=-75.595,id=85 
+1.459           VISIT_POINT          uTimerScript    x=-1.51,y=-156.43,id=86 
+1.459           VISIT_POINT          uTimerScript    x=147.845,y=-64.855,id=87 
+1.459           VISIT_POINT          uTimerScript    x=99.448,y=-68.575,id=88 
+1.459           VISIT_POINT          uTimerScript    x=114.185,y=-150.13,id=89 
+1.459           VISIT_POINT          uTimerScript    x=4.047,y=-130.93,id=90 
+1.459           VISIT_POINT          uTimerScript    x=128.743,y=-107.965,id=91 
+1.459           VISIT_POINT          uTimerScript    x=3.755,y=-168.73,id=92 
+1.459           VISIT_POINT          uTimerScript    x=20.113,y=-73.045,id=93 
+1.459           VISIT_POINT          uTimerScript    x=33.41,y=-132.925,id=94 
+1.459           VISIT_POINT          uTimerScript    x=131.173,y=-110.845,id=95 
+1.459           VISIT_POINT          uTimerScript    x=156.912,y=-116.575,id=96 
+1.459           VISIT_POINT          uTimerScript    x=99.56,y=-94.6,id=97 
+1.459           VISIT_POINT          uTimerScript    x=144.942,y=-84.955,id=98 
+1.459           VISIT_POINT          uTimerScript    x=92.045,y=-158.545,id=99 
+1.459           VISIT_POINT          uTimerScript    x=125.368,y=-142.45,id=100 
+1.459           VISIT_POINT          uTimerScript    lastpoint 
+1.460           APPCAST              uTimerScript    proc=uTimerScript!@#iter=1!@#node=shoreside!@#iter=1!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+1.496           APPCAST              uXMS_966        proc=uXMS_966!@#iter=1!@#node=shoreside!@#iter=1!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.552           VIEW_POINT           pPointAssign    x=190.865,y=-120.055,label=(1),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=142.535,y=-99.955,label=(2),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=58.835,y=-94.255,label=(3),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=113.892,y=-144.565,label=(4),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=112.632,y=-157.75,label=(5),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=43.4,y=-48.235,label=(6),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=66.867,y=-33.61,label=(7),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=183.868,y=-44.575,label=(8),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=116.615,y=-99.235,label=(9),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=128.472,y=-137.275,label=(10),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=107.502,y=-57.49,label=(11),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=153.493,y=-62.8,label=(12),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=164.607,y=-53.59,label=(13),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=104.15,y=-161.815,label=(14),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=32.195,y=-74.755,label=(15),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=184.363,y=-141.82,label=(16),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=131.938,y=-143.62,label=(17),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=-13.547,y=-26.845,label=(18),vertex_color=pink,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=128.607,y=-153.415,label=(19),vertex_color=red,vertex_size=5 
+1.552           VIEW_POINT           pPointAssign    x=78.117,y=-153.46,label=(20),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=71.322,y=-57.64,label=(21),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=109.46,y=-126.94,label=(22),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=130.093,y=-168.07,label=(23),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=113.578,y=-69.235,label=(24),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=41.892,y=-33.805,label=(25),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=55.19,y=-139.885,label=(26),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=60.275,y=-169.75,label=(27),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=142.422,y=-94.42,label=(28),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=133.58,y=-43.045,label=(29),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=-21.67,y=-98.845,label=(30),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=-15.01,y=-47.83,label=(31),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=107.165,y=-97.48,label=(32),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=-9.228,y=-26.065,label=(33),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=121.903,y=-63.67,label=(34),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=-20.905,y=-27.25,label=(35),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=16.715,y=-126.115,label=(36),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=-10.825,y=-39.355,label=(37),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=177.455,y=-72.55,label=(38),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=158.465,y=-119.71,label=(39),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=77.578,y=-163.42,label=(40),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=74.945,y=-119.77,label=(41),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=147.237,y=-112.81,label=(42),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=161.165,y=-64.63,label=(43),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=77.218,y=-124.945,label=(44),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=66.282,y=-170.665,label=(45),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=169.963,y=-103.945,label=(46),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=54.763,y=-112.45,label=(47),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=154.28,y=-69.385,label=(48),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=16.535,y=-128.98,label=(49),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=22.16,y=-156.34,label=(50),vertex_color=pink,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=19.932,y=-98.65,label=(51),vertex_color=red,vertex_size=5 
+1.553           VIEW_POINT           pPointAssign    x=15.275,y=-109.645,label=(52),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=60.972,y=-123.85,label=(53),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=158.982,y=-45.115,label=(54),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=114.613,y=-65.92,label=(55),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=186.973,y=-99.91,label=(56),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=166.947,y=-106.855,label=(57),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=131.735,y=-151.405,label=(58),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=-7.315,y=-135.52,label=(59),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=34.445,y=-159.64,label=(60),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=35.57,y=-139.135,label=(61),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=-12.94,y=-80.59,label=(62),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=152.525,y=-145.645,label=(63),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=158.06,y=-35.44,label=(64),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=-1.15,y=-165.19,label=(65),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=52.355,y=-108.955,label=(66),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=91.887,y=-93.205,label=(67),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=48.08,y=-25.195,label=(68),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=78.927,y=-52.45,label=(69),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=140.42,y=-60.025,label=(70),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=64.865,y=-131.53,label=(71),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=117.065,y=-143.095,label=(72),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=55.91,y=-173.95,label=(73),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=124.94,y=-53.455,label=(74),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=67.137,y=-95.905,label=(75),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=121.183,y=-35.44,label=(76),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=174.778,y=-84.325,label=(77),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=196.827,y=-89.11,label=(78),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=-4.435,y=-71.245,label=(79),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=192.665,y=-167.8,label=(80),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=171.583,y=-155.275,label=(81),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=92.585,y=-59.395,label=(82),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=148.633,y=-82.6,label=(83),vertex_color=red,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=18.402,y=-72.13,label=(84),vertex_color=pink,vertex_size=5 
+1.554           VIEW_POINT           pPointAssign    x=8.008,y=-75.595,label=(85),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=-1.51,y=-156.43,label=(86),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=147.845,y=-64.855,label=(87),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=99.448,y=-68.575,label=(88),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=114.185,y=-150.13,label=(89),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=4.047,y=-130.93,label=(90),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=128.743,y=-107.965,label=(91),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=3.755,y=-168.73,label=(92),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=20.113,y=-73.045,label=(93),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=33.41,y=-132.925,label=(94),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=131.173,y=-110.845,label=(95),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=156.912,y=-116.575,label=(96),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=99.56,y=-94.6,label=(97),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=144.942,y=-84.955,label=(98),vertex_color=pink,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=92.045,y=-158.545,label=(99),vertex_color=red,vertex_size=5 
+1.555           VIEW_POINT           pPointAssign    x=125.368,y=-142.45,label=(100),vertex_color=pink,vertex_size=5 
+1.576           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=3!@#node=shoreside!@#iter=3!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  0!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       7!@Draw Count Rate:  9.55881!@Curr Time:        1521578230.46!@Time Warp:        1.000!@Elapsed:          0.00002!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.578           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+1.578           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+1.586           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.586           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.802           APPCAST              pPointAssign    proc=pPointAssign!@#iter=5!@#node=shoreside!@#iter=5!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.802           DB_TIME              MOOSDB_shoreside 1521578230.69115 
+1.802           DB_UPTIME            MOOSDB_shoreside 2.00716      
+1.802           DB_CLIENTS           MOOSDB_shoreside uXMS_966,uTimerScript,uFldShoreBroker,pHostInfo,pShare,pMarineViewer,pLogger,pPointAssign,uMAC_4550, 
+1.803           DB_VARSUMMARY        MOOSDB_shoreside APPCAST              16:37:10.490         pMarineViewer        1.9 Hz S  proc=pMarineViewer!@#i...
+APPCAST_REQ          16:37:10.490         pMarineViewer        6.0 Hz S  node=all,app=all,durat...
+APPCAST_REQ_ALL      16:37:10.490         pMarineViewer        5.6 Hz S  node=all,app=all,durat...
+APPCAST_REQ_SHORESIDE 16:37:09.738         uMAC_4550            0.0 Hz S  node=shoreside,app=all...
+DB_CLIENTS           16:37:10.691         MOOSDB_shoreside     0.0 Hz S  uXMS_966,uTimerScript,...
+DB_EVENT             16:37:09.666         MOOSDB_shoreside     4.3 Hz S  connected=uXMS_966  
+DB_QOS               16:37:08.683         MOOSDB#1             0.0 Hz S                      
+DB_RWSUMMARY         16:37:08.683         MOOSDB#1             0.0 Hz S                      
+DB_TIME              16:37:10.691         MOOSDB_shoreside     0.0 Hz D  1521578230.7         
+DB_UPTIME            16:37:10.691         MOOSDB_shoreside     0.0 Hz D  2.0                  
+DB_VARSUMMARY        16:37:08.683         MOOSDB#1             0.0 Hz S                      
+DEPLOY_ALL           18:59:59.000         (write pending)      0.0 Hz ~  
+                   EXITED_NORMALLY      18:59:59.000         (write pending)      0.0 Hz ~  
+                   GRID_CONFIG          18:59:59.000         (write pending)      0.0 Hz ~  
+                   GRID_DELTA           18:59:59.000         (write pending)      0.0 Hz ~  
+                   HELM_MAP_CLEAR       16:37:09.964         pMarineViewer        0.0 Hz D  0.0                  
+HOST_INFO_REQUEST    18:59:59.000         (write pending)      0.0 Hz ~  
+                   LOGGER_DIRECTORY     16:37:09.582         pLogger              0.0 Hz S  ./LOG_SHORESIDE_20_3_2...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_BROKER_PING     18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT          18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_LOCAL    18:59:59.000         (write pending)      0.0 Hz ~  
+                   PHI_HOST_INFO        18:59:59.000         (write pending)      0.0 Hz ~  
+                   PHI_HOST_IP          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       16:37:09.643         pLogger              0.0 Hz S  AppErrorFlag=false,Upt...
+PMARINEVIEWER_ITER_GAP 16:37:10.464         pMarineViewer        0.0 Hz D  1.0                  
+PMARINEVIEWER_ITER_LEN 16:37:10.490         pMarineViewer        1.9 Hz D  0.0                  
+PMARINEVIEWER_STATUS 16:37:09.964         pMarineViewer        0.0 Hz S  AppErrorFlag=false,Upt...
+PMV_CLEAR            18:59:59.000         (write pending)      0.0 Hz ~  
+                   PMV_CONNECT          16:37:09.964         pMarineViewer        0.0 Hz D  0.0                  
+PMV_MENU_CONTEXT     18:59:59.000         (write pending)      0.0 Hz ~  
+                   PPOINTASSIGN_ITER_GAP 16:37:10.691         pPointAssign         2.0 Hz D  1.0                  
+PPOINTASSIGN_ITER_LEN 16:37:10.490         pPointAssign         1.9 Hz D  0.0                  
+PPOINTASSIGN_STATUS  16:37:09.689         pPointAssign         0.0 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_INPUT_SUMMARY 18:59:59.000         (write pending)      0.0 Hz ~  
+                   PSHARE_STATUS        16:37:09.830         pShare               0.0 Hz S  AppErrorFlag=false,Upt...
+REFUEL_NEEDED_ALL    18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_ALL           18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_ALL     18:59:59.000         (write pending)      0.0 Hz ~  
+                   TEST                 16:37:10.691         pPointAssign         3.0 Hz D  0.0                  
+TRAIL_RESET          18:59:59.000         (write pending)      0.0 Hz ~  
+                   UMAC_4550_STATUS     16:37:09.538         uMAC_4550            0.0 Hz S  AppErrorFlag=false,Upt...
+UTIMERSCRIPT_ITER_GAP 16:37:10.592         uTimerScript         0.0 Hz D  1.0                  
+UTIMERSCRIPT_ITER_LEN 16:37:10.592         uTimerScript         0.0 Hz D  0.0                  
+UTIMERSCRIPT_STATUS  16:37:10.342         uTimerScript         0.0 Hz S  AppErrorFlag=false,Upt...
+UTS_FORWARD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_PAUSE            18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_RESET            18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_STATUS           16:37:10.390         uTimerScript         0.0 Hz S  name=unnamed, elapsed_...
+UXMS_966_ITER_GAP    16:37:10.585         uXMS_966             0.0 Hz D  1.0                  
+UXMS_966_ITER_LEN    16:37:10.585         uXMS_966             0.0 Hz D  0.0                  
+UXMS_966_STATUS      16:37:10.384         uXMS_966             0.0 Hz S  AppErrorFlag=false,Upt...
+VIEW_CIRCLE          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_COMMS_PULSE     18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_GRID            18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_MARKER          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_POINT           16:37:10.490         pPointAssign         0.0 Hz S  x=125.368,y=-142.45,la...
+VIEW_POLYGON         18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_RANGE_PULSE     18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_SEGLIST         18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_SEGLR           18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_VECTOR          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_WEDGE           18:59:59.000         (write pending)      0.0 Hz ~  
+                   VISIT_POINT          16:37:10.390         uTimerScript         0.0 Hz S  lastpoint           
+VISIT_POINT_GILDA    16:37:10.490         pPointAssign         0.0 Hz S  lastpoint           
+VISIT_POINT_HENRY    16:37:10.490         pPointAssign         0.0 Hz S  lastpoint           
+Z_CNT                16:37:10.691         pPointAssign         3.0 Hz D  7128116.0            
+gilda_REFUEL_END     18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_REFUEL_START   18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_TIME_refueling 18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_TIME_running   18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_REFUEL_END     18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_REFUEL_START   18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_TIME_refueling 18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_TIME_running   18:59:59.000         (write pending)      0.0 Hz ~  
+                    
+1.803           DB_QOS               MOOSDB_shoreside pHostInfo=0:0.246048:0.110149:0,pLogger=0:0.193119:0.169039:0,pMarineViewer=0:0.154018:0.111103:0,pPointAssign=0:0.198126:0.169992:0,pShare=0:0.138998:0.138998:0,uFldShoreBroker=0:0.332117:0.154972:0,uMAC_4550=0:0.147104:0.138044:0,uTimerScript=0:0.126839:0.0710487:0,uXMS_966=0:0.140905:0.140905:0, 
+1.803           DB_RWSUMMARY         MOOSDB_shoreside uXMS_966=APPCAST_REQ:DB_UPTIME:DEPLOY_ALL:REFUEL_NEEDED_ALL:RETURN_ALL:STATION_KEEP_ALL:gilda_REFUEL_END:gilda_REFUEL_START:gilda_TIME_refueling:gilda_TIME_running:henry_REFUEL_END:henry_REFUEL_START:henry_TIME_refueling:henry_TIME_running&APPCAST:UXMS_966_ITER_GAP:UXMS_966_ITER_LEN:UXMS_966_STATUS,uTimerScript=APPCAST_REQ:DB_CLIENTS:DB_UPTIME:EXITED_NORMALLY:TEST:UTS_FORWARD:UTS_PAUSE:UTS_RESET&APPCAST:UTIMERSCRIPT_ITER_GAP:UTIMERSCRIPT_ITER_LEN:UTIMERSCRIPT_STATUS:UTS_STATUS:VISIT_POINT,uFldShoreBroker=APPCAST_REQ:NODE_BROKER_PING:PHI_HOST_INFO&,pHostInfo=APPCAST_REQ:HOST_INFO_REQUEST:PSHARE_INPUT_SUMMARY&,pShare=PSHARE_CMD&PSHARE_STATUS,pMarineViewer=APPCAST:APPCAST_REQ:GRID_CONFIG:GRID_DELTA:NODE_REPORT:NODE_REPORT_LOCAL:PHI_HOST_INFO:PHI_HOST_IP:PMV_CLEAR:PMV_MENU_CONTEXT:REFUEL_NEEDED_ALL:TRAIL_RESET:VIEW_CIRCLE:VIEW_COMMS_PULSE:VIEW_GRID:VIEW_MARKER:VIEW_POINT:VIEW_POLYGON:VIEW_RANGE_PULSE:VIEW_SEGLIST:VIEW_SEGLR:VIEW_VECTOR:VIEW_WEDGE&APPCAST:APPCAST_REQ:APPCAST_REQ_ALL:HELM_MAP_CLEAR:PMARINEVIEWER_ITER_GAP:PMARINEVIEWER_ITER_LEN:PMARINEVIEWER_STATUS:PMV_CONNECT,pLogger=APPCAST:APPCAST_REQ:APPCAST_REQ_ALL:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:EXITED_NORMALLY:GRID_CONFIG:GRID_DELTA:HOST_INFO_REQUEST:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:NODE_BROKER_PING:NODE_REPORT:NODE_REPORT_LOCAL:PHI_HOST_INFO:PHI_HOST_IP:PLOGGER_CMD:PMV_CLEAR:PMV_MENU_CONTEXT:PSHARE_INPUT_SUMMARY:TRAIL_RESET:UTS_FORWARD:UTS_PAUSE:UTS_RESET:VIEW_CIRCLE:VIEW_COMMS_PULSE:VIEW_GRID:VIEW_MARKER:VIEW_POINT:VIEW_POLYGON:VIEW_RANGE_PULSE:VIEW_SEGLIST:VIEW_SEGLR:VIEW_VECTOR:VIEW_WEDGE:VISIT_POINT&LOGGER_DIRECTORY:PLOGGER_STATUS,pPointAssign=APPCAST_REQ:VISIT_POINT&APPCAST:PPOINTASSIGN_ITER_GAP:PPOINTASSIGN_ITER_LEN:PPOINTASSIGN_STATUS:TEST:VIEW_POINT:VISIT_POINT_GILDA:VISIT_POINT_HENRY:Z_CNT,uMAC_4550=APPCAST&APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_SHORESIDE:UMAC_4550_STATUS 
+1.829           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.829           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+1.851           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+1.851           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+1.897           APPCAST              uXMS_966        proc=uXMS_966!@#iter=3!@#node=shoreside!@#iter=3!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+1.927           PSHARE_INPUT_SUMMARY pShare          localhost:9300 
+0.850           APPCAST_REQ_SHORESIDE uMAC_4550       node=shoreside,app=all,duration=0.1,key=uMAC_4550startup,thresh=any 
+1.075           HELM_MAP_CLEAR       pMarineViewer   0.00000      
+1.075           PMV_CONNECT          pMarineViewer   0.00000      
+1.555           VISIT_POINT_GILDA    pPointAssign    lastpoint 
+1.555           VISIT_POINT_HENRY    pPointAssign    lastpoint 
+1.704           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00010      
+1.802           PPOINTASSIGN_ITER_GAP pPointAssign    1.00205      
+1.802           TEST                 pPointAssign    0.00000      
+1.802           Z_CNT                pPointAssign    7128116.00000 
+1.802           PPOINTASSIGN_ITER_LEN pPointAssign    0.00008      
+1.826           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00172      
+1.826           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00013      
+1.896           UXMS_966_ITER_GAP    uXMS_966        1.00097      
+1.896           UXMS_966_ITER_LEN    uXMS_966        0.00027      
+1.954           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00073      
+1.954           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00012      
+1.954           APPCAST              uTimerScript    proc=uTimerScript!@#iter=3!@#node=shoreside!@#iter=3!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+2.002           PHI_HOST_IP          pHostInfo       localhost 
+2.002           PHI_HOST_INFO        pHostInfo       community=shoreside,hostip=localhost,port_db=9000,pshare_iroutes=localhost:9300,hostip_alts=,timewarp=1 
+2.002           APPCAST              pHostInfo       proc=pHostInfo!@#iter=1!@#node=shoreside!@#iter=1!@#messages=!@  PHI_HOST_IP:         [7;31mDEFAULT HOSTIP FORCED[0m!@  PHI_HOST_IP_ALL:     localhost!@!@  PHI_HOST_IP_VERBOSE: USER_HARD_CONFIGURED=localhost!@!@  PHI_HOST_PORT:       9000!@  PHI_PSHARES_IROUTES: localhost:9300!@  PHI_HOST_INFO:       community=shoreside,hostip=localhost,!@                       port_db=9000,pshare_iroutes=localhost:9300,!@                       hostip_alts=,timewarp=1!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.052           PPOINTASSIGN_ITER_GAP pPointAssign    1.00087      
+2.052           TEST                 pPointAssign    0.00000      
+2.052           Z_CNT                pPointAssign    7128116.00000 
+2.052           PPOINTASSIGN_ITER_LEN pPointAssign    0.00010      
+2.058           NODE_BROKER_PING     uFldNodeBroker  community=henry,hostip=localhost,port_db=9002,pshare_iroutes=localhost:9302,timewarp=1,time=1521578230.95,key=0 
+2.058           NODE_BROKER_PING     uFldNodeBroker  community=gilda,hostip=localhost,port_db=9001,pshare_iroutes=localhost:9301,timewarp=1,time=1521578230.95,key=0 
+2.077           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00120      
+2.077           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00010      
+2.077           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=5!@#node=shoreside!@#iter=5!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       11!@Draw Count Rate:  8.92105!@Curr Time:        1521578230.97!@Time Warp:        1.000!@Elapsed:          0.00006!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.077           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+2.077           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+2.079           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.079           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.097           UXMS_966_ITER_GAP    uXMS_966        1.00234      
+2.097           UXMS_966_ITER_LEN    uXMS_966        0.00016      
+2.102           APPCAST              uFldShoreBroker proc=uFldShoreBroker!@#iter=1!@#node=shoreside!@#iter=1!@#messages=!@ Total PHI_HOST_INFO    received: 1!@ Total NODE_BROKER_PING received: 0!@ Total NODE_BROKER_ACK    posted: 1!@ Total PSHARE_CMD         posted: 0!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@     Community: shoreside!@        HostIP: localhost!@   Port MOOSDB: 9000!@     Time Warp: 1!@       IRoutes: localhost:9300!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@Node  IP               Elap  pShare              !@Name  Address  Status  Time  Input Route(s)  Skew!@----  -------  ------  ----  --------------  ----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.204           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00136      
+2.204           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00010      
+2.297           UXMS_966_ITER_GAP    uXMS_966        1.00087      
+2.297           UXMS_966_ITER_LEN    uXMS_966        0.00018      
+2.297           APPCAST              uXMS_966        proc=uXMS_966!@#iter=5!@#node=shoreside!@#iter=5!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.303           PPOINTASSIGN_ITER_GAP pPointAssign    1.00066      
+2.303           TEST                 pPointAssign    0.00000      
+2.303           Z_CNT                pPointAssign    7128116.00000 
+2.303           PPOINTASSIGN_ITER_LEN pPointAssign    0.00014      
+2.303           APPCAST              pPointAssign    proc=pPointAssign!@#iter=7!@#node=shoreside!@#iter=7!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.327           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00162      
+2.327           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00010      
+2.327           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+2.327           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+2.329           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.329           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.452           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+2.452           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+2.454           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00101      
+2.455           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00014      
+2.455           APPCAST              uTimerScript    proc=uTimerScript!@#iter=5!@#node=shoreside!@#iter=5!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+2.497           UXMS_966_ITER_GAP    uXMS_966        1.00183      
+2.497           UXMS_966_ITER_LEN    uXMS_966        0.00016      
+2.553           PPOINTASSIGN_ITER_GAP pPointAssign    1.00115      
+2.553           TEST                 pPointAssign    0.00000      
+2.553           Z_CNT                pPointAssign    7128116.00000 
+2.553           PPOINTASSIGN_ITER_LEN pPointAssign    0.00012      
+2.577           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00134      
+2.578           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00039      
+2.578           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=7!@#node=shoreside!@#iter=7!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       15!@Draw Count Rate:  8.65162!@Curr Time:        1521578231.47!@Time Warp:        1.000!@Elapsed:          0.00005!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.581           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.581           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.697           UXMS_966_ITER_GAP    uXMS_966        1.00087      
+2.698           UXMS_966_ITER_LEN    uXMS_966        0.00035      
+2.698           APPCAST              uXMS_966        proc=uXMS_966!@#iter=7!@#node=shoreside!@#iter=7!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.705           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00152      
+2.705           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00005      
+2.803           PPOINTASSIGN_ITER_GAP pPointAssign    1.00075      
+2.803           TEST                 pPointAssign    0.00000      
+2.803           Z_CNT                pPointAssign    7128116.00000 
+2.803           PPOINTASSIGN_ITER_LEN pPointAssign    0.00002      
+2.803           APPCAST              pPointAssign    proc=pPointAssign!@#iter=9!@#node=shoreside!@#iter=9!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.828           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00182      
+2.828           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00006      
+2.829           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.829           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoreside,thresh=any 
+2.898           UXMS_966_ITER_GAP    uXMS_966        1.00322      
+2.898           UXMS_966_ITER_LEN    uXMS_966        0.00032      
+2.932           PSHARE_INPUT_SUMMARY pShare          localhost:9300 
+2.955           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00071      
+2.955           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00010      
+2.955           APPCAST              uTimerScript    proc=uTimerScript!@#iter=7!@#node=shoreside!@#iter=7!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+3.002           APPCAST              pHostInfo       proc=pHostInfo!@#iter=2!@#node=shoreside!@#iter=2!@#messages=!@  PHI_HOST_IP:         [7;31mDEFAULT HOSTIP FORCED[0m!@  PHI_HOST_IP_ALL:     localhost!@!@  PHI_HOST_IP_VERBOSE: USER_HARD_CONFIGURED=localhost!@!@  PHI_HOST_PORT:       9000!@  PHI_PSHARES_IROUTES: localhost:9300!@  PHI_HOST_INFO:       community=shoreside,hostip=localhost,!@                       port_db=9000,pshare_iroutes=localhost:9300,!@                       hostip_alts=,timewarp=1!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.053           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+3.053           PPOINTASSIGN_ITER_GAP pPointAssign    1.00058      
+3.053           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+3.053           TEST                 pPointAssign    0.00000      
+3.053           Z_CNT                pPointAssign    7128116.00000 
+3.053           PPOINTASSIGN_ITER_LEN pPointAssign    0.00009      
+2.002           PHI_HOST_IP_ALL      pHostInfo       localhost 
+2.002           PHI_HOST_IP_VERBOSE  pHostInfo       USER_HARD_CONFIGURED=localhost 
+2.002           PHI_HOST_PORT_DB     pHostInfo       9000 
+2.101           UFLDSHOREBROKER_ITER_LEN uFldShoreBroker 0.00000      
+2.932           PSHARE_OUTPUT_SUMMARY pShare           
+3.002           PHOSTINFO_ITER_LEN   pHostInfo       0.00002      
+3.078           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00107      
+3.078           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00004      
+3.078           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=9!@#node=shoreside!@#iter=9!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       19!@Draw Count Rate:  8.50301!@Curr Time:        1521578231.97!@Time Warp:        1.000!@Elapsed:          0.00003!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.081           APPCAST_REQ          pMarineViewer   node=shoreside,app=pPointAssign,duration=3.0,key=pMarineViewer:shoresideapp,thresh=any 
+3.081           APPCAST_REQ_SHORESIDE pMarineViewer   node=shoreside,app=pPointAssign,duration=3.0,key=pMarineViewer:shoresideapp,thresh=any 
+3.081           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoresidegen,thresh=run_warning 
+3.081           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoresidegen,thresh=run_warning 
+3.098           UXMS_966_ITER_GAP    uXMS_966        1.00101      
+3.098           UXMS_966_ITER_LEN    uXMS_966        0.00014      
+3.098           APPCAST              uXMS_966        proc=uXMS_966!@#iter=9!@#node=shoreside!@#iter=9!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=NODE_BROKER_ACK_HENRY,dest_name=NODE_BROKER_ACK,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=NODE_BROKER_ACK_GILDA,dest_name=NODE_BROKER_ACK,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=VISIT_POINT_HENRY,dest_name=VISIT_POINT,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=REFUEL_TIME_RESET_ALL,dest_name=REFUEL_TIME_RESET,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=REFUEL_NEEDED_ALL,dest_name=REFUEL_NEEDED,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=RETURN_HENRY,dest_name=RETURN,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=RETURN_ALL,dest_name=RETURN,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=MOOS_MANUAL_OVERRIDE_ALL,dest_name=MOOS_MANUAL_OVERRIDE,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=MOOS_MANUAL_OVERRIDE_HENRY,dest_name=MOOS_MANUAL_OVERRIDE,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=STATION_KEEP_ALL,dest_name=STATION_KEEP,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=STATION_KEEP_HENRY,dest_name=STATION_KEEP,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=APPCAST_REQ_ALL,dest_name=APPCAST_REQ,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=APPCAST_REQ_HENRY,dest_name=APPCAST_REQ,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=DEPLOY_ALL,dest_name=DEPLOY,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=DEPLOY_HENRY,dest_name=DEPLOY,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=NODE_REPORT_ALL,dest_name=NODE_REPORT,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=NODE_REPORT_HENRY,dest_name=NODE_REPORT,route=localhost:9302 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=VISIT_POINT_GILDA,dest_name=VISIT_POINT,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=REFUEL_TIME_RESET_ALL,dest_name=REFUEL_TIME_RESET,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=REFUEL_NEEDED_ALL,dest_name=REFUEL_NEEDED,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=RETURN_GILDA,dest_name=RETURN,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=RETURN_ALL,dest_name=RETURN,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=MOOS_MANUAL_OVERRIDE_ALL,dest_name=MOOS_MANUAL_OVERRIDE,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=MOOS_MANUAL_OVERRIDE_GILDA,dest_name=MOOS_MANUAL_OVERRIDE,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=STATION_KEEP_ALL,dest_name=STATION_KEEP,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=STATION_KEEP_GILDA,dest_name=STATION_KEEP,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=APPCAST_REQ_ALL,dest_name=APPCAST_REQ,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=APPCAST_REQ_GILDA,dest_name=APPCAST_REQ,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=DEPLOY_ALL,dest_name=DEPLOY,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=DEPLOY_GILDA,dest_name=DEPLOY,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=NODE_REPORT_ALL,dest_name=NODE_REPORT,route=localhost:9301 
+3.102           PSHARE_CMD           uFldShoreBroker cmd=output,src_name=NODE_REPORT_GILDA,dest_name=NODE_REPORT,route=localhost:9301 
+3.102           UFLDSHOREBROKER_ITER_LEN uFldShoreBroker 0.00055      
+3.103           APPCAST              uFldShoreBroker proc=uFldShoreBroker!@#iter=2!@#node=shoreside!@#iter=2!@#messages=!@ Total PHI_HOST_INFO    received: 1!@ Total NODE_BROKER_PING received: 2!@ Total NODE_BROKER_ACK    posted: 2!@ Total PSHARE_CMD         posted: 32!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@     Community: shoreside!@        HostIP: localhost!@   Port MOOSDB: 9000!@     Time Warp: 1!@       IRoutes: localhost:9300!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@Node   IP                 Elap  pShare                !@Name   Address    Status  Time  Input Route(s)  Skew  !@-----  ---------  ------  ----  --------------  ------!@henry  localhost  ok      0.0   localhost:9302  1.0405!@gilda  localhost  ok      0.0   localhost:9301  1.0405!@!@#!@#events_total=8!@#events=[2.00]: PSHARE_CMD:cmd=output,src_name=STATION_KEEP_ALL,dest_name=STATION_KEEP,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=STATION_KEEP_GILDA,dest_name=STATION_KEEP,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=APPCAST_REQ_ALL,dest_name=APPCAST_REQ,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=APPCAST_REQ_GILDA,dest_name=APPCAST_REQ,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=DEPLOY_ALL,dest_name=DEPLOY,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=DEPLOY_GILDA,dest_name=DEPLOY,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=NODE_REPORT_ALL,dest_name=NODE_REPORT,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=NODE_REPORT_GILDA,dest_name=NODE_REPORT,route=localhost:9301!@#run_warning_total=0!@# 
+3.058           NODE_BROKER_PING     uFldNodeBroker  community=henry,hostip=localhost,port_db=9002,pshare_iroutes=localhost:9302,timewarp=1,time=1521578231.95,key=0 
+3.058           NODE_BROKER_PING     uFldNodeBroker  community=gilda,hostip=localhost,port_db=9001,pshare_iroutes=localhost:9301,timewarp=1,time=1521578231.95,key=0 
+3.205           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00176      
+3.206           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00014      
+3.299           UXMS_966_ITER_GAP    uXMS_966        1.00151      
+3.299           UXMS_966_ITER_LEN    uXMS_966        0.00021      
+3.303           PPOINTASSIGN_ITER_GAP pPointAssign    1.00093      
+3.303           TEST                 pPointAssign    0.00000      
+3.303           Z_CNT                pPointAssign    7128116.00000 
+3.303           PPOINTASSIGN_ITER_LEN pPointAssign    0.00009      
+3.303           APPCAST              pPointAssign    proc=pPointAssign!@#iter=11!@#node=shoreside!@#iter=11!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.328           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00092      
+3.328           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00012      
+3.456           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00101      
+3.456           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00007      
+3.456           APPCAST              uTimerScript    proc=uTimerScript!@#iter=9!@#node=shoreside!@#iter=9!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+3.499           UXMS_966_ITER_GAP    uXMS_966        1.00133      
+3.499           UXMS_966_ITER_LEN    uXMS_966        0.00021      
+3.499           APPCAST              uXMS_966        proc=uXMS_966!@#iter=11!@#node=shoreside!@#iter=11!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.554           PPOINTASSIGN_ITER_GAP pPointAssign    1.00071      
+3.554           TEST                 pPointAssign    0.00000      
+3.554           Z_CNT                pPointAssign    7128116.00000 
+3.554           PPOINTASSIGN_ITER_LEN pPointAssign    0.00008      
+3.579           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00076      
+3.579           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00006      
+3.579           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=11!@#node=shoreside!@#iter=11!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       23!@Draw Count Rate:  8.40974!@Curr Time:        1521578232.47!@Time Warp:        1.000!@Elapsed:          0.00003!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.654           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+3.654           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+3.700           UXMS_966_ITER_GAP    uXMS_966        1.00317      
+3.700           UXMS_966_ITER_LEN    uXMS_966        0.00027      
+3.706           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00131      
+3.706           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00014      
+3.804           PPOINTASSIGN_ITER_GAP pPointAssign    1.00079      
+3.804           TEST                 pPointAssign    0.00000      
+3.804           Z_CNT                pPointAssign    7128116.00000 
+3.804           PPOINTASSIGN_ITER_LEN pPointAssign    0.00009      
+3.804           APPCAST              pPointAssign    proc=pPointAssign!@#iter=13!@#node=shoreside!@#iter=13!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.804           DB_TIME              MOOSDB_shoreside 1521578232.69280 
+3.804           DB_UPTIME            MOOSDB_shoreside 4.00881      
+3.804           DB_CLIENTS           MOOSDB_shoreside uXMS_966,uTimerScript,uFldShoreBroker,pHostInfo,pShare,pMarineViewer,pLogger,pPointAssign,uMAC_4550, 
+3.805           DB_VARSUMMARY        MOOSDB_shoreside APPCAST              16:37:12.510         pMarineViewer        11.1Hz S  proc=pMarineViewer!@#i...
+APPCAST_REQ          16:37:12.543         uMAC_4550            5.5 Hz S  node=all,app=all,durat...
+APPCAST_REQ_ALL      16:37:12.543         uMAC_4550            4.5 Hz S  node=all,app=all,durat...
+APPCAST_REQ_GILDA    18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPCAST_REQ_HENRY    18:59:59.000         (write pending)      0.0 Hz ~  
+                   APPCAST_REQ_SHORESIDE 16:37:12.010         pMarineViewer        0.2 Hz S  node=shoreside,app=pPo...
+DB_CLIENTS           16:37:12.692         MOOSDB_shoreside     0.2 Hz S  uXMS_966,uTimerScript,...
+DB_EVENT             16:37:09.666         MOOSDB_shoreside     4.3 Hz S  connected=uXMS_966  
+DB_QOS               16:37:10.691         MOOSDB_shoreside     0.0 Hz S  pHostInfo=0:0.246048:0...
+DB_RWSUMMARY         16:37:10.692         MOOSDB_shoreside     0.0 Hz S  uXMS_966=APPCAST_REQ:D...
+DB_TIME              16:37:12.692         MOOSDB_shoreside     0.2 Hz D  1521578232.7         
+DB_UPTIME            16:37:12.692         MOOSDB_shoreside     0.2 Hz D  4.0                  
+DB_VARSUMMARY        16:37:10.691         MOOSDB_shoreside     0.0 Hz S  APPCAST              1...
+DEPLOY_ALL           18:59:59.000         (write pending)      0.0 Hz ~  
+                   DEPLOY_GILDA         18:59:59.000         (write pending)      0.0 Hz ~  
+                   DEPLOY_HENRY         18:59:59.000         (write pending)      0.0 Hz ~  
+                   EXITED_NORMALLY      18:59:59.000         (write pending)      0.0 Hz ~  
+                   GRID_CONFIG          18:59:59.000         (write pending)      0.0 Hz ~  
+                   GRID_DELTA           18:59:59.000         (write pending)      0.0 Hz ~  
+                   HELM_MAP_CLEAR       16:37:09.964         pMarineViewer        0.0 Hz D  0.0                  
+HOST_INFO_REQUEST    18:59:59.000         (write pending)      0.0 Hz ~  
+                   LOGGER_DIRECTORY     16:37:09.582         pLogger              0.0 Hz S  ./LOG_SHORESIDE_20_3_2...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_MANUAL_OVERRIDE_ALL 18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_MANUAL_OVERRIDE_GILDA 18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_MANUAL_OVERRIDE_HENRY 18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_BROKER_ACK_GILDA 16:37:12.011         uFldShoreBroker      0.0 Hz S  community=shoreside,ho...
+NODE_BROKER_ACK_HENRY 16:37:12.011         uFldShoreBroker      0.0 Hz S  community=shoreside,ho...
+NODE_BROKER_PING     16:37:12.054         uFldNodeBroker       0.9 Hz S  community=henry,hostip...
+NODE_BROKER_VACK     16:37:12.011         uFldShoreBroker      0.0 Hz S  gilda               
+NODE_REPORT          18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_ALL      18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_GILDA    18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_HENRY    18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_LOCAL    18:59:59.000         (write pending)      0.0 Hz ~  
+                   PHI_HOST_INFO        16:37:10.934         pHostInfo            0.0 Hz S  community=shoreside,ho...
+PHI_HOST_IP          16:37:10.890         pHostInfo            0.0 Hz S  localhost           
+PHI_HOST_IP_ALL      16:37:10.890         pHostInfo            0.0 Hz S  localhost           
+PHI_HOST_IP_VERBOSE  16:37:10.890         pHostInfo            0.0 Hz S  USER_HARD_CONFIGURED=l...
+PHI_HOST_PORT_DB     16:37:10.890         pHostInfo            0.0 Hz S  9000                
+PHOSTINFO_ITER_GAP   16:37:11.891         pHostInfo            0.0 Hz D  1.0                  
+PHOSTINFO_ITER_LEN   16:37:11.891         pHostInfo            0.5 Hz D  0.0                  
+PHOSTINFO_STATUS     16:37:10.890         pHostInfo            0.0 Hz S  AppErrorFlag=false,Upt...
+PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       16:37:11.649         pLogger              0.2 Hz S  AppErrorFlag=false,Upt...
+PMARINEVIEWER_ITER_GAP 16:37:12.467         pMarineViewer        3.7 Hz D  1.0                  
+PMARINEVIEWER_ITER_LEN 16:37:12.467         pMarineViewer        3.8 Hz D  0.0                  
+PMARINEVIEWER_STATUS 16:37:11.967         pMarineViewer        0.2 Hz S  AppErrorFlag=false,Upt...
+PMV_CLEAR            18:59:59.000         (write pending)      0.0 Hz ~  
+                   PMV_CONNECT          16:37:09.964         pMarineViewer        0.0 Hz D  0.0                  
+PMV_MENU_CONTEXT     18:59:59.000         (write pending)      0.0 Hz ~  
+                   PPOINTASSIGN_ITER_GAP 16:37:12.692         pPointAssign         3.9 Hz D  1.0                  
+PPOINTASSIGN_ITER_LEN 16:37:12.692         pPointAssign         3.9 Hz D  0.0                  
+PPOINTASSIGN_STATUS  16:37:11.691         pPointAssign         0.2 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           16:37:12.011         uFldShoreBroker      0.0 Hz S  cmd=output,src_name=NO...
+PSHARE_INPUT_SUMMARY 16:37:11.820         pShare               0.5 Hz S  localhost:9300      
+PSHARE_OUTPUT_SUMMARY 16:37:11.820         pShare               0.5 Hz S                      
+PSHARE_STATUS        16:37:11.820         pShare               0.3 Hz S  AppErrorFlag=false,Upt...
+REFUEL_NEEDED_ALL    18:59:59.000         (write pending)      0.0 Hz ~  
+                   REFUEL_TIME_RESET_ALL 18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_ALL           18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_GILDA         18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_HENRY         18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_ALL     18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_GILDA   18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_HENRY   18:59:59.000         (write pending)      0.0 Hz ~  
+                   TEST                 16:37:12.692         pPointAssign         3.9 Hz D  0.0                  
+TRAIL_RESET          18:59:59.000         (write pending)      0.0 Hz ~  
+                   UFLDSHOREBROKER_ITER_GAP 16:37:12.010         uFldShoreBroker      0.0 Hz D  1.0                  
+UFLDSHOREBROKER_ITER_LEN 16:37:12.011         uFldShoreBroker      0.5 Hz D  0.0                  
+UFLDSHOREBROKER_STATUS 16:37:10.990         uFldShoreBroker      0.0 Hz S  AppErrorFlag=false,Upt...
+UMAC_4550_STATUS     16:37:11.541         uMAC_4550            0.2 Hz S  AppErrorFlag=false,Upt...
+UTIMERSCRIPT_ITER_GAP 16:37:12.595         uTimerScript         3.7 Hz D  1.0                  
+UTIMERSCRIPT_ITER_LEN 16:37:12.595         uTimerScript         3.8 Hz D  0.0                  
+UTIMERSCRIPT_STATUS  16:37:12.344         uTimerScript         0.2 Hz S  AppErrorFlag=false,Upt...
+UTS_FORWARD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_PAUSE            18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_RESET            18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_STATUS           16:37:10.390         uTimerScript         0.0 Hz S  name=unnamed, elapsed_...
+UXMS_966_ITER_GAP    16:37:12.588         uXMS_966             4.4 Hz D  1.0                  
+UXMS_966_ITER_LEN    16:37:12.588         uXMS_966             4.2 Hz D  0.0                  
+UXMS_966_STATUS      16:37:12.387         uXMS_966             0.2 Hz S  AppErrorFlag=false,Upt...
+VIEW_CIRCLE          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_COMMS_PULSE     18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_GRID            18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_MARKER          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_POINT           16:37:10.490         pPointAssign         0.0 Hz S  x=125.368,y=-142.45,la...
+VIEW_POLYGON         18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_RANGE_PULSE     18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_SEGLIST         18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_SEGLR           18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_VECTOR          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_WEDGE           18:59:59.000         (write pending)      0.0 Hz ~  
+                   VISIT_POINT          16:37:10.390         uTimerScript         0.0 Hz S  lastpoint           
+VISIT_POINT_GILDA    16:37:10.490         pPointAssign         0.0 Hz S  lastpoint           
+VISIT_POINT_HENRY    16:37:10.490         pPointAssign         0.0 Hz S  lastpoint           
+Z_CNT                16:37:12.692         pPointAssign         3.9 Hz D  7128116.0            
+gilda_REFUEL_END     18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_REFUEL_START   18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_TIME_refueling 18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_TIME_running   18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_REFUEL_END     18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_REFUEL_START   18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_TIME_refueling 18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_TIME_running   18:59:59.000         (write pending)      0.0 Hz ~  
+                    
+3.805           DB_QOS               MOOSDB_shoreside pHostInfo=0:0.246048:0.110149:0,pLogger=0:0.193119:0.13113:0,pMarineViewer=0:0.188112:0.105143:0,pPointAssign=0:0.415087:0.169992:0,pShare=0:0.169039:0.0948906:0,uFldShoreBroker=0:0.332117:0.136137:0,uMAC_4550=0:0.147104:0.110865:0,uTimerScript=0:0.184059:0.0669956:0,uXMS_966=0:0.190973:0.140905:0, 
+3.805           DB_RWSUMMARY         MOOSDB_shoreside uXMS_966=APPCAST_REQ:DB_UPTIME:DEPLOY_ALL:REFUEL_NEEDED_ALL:RETURN_ALL:STATION_KEEP_ALL:gilda_REFUEL_END:gilda_REFUEL_START:gilda_TIME_refueling:gilda_TIME_running:henry_REFUEL_END:henry_REFUEL_START:henry_TIME_refueling:henry_TIME_running&APPCAST:UXMS_966_ITER_GAP:UXMS_966_ITER_LEN:UXMS_966_STATUS,uTimerScript=APPCAST_REQ:DB_CLIENTS:DB_UPTIME:EXITED_NORMALLY:TEST:UTS_FORWARD:UTS_PAUSE:UTS_RESET&APPCAST:UTIMERSCRIPT_ITER_GAP:UTIMERSCRIPT_ITER_LEN:UTIMERSCRIPT_STATUS:UTS_STATUS:VISIT_POINT,uFldShoreBroker=APPCAST_REQ:NODE_BROKER_PING:PHI_HOST_INFO&APPCAST:NODE_BROKER_ACK_GILDA:NODE_BROKER_ACK_HENRY:NODE_BROKER_VACK:PSHARE_CMD:UFLDSHOREBROKER_ITER_GAP:UFLDSHOREBROKER_ITER_LEN:UFLDSHOREBROKER_STATUS,pHostInfo=APPCAST_REQ:HOST_INFO_REQUEST:PSHARE_INPUT_SUMMARY&APPCAST:PHI_HOST_INFO:PHI_HOST_IP:PHI_HOST_IP_ALL:PHI_HOST_IP_VERBOSE:PHI_HOST_PORT_DB:PHOSTINFO_ITER_GAP:PHOSTINFO_ITER_LEN:PHOSTINFO_STATUS,pShare=APPCAST_REQ_ALL:APPCAST_REQ_GILDA:APPCAST_REQ_HENRY:DEPLOY_ALL:DEPLOY_GILDA:DEPLOY_HENRY:MOOS_MANUAL_OVERRIDE_ALL:MOOS_MANUAL_OVERRIDE_GILDA:MOOS_MANUAL_OVERRIDE_HENRY:NODE_BROKER_ACK_GILDA:NODE_BROKER_ACK_HENRY:NODE_REPORT_ALL:NODE_REPORT_GILDA:NODE_REPORT_HENRY:PSHARE_CMD:REFUEL_NEEDED_ALL:REFUEL_TIME_RESET_ALL:RETURN_ALL:RETURN_GILDA:RETURN_HENRY:STATION_KEEP_ALL:STATION_KEEP_GILDA:STATION_KEEP_HENRY:VISIT_POINT_GILDA:VISIT_POINT_HENRY&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pMarineViewer=APPCAST:APPCAST_REQ:GRID_CONFIG:GRID_DELTA:NODE_REPORT:NODE_REPORT_LOCAL:PHI_HOST_INFO:PHI_HOST_IP:PMV_CLEAR:PMV_MENU_CONTEXT:REFUEL_NEEDED_ALL:TRAIL_RESET:VIEW_CIRCLE:VIEW_COMMS_PULSE:VIEW_GRID:VIEW_MARKER:VIEW_POINT:VIEW_POLYGON:VIEW_RANGE_PULSE:VIEW_SEGLIST:VIEW_SEGLR:VIEW_VECTOR:VIEW_WEDGE&APPCAST:APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_SHORESIDE:HELM_MAP_CLEAR:PMARINEVIEWER_ITER_GAP:PMARINEVIEWER_ITER_LEN:PMARINEVIEWER_STATUS:PMV_CONNECT,pLogger=APPCAST:APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_SHORESIDE:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:DEPLOY_ALL:EXITED_NORMALLY:GRID_CONFIG:GRID_DELTA:HELM_MAP_CLEAR:HOST_INFO_REQUEST:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_SYSTEM:NODE_BROKER_PING:NODE_REPORT:NODE_REPORT_LOCAL:PHI_HOST_INFO:PHI_HOST_IP:PHI_HOST_IP_ALL:PHI_HOST_IP_VERBOSE:PHI_HOST_PORT_DB:PHOSTINFO_ITER_LEN:PLOGGER_CMD:PMARINEVIEWER_ITER_GAP:PMARINEVIEWER_ITER_LEN:PMV_CLEAR:PMV_CONNECT:PMV_MENU_CONTEXT:PPOINTASSIGN_ITER_GAP:PPOINTASSIGN_ITER_LEN:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:REFUEL_NEEDED_ALL:RETURN_ALL:STATION_KEEP_ALL:TEST:TRAIL_RESET:UFLDSHOREBROKER_ITER_LEN:UTIMERSCRIPT_ITER_GAP:UTIMERSCRIPT_ITER_LEN:UTS_FORWARD:UTS_PAUSE:UTS_RESET:UXMS_966_ITER_GAP:UXMS_966_ITER_LEN:VIEW_CIRCLE:VIEW_COMMS_PULSE:VIEW_GRID:VIEW_MARKER:VIEW_POINT:VIEW_POLYGON:VIEW_RANGE_PULSE:VIEW_SEGLIST:VIEW_SEGLR:VIEW_VECTOR:VIEW_WEDGE:VISIT_POINT:VISIT_POINT_GILDA:VISIT_POINT_HENRY:Z_CNT:gilda_REFUEL_END:gilda_REFUEL_START:gilda_TIME_refueling:gilda_TIME_running:henry_REFUEL_END:henry_REFUEL_START:henry_TIME_refueling:henry_TIME_running&LOGGER_DIRECTORY:PLOGGER_STATUS,pPointAssign=APPCAST_REQ:VISIT_POINT&APPCAST:PPOINTASSIGN_ITER_GAP:PPOINTASSIGN_ITER_LEN:PPOINTASSIGN_STATUS:TEST:VIEW_POINT:VISIT_POINT_GILDA:VISIT_POINT_HENRY:Z_CNT,uMAC_4550=APPCAST&APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_SHORESIDE:UMAC_4550_STATUS 
+3.829           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00113      
+3.829           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00008      
+3.900           UXMS_966_ITER_GAP    uXMS_966        1.00088      
+3.900           UXMS_966_ITER_LEN    uXMS_966        0.00022      
+3.900           APPCAST              uXMS_966        proc=uXMS_966!@#iter=13!@#node=shoreside!@#iter=13!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34mn/a[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32mn/a[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+3.956           PSHARE_OUTPUT_SUMMARY pShare          APPCAST_REQ_ALL->APPCAST_REQ:localhost:9302 & APPCAST_REQ:localhost:9301, APPCAST_REQ_GILDA->APPCAST_REQ:localhost:9301, APPCAST_REQ_HENRY->APPCAST_REQ:localhost:9302, DEPLOY_ALL->DEPLOY:localhost:9302 & DEPLOY:localhost:9301, DEPLOY_GILDA->DEPLOY:localhost:9301, DEPLOY_HENRY->DEPLOY:localhost:9302, MOOS_MANUAL_OVERRIDE_ALL->MOOS_MANUAL_OVERRIDE:localhost:9302 & MOOS_MANUAL_OVERRIDE:localhost:9301, MOOS_MANUAL_OVERRIDE_GILDA->MOOS_MANUAL_OVERRIDE:localhost:9301, MOOS_MANUAL_OVERRIDE_HENRY->MOOS_MANUAL_OVERRIDE:localhost:9302, NODE_BROKER_ACK_GILDA->NODE_BROKER_ACK:localhost:9301, NODE_BROKER_ACK_HENRY->NODE_BROKER_ACK:localhost:9302, NODE_REPORT_ALL->NODE_REPORT:localhost:9302 & NODE_REPORT:localhost:9301, NODE_REPORT_GILDA->NODE_REPORT:localhost:9301, NODE_REPORT_HENRY->NODE_REPORT:localhost:9302, REFUEL_NEEDED_ALL->REFUEL_NEEDED:localhost:9302 & REFUEL_NEEDED:localhost:9301, REFUEL_TIME_RESET_ALL->REFUEL_TIME_RESET:localhost:9302 & REFUEL_TIME_RESET:localhost:9301, RETURN_ALL->RETURN:localhost:9302 & RETURN:localhost:9301, RETURN_GILDA->RETURN:localhost:9301, RETURN_HENRY->RETURN:localhost:9302, STATION_KEEP_ALL->STATION_KEEP:localhost:9302 & STATION_KEEP:localhost:9301, STATION_KEEP_GILDA->STATION_KEEP:localhost:9301, STATION_KEEP_HENRY->STATION_KEEP:localhost:9302, VISIT_POINT_GILDA->VISIT_POINT:localhost:9301, VISIT_POINT_HENRY->VISIT_POINT:localhost:9302 
+3.956           PSHARE_INPUT_SUMMARY pShare          localhost:9300 
+3.956           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00070      
+3.956           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00019      
+3.957           APPCAST              uTimerScript    proc=uTimerScript!@#iter=11!@#node=shoreside!@#iter=11!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+4.003           PHOSTINFO_ITER_LEN   pHostInfo       0.00000      
+4.003           APPCAST              pHostInfo       proc=pHostInfo!@#iter=3!@#node=shoreside!@#iter=3!@#messages=!@  PHI_HOST_IP:         [7;31mDEFAULT HOSTIP FORCED[0m!@  PHI_HOST_IP_ALL:     localhost!@!@  PHI_HOST_IP_VERBOSE: USER_HARD_CONFIGURED=localhost!@!@  PHI_HOST_PORT:       9000!@  PHI_PSHARES_IROUTES: localhost:9300!@  PHI_HOST_INFO:       community=shoreside,hostip=localhost,!@                       port_db=9000,pshare_iroutes=localhost:9300,!@                       hostip_alts=,timewarp=1!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.054           PPOINTASSIGN_ITER_GAP pPointAssign    1.00067      
+4.054           TEST                 pPointAssign    0.00000      
+4.054           Z_CNT                pPointAssign    7128116.00000 
+4.054           PPOINTASSIGN_ITER_LEN pPointAssign    0.00008      
+0.758           gilda_REFUEL_START   pHelmIvP:HELM_VAR_INIT false 
+0.758           henry_REFUEL_START   pHelmIvP:HELM_VAR_INIT false 
+4.079           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00085      
+4.079           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00010      
+4.079           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=13!@#node=shoreside!@#iter=13!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 0!@NodeReport Index: 0!@Draw Count:       27!@Draw Count Rate:  8.34513!@Curr Time:        1521578232.97!@Time Warp:        1.000!@Elapsed:          0.00004!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.081           APPCAST_REQ          pMarineViewer   node=shoreside,app=pPointAssign,duration=3.0,key=pMarineViewer:shoresideapp,thresh=any 
+4.081           APPCAST_REQ_SHORESIDE pMarineViewer   node=shoreside,app=pPointAssign,duration=3.0,key=pMarineViewer:shoresideapp,thresh=any 
+4.081           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoresidegen,thresh=run_warning 
+4.081           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoresidegen,thresh=run_warning 
+4.100           UXMS_966_ITER_GAP    uXMS_966        1.00225      
+4.100           UXMS_966_ITER_LEN    uXMS_966        0.00020      
+4.103           UFLDSHOREBROKER_ITER_LEN uFldShoreBroker 0.00003      
+4.103           APPCAST              uFldShoreBroker proc=uFldShoreBroker!@#iter=3!@#node=shoreside!@#iter=3!@#messages=!@ Total PHI_HOST_INFO    received: 1!@ Total NODE_BROKER_PING received: 4!@ Total NODE_BROKER_ACK    posted: 3!@ Total PSHARE_CMD         posted: 32!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@     Community: shoreside!@        HostIP: localhost!@   Port MOOSDB: 9000!@     Time Warp: 1!@       IRoutes: localhost:9300!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@Node   IP                 Elap  pShare                !@Name   Address    Status  Time  Input Route(s)  Skew  !@-----  ---------  ------  ----  --------------  ------!@henry  localhost  ok      0.0   localhost:9302  1.0410!@gilda  localhost  ok      0.0   localhost:9301  1.0410!@!@#!@#events_total=8!@#events=[2.00]: PSHARE_CMD:cmd=output,src_name=STATION_KEEP_ALL,dest_name=STATION_KEEP,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=STATION_KEEP_GILDA,dest_name=STATION_KEEP,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=APPCAST_REQ_ALL,dest_name=APPCAST_REQ,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=APPCAST_REQ_GILDA,dest_name=APPCAST_REQ,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=DEPLOY_ALL,dest_name=DEPLOY,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=DEPLOY_GILDA,dest_name=DEPLOY,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=NODE_REPORT_ALL,dest_name=NODE_REPORT,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=NODE_REPORT_GILDA,dest_name=NODE_REPORT,route=localhost:9301!@#run_warning_total=0!@# 
+2.058           APPCAST              uFldNodeBroker  proc=uFldNodeBroker!@#iter=1!@#node=henry!@#iter=1!@#messages=!@  Total OK  PHI_HOST_INFO    received: 1!@  Total BAD PHI_HOST_INFO    received: 0!@  Total HOST_INFO changes    received: 1!@  Total          PSHARE_CMD    posted: 2!@  Total BAD NODE_BROKER_ACK  received: 0!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@     Community: henry!@        HostIP: localhost!@   Port MOOSDB: 9002!@     Time Warp: 1!@   TryHost IPs: !@      IRoutes: localhost:9302!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@Community                  Pings  Pings  IP       Time!@Name       Route           Sent   Acked  Address  Warp!@---------  --------------  -----  -----  -------  ----!@           localhost:9300  1      0                   !@!@Phase Completion Summary:!@------------------------------------!@ Phase 1: (Y) Valid Host information retrieved (iroutes).!@ Phase 2: (Y) Valid TryHosts (1) configured.!@ Phase 3: (Y) NODE_BROKER_PINGS are being sent to TryHosts.!@ Phase 4: (N) A Valid NODE_BROKER_ACK has been received.!@ Phase 5: (N) pShare requested to share user vars with shoreside.!@*Hint: Phase 4 problem. Check that shoreside is running and            !@      that shoreside has received this node's NODE_BROKER_PING.        !@      If the shoreside HAS NOT received the ping, check that the       !@      pShare input route matches one of the TryHosts in uFldNodeBroker.!@      If the shoreside HAS received a ping, check that we have received!@      a NODE_BROKER_ACK in the local MOOSDB.!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+2.058           APPCAST              uFldNodeBroker  proc=uFldNodeBroker!@#iter=1!@#node=gilda!@#iter=1!@#messages=!@  Total OK  PHI_HOST_INFO    received: 1!@  Total BAD PHI_HOST_INFO    received: 0!@  Total HOST_INFO changes    received: 1!@  Total          PSHARE_CMD    posted: 2!@  Total BAD NODE_BROKER_ACK  received: 0!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@     Community: gilda!@        HostIP: localhost!@   Port MOOSDB: 9001!@     Time Warp: 1!@   TryHost IPs: !@      IRoutes: localhost:9301!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@Community                  Pings  Pings  IP       Time!@Name       Route           Sent   Acked  Address  Warp!@---------  --------------  -----  -----  -------  ----!@           localhost:9300  1      0                   !@!@Phase Completion Summary:!@------------------------------------!@ Phase 1: (Y) Valid Host information retrieved (iroutes).!@ Phase 2: (Y) Valid TryHosts (1) configured.!@ Phase 3: (Y) NODE_BROKER_PINGS are being sent to TryHosts.!@ Phase 4: (N) A Valid NODE_BROKER_ACK has been received.!@ Phase 5: (N) pShare requested to share user vars with shoreside.!@*Hint: Phase 4 problem. Check that shoreside is running and            !@      that shoreside has received this node's NODE_BROKER_PING.        !@      If the shoreside HAS NOT received the ping, check that the       !@      pShare input route matches one of the TryHosts in uFldNodeBroker.!@      If the shoreside HAS received a ping, check that we have received!@      a NODE_BROKER_ACK in the local MOOSDB.!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.003           PHOSTINFO_ITER_GAP   pHostInfo       1.00041      
+4.059           NODE_BROKER_PING     uFldNodeBroker  community=henry,hostip=localhost,port_db=9002,pshare_iroutes=localhost:9302,timewarp=1,time=1521578232.95,key=0 
+4.059           NODE_BROKER_PING     uFldNodeBroker  community=gilda,hostip=localhost,port_db=9001,pshare_iroutes=localhost:9301,timewarp=1,time=1521578232.95,key=0 
+4.101           NODE_REPORT          pNodeReporter   NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,LON=-70.3304,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=6,YAW=-1.5707963,TIME=1521578232.99,LENGTH=4 
+4.102           NODE_REPORT          pNodeReporter   NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=6,YAW=-1.5707963,TIME=1521578232.99,LENGTH=4 
+4.103           UFLDSHOREBROKER_ITER_GAP uFldShoreBroker 1.00093      
+4.103           NODE_BROKER_ACK_HENRY uFldShoreBroker community=shoreside,hostip=localhost,port_db=9000,pshare_iroutes=localhost:9300,timewarp=1,status=ok,key=0,id=2 
+4.103           NODE_BROKER_ACK_GILDA uFldShoreBroker community=shoreside,hostip=localhost,port_db=9000,pshare_iroutes=localhost:9300,timewarp=1,status=ok,key=0,id=2 
+4.103           NODE_BROKER_VACK     uFldShoreBroker gilda 
+4.207           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00189      
+4.207           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00013      
+4.255           APPCAST_REQ          uMAC_4550       node=henry,app=all,duration=0.1,key=uMAC_4550startup,thresh=any 
+4.255           APPCAST_REQ_HENRY    uMAC_4550       node=henry,app=all,duration=0.1,key=uMAC_4550startup,thresh=any 
+4.255           APPCAST_REQ          uMAC_4550       node=gilda,app=all,duration=0.1,key=uMAC_4550startup,thresh=any 
+4.255           APPCAST_REQ_GILDA    uMAC_4550       node=gilda,app=all,duration=0.1,key=uMAC_4550startup,thresh=any 
+4.255           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+4.255           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+4.262           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=14!@#node=henry!@#iter=14!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.300           UXMS_966_ITER_GAP    uXMS_966        1.00090      
+4.300           UXMS_966_ITER_LEN    uXMS_966        0.00017      
+4.301           APPCAST              uXMS_966        proc=uXMS_966!@#iter=15!@#node=shoreside!@#iter=15!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34m"false"[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32m"false"[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.304           PPOINTASSIGN_ITER_GAP pPointAssign    1.00058      
+4.304           TEST                 pPointAssign    0.00000      
+4.304           Z_CNT                pPointAssign    7128116.00000 
+4.304           PPOINTASSIGN_ITER_LEN pPointAssign    0.00006      
+4.304           APPCAST              pPointAssign    proc=pPointAssign!@#iter=15!@#node=shoreside!@#iter=15!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.307           APPCAST              uSimMarine      proc=uSimMarine!@#iter=38!@#node=gilda!@#iter=38!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose       Current Pose (NAV)   Current Pose (GT)!@------- --------   ------- ----------   ------- ---------!@Headng: 180        Headng: 180           (same) -        !@ Speed: 0           Speed: 0                    -        !@ Depth: 0           Depth: 0                    -        !@   Alt: 0             Alt: 0                    -        !@ (X,Y): 0,0         (X,Y): 0,0                  -        !@   Lat: 43.8253       Lat: 43.8253              -        !@   Lon: -70.3304      Lon: -70.3304             -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.307           APPCAST              uSimMarine      proc=uSimMarine!@#iter=38!@#node=henry!@#iter=38!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose           Current Pose (NAV)     Current Pose (GT)!@------- ------------   ------- ------------   ------- ---------!@Headng: 180            Headng: 180             (same) -        !@ Speed: 0               Speed: 0                      -        !@ Depth: 0               Depth: 0                      -        !@   Alt: 0                 Alt: 0                      -        !@ (X,Y): 80,0            (X,Y): 80,0                   -        !@   Lat: 43.82531158       Lat: 43.82531158            -        !@   Lon: -70.32940535      Lon: -70.32940535           -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.329           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00142      
+4.329           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00020      
+4.330           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=0.1,key=pMarineViewerstartup,thresh=any 
+4.330           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=0.1,key=pMarineViewerstartup,thresh=any 
+4.457           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00075      
+4.457           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00011      
+4.457           APPCAST              uTimerScript    proc=uTimerScript!@#iter=13!@#node=shoreside!@#iter=13!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+4.501           UXMS_966_ITER_GAP    uXMS_966        1.00242      
+4.501           UXMS_966_ITER_LEN    uXMS_966        0.00013      
+4.512           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=15!@#node=gilda!@#iter=15!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.554           PPOINTASSIGN_ITER_GAP pPointAssign    1.00092      
+4.554           TEST                 pPointAssign    0.00000      
+4.554           Z_CNT                pPointAssign    7128116.00000 
+4.554           PPOINTASSIGN_ITER_LEN pPointAssign    0.00010      
+4.580           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00134      
+4.580           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00013      
+4.580           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=15!@#node=shoreside!@#iter=15!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 2!@NodeReport Index: 6!@Draw Count:       31!@Draw Count Rate:  8.2974!@Curr Time:        1521578233.47!@Time Warp:        1.000!@Elapsed:          0.00008!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.581           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+4.581           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+4.602           NODE_REPORT          pNodeReporter   NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,LON=-70.3304,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=7,YAW=-1.5707963,TIME=1521578233.49,LENGTH=4 
+4.602           APPCAST              pNodeReporter   proc=pNodeReporter!@#iter=8!@#node=gilda!@#iter=8!@#messages=Paused: false!@Vehicle Configuration:!@----------------------------!@     Vehicle name: gilda!@     Vehicle type: KAYAK!@   Vehicle length: 4.0!@!@Blackout Configuration:!@----------------------------!@Blackout interval: 0.00!@Blackout variance: 0.00!@!@AltNav Config and Status:!@----------------------------!@   ALT_NAV_PREFIX: !@     ALT_NAV_NAME: _GT!@ ALT_NAV_POSTINGS: 0!@!@Node Report Summary:!@----------------------------!@Reports Posted: 8!@ Latest Report: NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,!@                LON=-70.3304,TYPE=KAYAK,MODE=PARK,!@                ALLSTOP=ManualOverride,INDEX=7,YAW=-1.5707963,!@                TIME=1521578233.49,LENGTH=4!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.602           NODE_REPORT          pNodeReporter   NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=7,YAW=-1.5707963,TIME=1521578233.49,LENGTH=4 
+4.602           APPCAST              pNodeReporter   proc=pNodeReporter!@#iter=8!@#node=henry!@#iter=8!@#messages=Paused: false!@Vehicle Configuration:!@----------------------------!@     Vehicle name: henry!@     Vehicle type: KAYAK!@   Vehicle length: 4.0!@!@Blackout Configuration:!@----------------------------!@Blackout interval: 0.00!@Blackout variance: 0.00!@!@AltNav Config and Status:!@----------------------------!@   ALT_NAV_PREFIX: !@     ALT_NAV_NAME: _GT!@ ALT_NAV_POSTINGS: 0!@!@Node Report Summary:!@----------------------------!@Reports Posted: 8!@ Latest Report: NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,!@                LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,!@                MODE=PARK,ALLSTOP=ManualOverride,INDEX=7,!@                YAW=-1.5707963,TIME=1521578233.49,LENGTH=4!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.701           UXMS_966_ITER_GAP    uXMS_966        1.00075      
+4.701           UXMS_966_ITER_LEN    uXMS_966        0.00012      
+4.701           APPCAST              uXMS_966        proc=uXMS_966!@#iter=17!@#node=shoreside!@#iter=17!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34m"false"[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32m"false"[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.707           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00142      
+4.707           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00006      
+4.708           APPCAST              uSimMarine      proc=uSimMarine!@#iter=42!@#node=gilda!@#iter=42!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose       Current Pose (NAV)   Current Pose (GT)!@------- --------   ------- ----------   ------- ---------!@Headng: 180        Headng: 180           (same) -        !@ Speed: 0           Speed: 0                    -        !@ Depth: 0           Depth: 0                    -        !@   Alt: 0             Alt: 0                    -        !@ (X,Y): 0,0         (X,Y): 0,0                  -        !@   Lat: 43.8253       Lat: 43.8253              -        !@   Lon: -70.3304      Lon: -70.3304             -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.708           APPCAST              uSimMarine      proc=uSimMarine!@#iter=42!@#node=henry!@#iter=42!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose           Current Pose (NAV)     Current Pose (GT)!@------- ------------   ------- ------------   ------- ---------!@Headng: 180            Headng: 180             (same) -        !@ Speed: 0               Speed: 0                      -        !@ Depth: 0               Depth: 0                      -        !@   Alt: 0                 Alt: 0                      -        !@ (X,Y): 80,0            (X,Y): 80,0                   -        !@   Lat: 43.82531158       Lat: 43.82531158            -        !@   Lon: -70.32940535      Lon: -70.32940535           -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.763           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=16!@#node=henry!@#iter=16!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.804           PPOINTASSIGN_ITER_GAP pPointAssign    1.00064      
+4.804           TEST                 pPointAssign    0.00000      
+4.804           Z_CNT                pPointAssign    7128116.00000 
+4.804           PPOINTASSIGN_ITER_LEN pPointAssign    0.00002      
+4.804           APPCAST              pPointAssign    proc=pPointAssign!@#iter=17!@#node=shoreside!@#iter=17!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.830           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00159      
+4.830           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00005      
+4.831           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+4.831           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+4.856           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+4.856           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+4.901           UXMS_966_ITER_GAP    uXMS_966        1.00138      
+4.901           UXMS_966_ITER_LEN    uXMS_966        0.00024      
+4.957           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00076      
+4.957           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00011      
+4.957           APPCAST              pHostInfo       proc=pHostInfo!@#iter=4!@#node=gilda!@#iter=4!@#messages=!@  PHI_HOST_IP:         [7;31mDEFAULT HOSTIP FORCED[0m!@  PHI_HOST_IP_ALL:     localhost!@!@  PHI_HOST_IP_VERBOSE: USER_HARD_CONFIGURED=localhost!@!@  PHI_HOST_PORT:       9001!@  PHI_PSHARES_IROUTES: localhost:9301!@  PHI_HOST_INFO:       community=gilda,hostip=localhost,!@                       port_db=9001,pshare_iroutes=localhost:9301,!@                       hostip_alts=,timewarp=1!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.958           APPCAST              uTimerScript    proc=uTimerScript!@#iter=15!@#node=shoreside!@#iter=15!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+4.962           APPCAST              pHostInfo       proc=pHostInfo!@#iter=4!@#node=henry!@#iter=4!@#messages=!@  PHI_HOST_IP:         [7;31mDEFAULT HOSTIP FORCED[0m!@  PHI_HOST_IP_ALL:     localhost!@!@  PHI_HOST_IP_VERBOSE: USER_HARD_CONFIGURED=localhost!@!@  PHI_HOST_PORT:       9002!@  PHI_PSHARES_IROUTES: localhost:9302!@  PHI_HOST_INFO:       community=henry,hostip=localhost,!@                       port_db=9002,pshare_iroutes=localhost:9302,!@                       hostip_alts=,timewarp=1!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+4.973           PSHARE_OUTPUT_SUMMARY pShare          APPCAST_REQ_ALL->APPCAST_REQ:localhost:9302 & APPCAST_REQ:localhost:9301, APPCAST_REQ_GILDA->APPCAST_REQ:localhost:9301, APPCAST_REQ_HENRY->APPCAST_REQ:localhost:9302, DEPLOY_ALL->DEPLOY:localhost:9302 & DEPLOY:localhost:9301, DEPLOY_GILDA->DEPLOY:localhost:9301, DEPLOY_HENRY->DEPLOY:localhost:9302, MOOS_MANUAL_OVERRIDE_ALL->MOOS_MANUAL_OVERRIDE:localhost:9302 & MOOS_MANUAL_OVERRIDE:localhost:9301, MOOS_MANUAL_OVERRIDE_GILDA->MOOS_MANUAL_OVERRIDE:localhost:9301, MOOS_MANUAL_OVERRIDE_HENRY->MOOS_MANUAL_OVERRIDE:localhost:9302, NODE_BROKER_ACK_GILDA->NODE_BROKER_ACK:localhost:9301, NODE_BROKER_ACK_HENRY->NODE_BROKER_ACK:localhost:9302, NODE_REPORT_ALL->NODE_REPORT:localhost:9302 & NODE_REPORT:localhost:9301, NODE_REPORT_GILDA->NODE_REPORT:localhost:9301, NODE_REPORT_HENRY->NODE_REPORT:localhost:9302, REFUEL_NEEDED_ALL->REFUEL_NEEDED:localhost:9302 & REFUEL_NEEDED:localhost:9301, REFUEL_TIME_RESET_ALL->REFUEL_TIME_RESET:localhost:9302 & REFUEL_TIME_RESET:localhost:9301, RETURN_ALL->RETURN:localhost:9302 & RETURN:localhost:9301, RETURN_GILDA->RETURN:localhost:9301, RETURN_HENRY->RETURN:localhost:9302, STATION_KEEP_ALL->STATION_KEEP:localhost:9302 & STATION_KEEP:localhost:9301, STATION_KEEP_GILDA->STATION_KEEP:localhost:9301, STATION_KEEP_HENRY->STATION_KEEP:localhost:9302, VISIT_POINT_GILDA->VISIT_POINT:localhost:9301, VISIT_POINT_HENRY->VISIT_POINT:localhost:9302 
+4.973           PSHARE_INPUT_SUMMARY pShare          localhost:9300 
+5.003           PHOSTINFO_ITER_GAP   pHostInfo       1.00031      
+5.003           PHOSTINFO_ITER_LEN   pHostInfo       0.00001      
+5.003           APPCAST              pHostInfo       proc=pHostInfo!@#iter=4!@#node=shoreside!@#iter=4!@#messages=!@  PHI_HOST_IP:         [7;31mDEFAULT HOSTIP FORCED[0m!@  PHI_HOST_IP_ALL:     localhost!@!@  PHI_HOST_IP_VERBOSE: USER_HARD_CONFIGURED=localhost!@!@  PHI_HOST_PORT:       9000!@  PHI_PSHARES_IROUTES: localhost:9300!@  PHI_HOST_INFO:       community=shoreside,hostip=localhost,!@                       port_db=9000,pshare_iroutes=localhost:9300,!@                       hostip_alts=,timewarp=1!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.013           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=17!@#node=gilda!@#iter=17!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.055           PPOINTASSIGN_ITER_GAP pPointAssign    1.00070      
+5.055           TEST                 pPointAssign    0.00000      
+5.055           Z_CNT                pPointAssign    7128116.00000 
+5.055           PPOINTASSIGN_ITER_LEN pPointAssign    0.00008      
+5.059           NODE_BROKER_PING     uFldNodeBroker  community=gilda,hostip=localhost,port_db=9001,pshare_iroutes=localhost:9301,timewarp=1,time=1521578233.95,key=0 
+5.059           NODE_BROKER_PING     uFldNodeBroker  community=henry,hostip=localhost,port_db=9002,pshare_iroutes=localhost:9302,timewarp=1,time=1521578233.95,key=0 
+5.059           APPCAST              uFldNodeBroker  proc=uFldNodeBroker!@#iter=4!@#node=henry!@#iter=4!@#messages=!@  Total OK  PHI_HOST_INFO    received: 1!@  Total BAD PHI_HOST_INFO    received: 0!@  Total HOST_INFO changes    received: 1!@  Total          PSHARE_CMD    posted: 13!@  Total BAD NODE_BROKER_ACK  received: 0!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@     Community: henry!@        HostIP: localhost!@   Port MOOSDB: 9002!@     Time Warp: 1!@   TryHost IPs: !@      IRoutes: localhost:9302!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@Community                  Pings  Pings  IP         Time!@Name       Route           Sent   Acked  Address    Warp!@---------  --------------  -----  -----  ---------  ----!@shoreside  localhost:9300  4      2      localhost  1   !@!@Phase Completion Summary:!@------------------------------------!@ Phase 1: (Y) Valid Host information retrieved (iroutes).!@ Phase 2: (Y) Valid TryHosts (1) configured.!@ Phase 3: (Y) NODE_BROKER_PINGS are being sent to TryHosts.!@ Phase 4: (Y) A Valid NODE_BROKER_ACK has been received.!@ Phase 5: (Y) pShare requested to share user vars with shoreside.!@All Phases complete. Things should be working as configured. !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.059           APPCAST              uFldNodeBroker  proc=uFldNodeBroker!@#iter=4!@#node=gilda!@#iter=4!@#messages=!@  Total OK  PHI_HOST_INFO    received: 1!@  Total BAD PHI_HOST_INFO    received: 0!@  Total HOST_INFO changes    received: 1!@  Total          PSHARE_CMD    posted: 13!@  Total BAD NODE_BROKER_ACK  received: 0!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@     Community: gilda!@        HostIP: localhost!@   Port MOOSDB: 9001!@     Time Warp: 1!@   TryHost IPs: !@      IRoutes: localhost:9301!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@Community                  Pings  Pings  IP         Time!@Name       Route           Sent   Acked  Address    Warp!@---------  --------------  -----  -----  ---------  ----!@shoreside  localhost:9300  4      2      localhost  1   !@!@Phase Completion Summary:!@------------------------------------!@ Phase 1: (Y) Valid Host information retrieved (iroutes).!@ Phase 2: (Y) Valid TryHosts (1) configured.!@ Phase 3: (Y) NODE_BROKER_PINGS are being sent to TryHosts.!@ Phase 4: (Y) A Valid NODE_BROKER_ACK has been received.!@ Phase 5: (Y) pShare requested to share user vars with shoreside.!@All Phases complete. Things should be working as configured. !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.080           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00146      
+5.081           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00005      
+5.081           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=17!@#node=shoreside!@#iter=17!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 4!@NodeReport Index: 7!@Draw Count:       35!@Draw Count Rate:  8.26081!@Curr Time:        1521578233.97!@Time Warp:        1.000!@Elapsed:          0.00005!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.081           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+5.081           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=1.1,key=pMarineViewernewproc,thresh=any 
+5.084           APPCAST_REQ          pMarineViewer   node=shoreside,app=pPointAssign,duration=3.0,key=pMarineViewer:shoresideapp,thresh=any 
+5.084           APPCAST_REQ_SHORESIDE pMarineViewer   node=shoreside,app=pPointAssign,duration=3.0,key=pMarineViewer:shoresideapp,thresh=any 
+5.084           APPCAST_REQ          pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoresidegen,thresh=run_warning 
+5.084           APPCAST_REQ_ALL      pMarineViewer   node=all,app=all,duration=3.0,key=pMarineViewer:shoresidegen,thresh=run_warning 
+5.101           UXMS_966_ITER_GAP    uXMS_966        1.00065      
+5.101           UXMS_966_ITER_LEN    uXMS_966        0.00028      
+5.102           APPCAST              uXMS_966        proc=uXMS_966!@#iter=19!@#node=shoreside!@#iter=19!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34m"false"[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32m"false"[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.102           NODE_REPORT          pNodeReporter   NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,LON=-70.3304,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=8,YAW=-1.5707963,TIME=1521578233.99,LENGTH=4 
+5.102           APPCAST              pNodeReporter   proc=pNodeReporter!@#iter=9!@#node=gilda!@#iter=9!@#messages=Paused: false!@Vehicle Configuration:!@----------------------------!@     Vehicle name: gilda!@     Vehicle type: KAYAK!@   Vehicle length: 4.0!@!@Blackout Configuration:!@----------------------------!@Blackout interval: 0.00!@Blackout variance: 0.00!@!@AltNav Config and Status:!@----------------------------!@   ALT_NAV_PREFIX: !@     ALT_NAV_NAME: _GT!@ ALT_NAV_POSTINGS: 0!@!@Node Report Summary:!@----------------------------!@Reports Posted: 9!@ Latest Report: NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,!@                LON=-70.3304,TYPE=KAYAK,MODE=PARK,!@                ALLSTOP=ManualOverride,INDEX=8,YAW=-1.5707963,!@                TIME=1521578233.99,LENGTH=4!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.102           NODE_REPORT          pNodeReporter   NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=8,YAW=-1.5707963,TIME=1521578233.99,LENGTH=4 
+5.102           APPCAST              pNodeReporter   proc=pNodeReporter!@#iter=9!@#node=henry!@#iter=9!@#messages=Paused: false!@Vehicle Configuration:!@----------------------------!@     Vehicle name: henry!@     Vehicle type: KAYAK!@   Vehicle length: 4.0!@!@Blackout Configuration:!@----------------------------!@Blackout interval: 0.00!@Blackout variance: 0.00!@!@AltNav Config and Status:!@----------------------------!@   ALT_NAV_PREFIX: !@     ALT_NAV_NAME: _GT!@ ALT_NAV_POSTINGS: 0!@!@Node Report Summary:!@----------------------------!@Reports Posted: 9!@ Latest Report: NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,!@                LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,!@                MODE=PARK,ALLSTOP=ManualOverride,INDEX=8,!@                YAW=-1.5707963,TIME=1521578233.99,LENGTH=4!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.103           UFLDSHOREBROKER_ITER_GAP uFldShoreBroker 1.00034      
+5.103           NODE_BROKER_ACK_HENRY uFldShoreBroker community=shoreside,hostip=localhost,port_db=9000,pshare_iroutes=localhost:9300,timewarp=1,status=ok,key=0,id=3 
+5.103           NODE_BROKER_VACK     uFldShoreBroker henry 
+5.103           NODE_BROKER_ACK_GILDA uFldShoreBroker community=shoreside,hostip=localhost,port_db=9000,pshare_iroutes=localhost:9300,timewarp=1,status=ok,key=0,id=3 
+5.103           NODE_BROKER_VACK     uFldShoreBroker gilda 
+5.103           UFLDSHOREBROKER_ITER_LEN uFldShoreBroker 0.00003      
+5.103           APPCAST              uFldShoreBroker proc=uFldShoreBroker!@#iter=4!@#node=shoreside!@#iter=4!@#messages=!@ Total PHI_HOST_INFO    received: 1!@ Total NODE_BROKER_PING received: 6!@ Total NODE_BROKER_ACK    posted: 4!@ Total PSHARE_CMD         posted: 32!@!@===========================================================!@            Shoreside Node(s) Information:!@===========================================================!@!@     Community: shoreside!@        HostIP: localhost!@   Port MOOSDB: 9000!@     Time Warp: 1!@       IRoutes: localhost:9300!@!@===========================================================!@             Vehicle Node Information:!@===========================================================!@!@Node   IP                 Elap  pShare                !@Name   Address    Status  Time  Input Route(s)  Skew  !@-----  ---------  ------  ----  --------------  ------!@henry  localhost  ok      0.0   localhost:9302  1.0413!@gilda  localhost  ok      0.0   localhost:9301  1.0413!@!@#!@#events_total=8!@#events=[2.00]: PSHARE_CMD:cmd=output,src_name=STATION_KEEP_ALL,dest_name=STATION_KEEP,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=STATION_KEEP_GILDA,dest_name=STATION_KEEP,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=APPCAST_REQ_ALL,dest_name=APPCAST_REQ,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=APPCAST_REQ_GILDA,dest_name=APPCAST_REQ,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=DEPLOY_ALL,dest_name=DEPLOY,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=DEPLOY_GILDA,dest_name=DEPLOY,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=NODE_REPORT_ALL,dest_name=NODE_REPORT,route=localhost:9301!@[2.00]: PSHARE_CMD:cmd=output,src_name=NODE_REPORT_GILDA,dest_name=NODE_REPORT,route=localhost:9301!@#run_warning_total=0!@# 
+5.110           APPCAST              uSimMarine      proc=uSimMarine!@#iter=46!@#node=gilda!@#iter=46!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose       Current Pose (NAV)   Current Pose (GT)!@------- --------   ------- ----------   ------- ---------!@Headng: 180        Headng: 180           (same) -        !@ Speed: 0           Speed: 0                    -        !@ Depth: 0           Depth: 0                    -        !@   Alt: 0             Alt: 0                    -        !@ (X,Y): 0,0         (X,Y): 0,0                  -        !@   Lat: 43.8253       Lat: 43.8253              -        !@   Lon: -70.3304      Lon: -70.3304             -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.110           APPCAST              uSimMarine      proc=uSimMarine!@#iter=46!@#node=henry!@#iter=46!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose           Current Pose (NAV)     Current Pose (GT)!@------- ------------   ------- ------------   ------- ---------!@Headng: 180            Headng: 180             (same) -        !@ Speed: 0               Speed: 0                      -        !@ Depth: 0               Depth: 0                      -        !@   Alt: 0                 Alt: 0                      -        !@ (X,Y): 80,0            (X,Y): 80,0                   -        !@   Lat: 43.82531158       Lat: 43.82531158            -        !@   Lon: -70.32940535      Lon: -70.32940535           -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.208           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00165      
+5.208           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00013      
+5.263           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=18!@#node=henry!@#iter=18!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.302           UXMS_966_ITER_GAP    uXMS_966        1.00222      
+5.302           UXMS_966_ITER_LEN    uXMS_966        0.00019      
+5.305           PPOINTASSIGN_ITER_GAP pPointAssign    1.00068      
+5.305           TEST                 pPointAssign    0.00000      
+5.305           Z_CNT                pPointAssign    7128116.00000 
+5.305           PPOINTASSIGN_ITER_LEN pPointAssign    0.00008      
+5.305           APPCAST              pPointAssign    proc=pPointAssign!@#iter=19!@#node=shoreside!@#iter=19!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.331           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00137      
+5.331           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00008      
+5.457           APPCAST_REQ          uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+5.457           APPCAST_REQ_ALL      uMAC_4550       node=all,app=all,duration=3.0,key=uMAC_4550:app,thresh=run_warning 
+5.458           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00070      
+5.458           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00006      
+5.458           APPCAST              uTimerScript    proc=uTimerScript!@#iter=17!@#node=shoreside!@#iter=17!@#messages=Current Script Information: !@     Elements: 102(102)!@      Reinits: 0!@    Time Warp: 1!@ Time Zero is: At uTimerScript launch time (not MOOSDB start time)!@  Delay Start: 0!@  Delay Reset: 0!@    Reset Max: 0!@!@Run criteria:!@   Block Apps: (ok) no blocking apps!@       Paused: (ok) Not paused!@ ConditionsOK: (ok) No un-met conditions!@!@RandomVar  Type     Min   Max  Parameters!@---------  -------  ----  ---  ----------!@RANDOM_X   uniform  -25   200            !@RANDOM_Y   uniform  -175  -25            !@!@Total Random Pairs: 0!@!@Var1  Var2  Type  Parameters!@----  ----  ----  ----------!@!@P/Tot  P/Loc  T/Total   T/Local  Variable/Var!@-----  -----  --------  -------  ------------!@94     94     1521578230.350.00     VISIT_POINT = x=33.41,y=-132.925,id=94!@95     95     1521578230.350.00     VISIT_POINT = x=131.173,y=-110.845,id=95!@96     96     1521578230.350.00     VISIT_POINT = x=156.912,y=-116.575,id=96!@97     97     1521578230.350.00     VISIT_POINT = x=99.56,y=-94.6,id=97!@98     98     1521578230.350.00     VISIT_POINT = x=144.942,y=-84.955,id=98!@99     99     1521578230.350.00     VISIT_POINT = x=92.045,y=-158.545,id=99!@100    100    1521578230.350.00     VISIT_POINT = x=125.368,y=-142.45,id=100!@101    101    1521578230.350.00     VISIT_POINT = lastpoint!@!@#!@#events_total=1!@#events=[0.25]: Script Start. Warp=1, DelayStart=0.0, DelayReset=0.0!@#run_warning_total=0!@# 
+5.502           UXMS_966_ITER_GAP    uXMS_966        1.00106      
+5.502           UXMS_966_ITER_LEN    uXMS_966        0.00015      
+5.502           APPCAST              uXMS_966        proc=uXMS_966!@#iter=21!@#node=shoreside!@#iter=21!@#messages=VarName               (S)  (T)  (C)  VarValue (SCOPING:[7;32mEVENTS[0m)!@--------------------  ---  ---  ---  -------------------------!@DEPLOY_ALL                           n/a!@REFUEL_NEEDED_ALL                    n/a!@RETURN_ALL                           n/a!@STATION_KEEP_ALL                     n/a!@[34mgilda_REFUEL_END[0m      [34m[0m               [34mn/a[0m!@[34mgilda_REFUEL_START[0m    [34m[0m               [34m"false"[0m!@[34mgilda_TIME_refueling[0m  [34m[0m               [34mn/a[0m!@[34mgilda_TIME_running[0m    [34m[0m               [34mn/a[0m!@[32mhenry_REFUEL_END[0m      [32m[0m               [32mn/a[0m!@[32mhenry_REFUEL_START[0m    [32m[0m               [32m"false"[0m!@[32mhenry_TIME_refueling[0m  [32m[0m               [32mn/a[0m!@[32mhenry_TIME_running[0m    [32m[0m               [32mn/a[0m!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.514           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=19!@#node=gilda!@#iter=19!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.555           PPOINTASSIGN_ITER_GAP pPointAssign    1.00090      
+5.555           TEST                 pPointAssign    0.00000      
+5.555           Z_CNT                pPointAssign    7128116.00000 
+5.555           PPOINTASSIGN_ITER_LEN pPointAssign    0.00008      
+5.511           APPCAST              uSimMarine      proc=uSimMarine!@#iter=50!@#node=henry!@#iter=50!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose           Current Pose (NAV)     Current Pose (GT)!@------- ------------   ------- ------------   ------- ---------!@Headng: 180            Headng: 180             (same) -        !@ Speed: 0               Speed: 0                      -        !@ Depth: 0               Depth: 0                      -        !@   Alt: 0                 Alt: 0                      -        !@ (X,Y): 80,0            (X,Y): 80,0                   -        !@   Lat: 43.82531158       Lat: 43.82531158            -        !@   Lon: -70.32940535      Lon: -70.32940535           -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.511           APPCAST              uSimMarine      proc=uSimMarine!@#iter=50!@#node=gilda!@#iter=50!@#messages=Datum: 43.8253,-70.3304!@!@  Start Pose       Current Pose (NAV)   Current Pose (GT)!@------- --------   ------- ----------   ------- ---------!@Headng: 180        Headng: 180           (same) -        !@ Speed: 0           Speed: 0                    -        !@ Depth: 0           Depth: 0                    -        !@   Alt: 0             Alt: 0                    -        !@ (X,Y): 0,0         (X,Y): 0,0                  -        !@   Lat: 43.8253       Lat: 43.8253              -        !@   Lon: -70.3304      Lon: -70.3304             -        !@Present Buoyancy rate: 0.025!@        Starting rate: 0.025!@               Source: initial_config!@!@Ext Drift  X   Y   |  Mag  Ang  |  Rot.  |  Source(s)  !@---------  --  --  |  ---  ---  |  ----  |  -----------!@ Starting  0   0   |  0    0    |  0     |  init_config!@  Present  0   0   |  0    0    |  0     |  n/a        !@!@Velocity Information: !@--------------------- !@     DESIRED_THRUST=0 ==> SPEED=0!@     Using Thrust_Factor: true (20)!@     Positive Thrust Map: n/a!@     Negative Thrust Map: n/a!@        Max Accereration: 0!@        Max Decereration: 0.5!@!@             Thrust Mode: normal!@     Thrust Mode Reverse: false!@        DESIRED_THRUST_L: n/a!@        DESIRED_THRUST_R: n/a!@!@Depth Information: !@------------------ !@           Max Depth Rate: 0.5!@     Max Depth Rate Speed: 2!@              Water Depth: 0!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.581           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00096      
+5.581           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00023      
+5.581           APPCAST              pMarineViewer   proc=pMarineViewer!@#iter=19!@#node=shoreside!@#iter=19!@#messages=Tiff File A:      /home/lin/moos-ivp/ivp/data/forrest19.tif!@Info File A:      /home/lin/moos-ivp/ivp/data/forrest19.info!@Tiff File B:      !@Info File B:      !@------------------!@Total GeoShapes:  100!@Clear GeoShapes:  0!@NodeReports Recd: 6!@NodeReport Index: 8!@Draw Count:       39!@Draw Count Rate:  8.23227!@Curr Time:        1521578234.47!@Time Warp:        1.000!@Elapsed:          0.00008!@CmdFolio size:    0!@!@Visual Settings: !@  pan_x:   -90.00!@  pan_y:   -280.00!@  zoom :   0.65!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.602           NODE_REPORT          pNodeReporter   NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,LON=-70.3304,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=9,YAW=-1.5707963,TIME=1521578234.49,LENGTH=4 
+5.602           APPCAST              pNodeReporter   proc=pNodeReporter!@#iter=10!@#node=gilda!@#iter=10!@#messages=Paused: false!@Vehicle Configuration:!@----------------------------!@     Vehicle name: gilda!@     Vehicle type: KAYAK!@   Vehicle length: 4.0!@!@Blackout Configuration:!@----------------------------!@Blackout interval: 0.00!@Blackout variance: 0.00!@!@AltNav Config and Status:!@----------------------------!@   ALT_NAV_PREFIX: !@     ALT_NAV_NAME: _GT!@ ALT_NAV_POSTINGS: 0!@!@Node Report Summary:!@----------------------------!@Reports Posted: 10!@ Latest Report: NAME=gilda,X=0,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.8253,!@                LON=-70.3304,TYPE=KAYAK,MODE=PARK,!@                ALLSTOP=ManualOverride,INDEX=9,YAW=-1.5707963,!@                TIME=1521578234.49,LENGTH=4!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.603           NODE_REPORT          pNodeReporter   NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,MODE=PARK,ALLSTOP=ManualOverride,INDEX=9,YAW=-1.5707963,TIME=1521578234.49,LENGTH=4 
+5.603           APPCAST              pNodeReporter   proc=pNodeReporter!@#iter=10!@#node=henry!@#iter=10!@#messages=Paused: false!@Vehicle Configuration:!@----------------------------!@     Vehicle name: henry!@     Vehicle type: KAYAK!@   Vehicle length: 4.0!@!@Blackout Configuration:!@----------------------------!@Blackout interval: 0.00!@Blackout variance: 0.00!@!@AltNav Config and Status:!@----------------------------!@   ALT_NAV_PREFIX: !@     ALT_NAV_NAME: _GT!@ ALT_NAV_POSTINGS: 0!@!@Node Report Summary:!@----------------------------!@Reports Posted: 10!@ Latest Report: NAME=henry,X=80,Y=0,SPD=0,HDG=180,DEP=0,!@                LAT=43.82531158,LON=-70.32940535,TYPE=KAYAK,!@                MODE=PARK,ALLSTOP=ManualOverride,INDEX=9,!@                YAW=-1.5707963,TIME=1521578234.49,LENGTH=4!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.702           UXMS_966_ITER_GAP    uXMS_966        1.00235      
+5.703           UXMS_966_ITER_LEN    uXMS_966        0.00028      
+5.708           UTIMERSCRIPT_ITER_GAP uTimerScript    1.00118      
+5.708           UTIMERSCRIPT_ITER_LEN uTimerScript    0.00017      
+5.764           APPCAST              pHelmIvP        proc=pHelmIvP!@#iter=20!@#node=henry!@#iter=20!@#messages=  Helm Iteration: 0!@  IvP Functions:  0!@  Mode(s):        !@  SolveTime:   0.00   (max=0.00)!@  CreateTime:  0.00   (max=0.00)!@  LoopTime:    0.00   (max=0.00)!@  Halted:         false   (0 warnings)!@Helm Decision: []!@Behaviors Spawnable: --------- (0)!@Behaviors Active: ---------- (0)!@Behaviors Running: --------- (0)!@Behaviors Idle: ------------ (0)!@  !@Behaviors Completed: ------- (0)!@!@!@Variable  Behavior  Time  Iter  Value!@--------  --------  ----  ----  -----!@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.805           PPOINTASSIGN_ITER_GAP pPointAssign    1.00062      
+5.805           TEST                 pPointAssign    0.00000      
+5.805           Z_CNT                pPointAssign    7128116.00000 
+5.805           PPOINTASSIGN_ITER_LEN pPointAssign    0.00010      
+5.805           APPCAST              pPointAssign    proc=pPointAssign!@#iter=21!@#node=shoreside!@#iter=21!@#messages============================================= !@File:                                        !@============================================ !@m_assign_by_region: 0!@m_vname1: gilda!@m_vname2: henry!@============================================ !@!@#!@#events_total=0!@#!@#run_warning_total=0!@# 
+5.805           DB_TIME              MOOSDB_shoreside 1521578234.69417 
+5.805           DB_UPTIME            MOOSDB_shoreside 6.01018      
+5.805           DB_CLIENTS           MOOSDB_shoreside uXMS_966,uTimerScript,uFldShoreBroker,pHostInfo,pShare,pMarineViewer,pLogger,pPointAssign,uMAC_4550, 
+5.806           DB_VARSUMMARY        MOOSDB_shoreside APPCAST              16:37:14.672         pHelmIvP             26.9Hz S  proc=pHelmIvP!@#iter=2...
+APPCAST_REQ          16:37:14.345         uMAC_4550            7.5 Hz S  node=all,app=all,durat...
+APPCAST_REQ_ALL      16:37:14.345         uMAC_4550            5.6 Hz S  node=all,app=all,durat...
+APPCAST_REQ_GILDA    16:37:13.144         uMAC_4550            0.0 Hz S  node=gilda,app=all,dur...
+APPCAST_REQ_HENRY    16:37:13.143         uMAC_4550            0.0 Hz S  node=henry,app=all,dur...
+APPCAST_REQ_SHORESIDE 16:37:14.010         pMarineViewer        0.8 Hz S  node=shoreside,app=pPo...
+DB_CLIENTS           16:37:14.694         MOOSDB_shoreside     0.4 Hz S  uXMS_966,uTimerScript,...
+DB_EVENT             16:37:09.666         MOOSDB_shoreside     4.3 Hz S  connected=uXMS_966  
+DB_QOS               16:37:12.693         MOOSDB_shoreside     0.2 Hz S  pHostInfo=0:0.246048:0...
+DB_RWSUMMARY         16:37:12.693         MOOSDB_shoreside     0.2 Hz S  uXMS_966=APPCAST_REQ:D...
+DB_TIME              16:37:14.694         MOOSDB_shoreside     0.4 Hz D  1521578234.7         
+DB_UPTIME            16:37:14.694         MOOSDB_shoreside     0.4 Hz D  6.0                  
+DB_VARSUMMARY        16:37:12.693         MOOSDB_shoreside     0.2 Hz S  APPCAST              1...
+DEPLOY_ALL           18:59:59.000         (write pending)      0.0 Hz ~  
+                   DEPLOY_GILDA         18:59:59.000         (write pending)      0.0 Hz ~  
+                   DEPLOY_HENRY         18:59:59.000         (write pending)      0.0 Hz ~  
+                   EXITED_NORMALLY      18:59:59.000         (write pending)      0.0 Hz ~  
+                   GRID_CONFIG          18:59:59.000         (write pending)      0.0 Hz ~  
+                   GRID_DELTA           18:59:59.000         (write pending)      0.0 Hz ~  
+                   HELM_MAP_CLEAR       16:37:09.964         pMarineViewer        0.0 Hz D  0.0                  
+HOST_INFO_REQUEST    18:59:59.000         (write pending)      0.0 Hz ~  
+                   LOGGER_DIRECTORY     16:37:09.582         pLogger              0.0 Hz S  ./LOG_SHORESIDE_20_3_2...
+LOGGER_RESTART       18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_DEBUG           18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_MANUAL_OVERRIDE_ALL 18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_MANUAL_OVERRIDE_GILDA 18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_MANUAL_OVERRIDE_HENRY 18:59:59.000         (write pending)      0.0 Hz ~  
+                   MOOS_SYSTEM          18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_BROKER_ACK_GILDA 16:37:14.010         uFldShoreBroker      0.8 Hz S  community=shoreside,ho...
+NODE_BROKER_ACK_HENRY 16:37:13.992         uFldShoreBroker      0.8 Hz S  community=shoreside,ho...
+NODE_BROKER_PING     16:37:14.017         uFldNodeBroker       1.8 Hz S  community=henry,hostip...
+NODE_BROKER_VACK     16:37:14.010         uFldShoreBroker      1.5 Hz S  gilda               
+NODE_REPORT          16:37:14.522         pNodeReporter        3.0 Hz S  NAME=gilda,X=0,Y=0,SPD...
+NODE_REPORT_ALL      18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_GILDA    18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_HENRY    18:59:59.000         (write pending)      0.0 Hz ~  
+                   NODE_REPORT_LOCAL    18:59:59.000         (write pending)      0.0 Hz ~  
+                   PHI_HOST_INFO        16:37:10.934         pHostInfo            0.0 Hz S  community=shoreside,ho...
+PHI_HOST_IP          16:37:10.890         pHostInfo            0.0 Hz S  localhost           
+PHI_HOST_IP_ALL      16:37:10.890         pHostInfo            0.0 Hz S  localhost           
+PHI_HOST_IP_VERBOSE  16:37:10.890         pHostInfo            0.0 Hz S  USER_HARD_CONFIGURED=l...
+PHI_HOST_PORT_DB     16:37:10.890         pHostInfo            0.0 Hz S  9000                
+PHOSTINFO_ITER_GAP   16:37:13.891         pHostInfo            0.7 Hz D  1.0                  
+PHOSTINFO_ITER_LEN   16:37:13.891         pHostInfo            0.9 Hz D  0.0                  
+PHOSTINFO_STATUS     16:37:12.891         pHostInfo            0.2 Hz S  AppErrorFlag=false,Upt...
+PLOGGER_CMD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   PLOGGER_STATUS       16:37:13.656         pLogger              0.4 Hz S  AppErrorFlag=false,Upt...
+PMARINEVIEWER_ITER_GAP 16:37:14.470         pMarineViewer        4.0 Hz D  1.0                  
+PMARINEVIEWER_ITER_LEN 16:37:14.472         pMarineViewer        4.0 Hz D  0.0                  
+PMARINEVIEWER_STATUS 16:37:13.969         pMarineViewer        0.4 Hz S  AppErrorFlag=false,Upt...
+PMV_CLEAR            18:59:59.000         (write pending)      0.0 Hz ~  
+                   PMV_CONNECT          16:37:09.964         pMarineViewer        0.0 Hz D  0.0                  
+PMV_MENU_CONTEXT     18:59:59.000         (write pending)      0.0 Hz ~  
+                   PPOINTASSIGN_ITER_GAP 16:37:14.694         pPointAssign         4.0 Hz D  1.0                  
+PPOINTASSIGN_ITER_LEN 16:37:14.694         pPointAssign         4.0 Hz D  0.0                  
+PPOINTASSIGN_STATUS  16:37:13.693         pPointAssign         0.4 Hz S  AppErrorFlag=false,Upt...
+PSHARE_CMD           16:37:12.011         uFldShoreBroker      0.0 Hz S  cmd=output,src_name=NO...
+PSHARE_INPUT_SUMMARY 16:37:13.862         pShare               0.9 Hz S  localhost:9300      
+PSHARE_OUTPUT_SUMMARY 16:37:13.862         pShare               0.9 Hz S  APPCAST_REQ_ALL->APPCA...
+PSHARE_STATUS        16:37:13.836         pShare               0.4 Hz S  AppErrorFlag=false,Upt...
+REFUEL_NEEDED_ALL    18:59:59.000         (write pending)      0.0 Hz ~  
+                   REFUEL_TIME_RESET_ALL 18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_ALL           18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_GILDA         18:59:59.000         (write pending)      0.0 Hz ~  
+                   RETURN_HENRY         18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_ALL     18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_GILDA   18:59:59.000         (write pending)      0.0 Hz ~  
+                   STATION_KEEP_HENRY   18:59:59.000         (write pending)      0.0 Hz ~  
+                   TEST                 16:37:14.694         pPointAssign         4.0 Hz D  0.0                  
+TRAIL_RESET          18:59:59.000         (write pending)      0.0 Hz ~  
+                   UFLDSHOREBROKER_ITER_GAP 16:37:13.992         uFldShoreBroker      0.8 Hz D  1.0                  
+UFLDSHOREBROKER_ITER_LEN 16:37:14.010         uFldShoreBroker      0.9 Hz D  0.0                  
+UFLDSHOREBROKER_STATUS 16:37:12.991         uFldShoreBroker      0.2 Hz S  AppErrorFlag=false,Upt...
+UMAC_4550_STATUS     16:37:13.544         uMAC_4550            0.4 Hz S  AppErrorFlag=false,Upt...
+UTIMERSCRIPT_ITER_GAP 16:37:14.597         uTimerScript         4.0 Hz D  1.0                  
+UTIMERSCRIPT_ITER_LEN 16:37:14.597         uTimerScript         4.0 Hz D  0.0                  
+UTIMERSCRIPT_STATUS  16:37:14.346         uTimerScript         0.4 Hz S  AppErrorFlag=false,Upt...
+UTS_FORWARD          18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_PAUSE            18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_RESET            18:59:59.000         (write pending)      0.0 Hz ~  
+                   UTS_STATUS           16:37:10.390         uTimerScript         0.0 Hz S  name=unnamed, elapsed_...
+UXMS_966_ITER_GAP    16:37:14.591         uXMS_966             4.9 Hz D  1.0                  
+UXMS_966_ITER_LEN    16:37:14.591         uXMS_966             5.0 Hz D  0.0                  
+UXMS_966_STATUS      16:37:14.391         uXMS_966             0.4 Hz S  AppErrorFlag=false,Upt...
+VIEW_CIRCLE          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_COMMS_PULSE     18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_GRID            18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_MARKER          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_POINT           16:37:10.490         pPointAssign         0.0 Hz S  x=125.368,y=-142.45,la...
+VIEW_POLYGON         18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_RANGE_PULSE     18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_SEGLIST         18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_SEGLR           18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_VECTOR          18:59:59.000         (write pending)      0.0 Hz ~  
+                   VIEW_WEDGE           18:59:59.000         (write pending)      0.0 Hz ~  
+                   VISIT_POINT          16:37:10.390         uTimerScript         0.0 Hz S  lastpoint           
+VISIT_POINT_GILDA    16:37:10.490         pPointAssign         0.0 Hz S  lastpoint           
+VISIT_POINT_HENRY    16:37:10.490         pPointAssign         0.0 Hz S  lastpoint           
+Z_CNT                16:37:14.694         pPointAssign         4.0 Hz D  7128116.0            
+gilda_REFUEL_END     18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_REFUEL_START   16:37:12.995         pHelmIvP             0.0 Hz S  false               
+gilda_TIME_refueling 18:59:59.000         (write pending)      0.0 Hz ~  
+                   gilda_TIME_running   18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_REFUEL_END     18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_REFUEL_START   16:37:12.995         pHelmIvP             0.0 Hz S  false               
+henry_TIME_refueling 18:59:59.000         (write pending)      0.0 Hz ~  
+                   henry_TIME_running   18:59:59.000         (write pending)      0.0 Hz ~  
+                    
+5.806           DB_QOS               MOOSDB_shoreside pHostInfo=0.158072:0.246048:0.110149:0.167036,pLogger=0.138998:0.193119:0.0879765:0.154686,pMarineViewer=0.156879:0.188112:0.105143:0.143051,pPointAssign=0.135899:0.415087:0.112057:0.223255,pShare=0.210047:0.210047:0.0948906:0.158358,uFldShoreBroker=0.0779629:0.332117:0.0779629:0.174665,uMAC_4550=0.0691414:0.147104:0.0691414:0.121641,uTimerScript=0.144958:0.184059:0.0619888:0.11878,uXMS_966=0.154972:0.190973:0.140905:0.158358, 
+5.807           DB_RWSUMMARY         MOOSDB_shoreside uXMS_966=APPCAST_REQ:DB_UPTIME:DEPLOY_ALL:REFUEL_NEEDED_ALL:RETURN_ALL:STATION_KEEP_ALL:gilda_REFUEL_END:gilda_REFUEL_START:gilda_TIME_refueling:gilda_TIME_running:henry_REFUEL_END:henry_REFUEL_START:henry_TIME_refueling:henry_TIME_running&APPCAST:UXMS_966_ITER_GAP:UXMS_966_ITER_LEN:UXMS_966_STATUS,uTimerScript=APPCAST_REQ:DB_CLIENTS:DB_UPTIME:EXITED_NORMALLY:TEST:UTS_FORWARD:UTS_PAUSE:UTS_RESET&APPCAST:UTIMERSCRIPT_ITER_GAP:UTIMERSCRIPT_ITER_LEN:UTIMERSCRIPT_STATUS:UTS_STATUS:VISIT_POINT,uFldShoreBroker=APPCAST_REQ:NODE_BROKER_PING:PHI_HOST_INFO&APPCAST:NODE_BROKER_ACK_GILDA:NODE_BROKER_ACK_HENRY:NODE_BROKER_VACK:PSHARE_CMD:UFLDSHOREBROKER_ITER_GAP:UFLDSHOREBROKER_ITER_LEN:UFLDSHOREBROKER_STATUS,pHostInfo=APPCAST_REQ:HOST_INFO_REQUEST:PSHARE_INPUT_SUMMARY&APPCAST:PHI_HOST_INFO:PHI_HOST_IP:PHI_HOST_IP_ALL:PHI_HOST_IP_VERBOSE:PHI_HOST_PORT_DB:PHOSTINFO_ITER_GAP:PHOSTINFO_ITER_LEN:PHOSTINFO_STATUS,pShare=APPCAST_REQ_ALL:APPCAST_REQ_GILDA:APPCAST_REQ_HENRY:DEPLOY_ALL:DEPLOY_GILDA:DEPLOY_HENRY:MOOS_MANUAL_OVERRIDE_ALL:MOOS_MANUAL_OVERRIDE_GILDA:MOOS_MANUAL_OVERRIDE_HENRY:NODE_BROKER_ACK_GILDA:NODE_BROKER_ACK_HENRY:NODE_REPORT_ALL:NODE_REPORT_GILDA:NODE_REPORT_HENRY:PSHARE_CMD:REFUEL_NEEDED_ALL:REFUEL_TIME_RESET_ALL:RETURN_ALL:RETURN_GILDA:RETURN_HENRY:STATION_KEEP_ALL:STATION_KEEP_GILDA:STATION_KEEP_HENRY:VISIT_POINT_GILDA:VISIT_POINT_HENRY&PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:PSHARE_STATUS,pMarineViewer=APPCAST:APPCAST_REQ:GRID_CONFIG:GRID_DELTA:NODE_REPORT:NODE_REPORT_LOCAL:PHI_HOST_INFO:PHI_HOST_IP:PMV_CLEAR:PMV_MENU_CONTEXT:REFUEL_NEEDED_ALL:TRAIL_RESET:VIEW_CIRCLE:VIEW_COMMS_PULSE:VIEW_GRID:VIEW_MARKER:VIEW_POINT:VIEW_POLYGON:VIEW_RANGE_PULSE:VIEW_SEGLIST:VIEW_SEGLR:VIEW_VECTOR:VIEW_WEDGE&APPCAST:APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_SHORESIDE:HELM_MAP_CLEAR:PMARINEVIEWER_ITER_GAP:PMARINEVIEWER_ITER_LEN:PMARINEVIEWER_STATUS:PMV_CONNECT,pLogger=APPCAST:APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_GILDA:APPCAST_REQ_HENRY:APPCAST_REQ_SHORESIDE:DB_CLIENTS:DB_EVENT:DB_QOS:DB_RWSUMMARY:DB_TIME:DB_UPTIME:DB_VARSUMMARY:DEPLOY_ALL:DEPLOY_GILDA:DEPLOY_HENRY:EXITED_NORMALLY:GRID_CONFIG:GRID_DELTA:HELM_MAP_CLEAR:HOST_INFO_REQUEST:LOGGER_DIRECTORY:LOGGER_RESTART:MOOS_DEBUG:MOOS_MANUAL_OVERRIDE_ALL:MOOS_MANUAL_OVERRIDE_GILDA:MOOS_MANUAL_OVERRIDE_HENRY:MOOS_SYSTEM:NODE_BROKER_ACK_GILDA:NODE_BROKER_ACK_HENRY:NODE_BROKER_PING:NODE_BROKER_VACK:NODE_REPORT:NODE_REPORT_ALL:NODE_REPORT_GILDA:NODE_REPORT_HENRY:NODE_REPORT_LOCAL:PHI_HOST_INFO:PHI_HOST_IP:PHI_HOST_IP_ALL:PHI_HOST_IP_VERBOSE:PHI_HOST_PORT_DB:PHOSTINFO_ITER_GAP:PHOSTINFO_ITER_LEN:PLOGGER_CMD:PMARINEVIEWER_ITER_GAP:PMARINEVIEWER_ITER_LEN:PMV_CLEAR:PMV_CONNECT:PMV_MENU_CONTEXT:PPOINTASSIGN_ITER_GAP:PPOINTASSIGN_ITER_LEN:PSHARE_CMD:PSHARE_INPUT_SUMMARY:PSHARE_OUTPUT_SUMMARY:REFUEL_NEEDED_ALL:REFUEL_TIME_RESET_ALL:RETURN_ALL:RETURN_GILDA:RETURN_HENRY:STATION_KEEP_ALL:STATION_KEEP_GILDA:STATION_KEEP_HENRY:TEST:TRAIL_RESET:UFLDSHOREBROKER_ITER_GAP:UFLDSHOREBROKER_ITER_LEN:UTIMERSCRIPT_ITER_GAP:UTIMERSCRIPT_ITER_LEN:UTS_FORWARD:UTS_PAUSE:UTS_RESET:UXMS_966_ITER_GAP:UXMS_966_ITER_LEN:VIEW_CIRCLE:VIEW_COMMS_PULSE:VIEW_GRID:VIEW_MARKER:VIEW_POINT:VIEW_POLYGON:VIEW_RANGE_PULSE:VIEW_SEGLIST:VIEW_SEGLR:VIEW_VECTOR:VIEW_WEDGE:VISIT_POINT:VISIT_POINT_GILDA:VISIT_POINT_HENRY:Z_CNT:gilda_REFUEL_END:gilda_REFUEL_START:gilda_TIME_refueling:gilda_TIME_running:henry_REFUEL_END:henry_REFUEL_START:henry_TIME_refueling:henry_TIME_running&LOGGER_DIRECTORY:PLOGGER_STATUS,pPointAssign=APPCAST_REQ:VISIT_POINT&APPCAST:PPOINTASSIGN_ITER_GAP:PPOINTASSIGN_ITER_LEN:PPOINTASSIGN_STATUS:TEST:VIEW_POINT:VISIT_POINT_GILDA:VISIT_POINT_HENRY:Z_CNT,uMAC_4550=APPCAST&APPCAST_REQ:APPCAST_REQ_ALL:APPCAST_REQ_GILDA:APPCAST_REQ_HENRY:APPCAST_REQ_SHORESIDE:UMAC_4550_STATUS 
+5.831           PMARINEVIEWER_ITER_GAP pMarineViewer   1.00162      
+5.832           PMARINEVIEWER_ITER_LEN pMarineViewer   0.00009      

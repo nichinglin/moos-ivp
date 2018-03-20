@@ -6,7 +6,7 @@ ProcessConfig = pPointAssign
   AppTick   = 4
   CommsTick = 4
 
-  ASSIGN_BY_REGION=true
-  VNAME1=henry
-  VNAME2=gilda
+  ASSIGN_BY_REGION=$(ASSIGN_BY_REGION)
+  VNAME1=$(VNAME1)
+  VNAME2=$(VNAME2)
 }

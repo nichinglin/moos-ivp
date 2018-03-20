@@ -1,11 +1,20 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LOG FILE:       ./LOG_SHORESIDE_20_3_2018_____16_37_09/LOG_SHORESIDE_20_3_2018_____16_37_09._moos
+%% FILE OPENED ON  Wed Dec 31 19:00:00 1969
+%% LOGSTART               1521578228.89
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //*******************************************************
 // ShoreSide Configuration File
 
 ServerHost = localhost
-ServerPort = $(VPORT)
-Community  = $(VNAME)
+ServerPort = 9000
+Community  = shoreside
 
-#include plug_origin_warp.moos
+MOOSTimeWarp = 1
+LatOrigin  = 43.825300 
+LongOrigin = -70.330400 
+
+
   
 //--------------------------------------------------------
 Processconfig = ANTLER
@@ -23,11 +32,87 @@ Processconfig = ANTLER
   Run = uXMS              @ NewConsole = true
 }
 
-#include plug_pShare.moos
-#include plug_pHostInfo.moos
-#include plug_pLogger.moos
-#include plug_uTimerScript.moos
-#include plug_pPointAssign.moos
+//---------------------------------------------------------
+// pShare Config Block  (Created from Plugin)
+
+ProcessConfig = pShare
+{
+  AppTick    = 2
+  CommsTick  = 2
+
+  input = route =  localhost:9300
+}
+
+
+//--------------------------------------------------
+// pHostInfo configuration block from plugin
+
+ProcessConfig = pHostInfo
+{
+  AppTick 	= 1
+  CommsTick 	= 1
+
+  DEFAULT_HOSTIP_FORCE = localhost
+}
+
+
+//--------------------------------------------------
+// pLogger Configuration Block (Created from Plugin)
+
+ProcessConfig = pLogger
+{
+  AppTick 	= 10
+  CommsTick 	= 10
+  
+  File		= LOG_SHORESIDE
+  PATH		= ./
+  AsyncLog 	= true
+  FileTimeStamp = true
+
+  // Log it all!!!!!
+  LogAuxSrc       = true
+  WildCardLogging = true 
+
+  WildCardOmitPattern = *_STATUS
+
+  CompressAlogs = false
+}
+
+//--------------------------------------------------
+// uFldNodeBroker configuration block from plugin
+
+ProcessConfig = uTimerScript
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  paused=false
+  condition = (TEST == 0)
+  //pause_var=UTS_PAUSE=
+  
+  randvar = varname=RANDOM_X, min=-25, max=200, key=at_post
+  randvar = varname=RANDOM_Y, min=-175, max=-25, key=at_post
+
+  event = var=VISIT_POINT, val="firstpoint", time=0
+  event = var=VISIT_POINT, val="x=$[RANDOM_X], y=$[RANDOM_Y], id=$[TCOUNT]", amt=100
+  event = var=VISIT_POINT, val="lastpoint", time=0
+
+  //reset_max  = 0
+}
+
+//--------------------------------------------------
+// pPointAssign configuration block from plugin
+
+ProcessConfig = pPointAssign
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  ASSIGN_BY_REGION=false
+  VNAME1=gilda
+  VNAME2=henry
+}
+
 
 //--------------------------------------------------
 ProcessConfig = uXMS
@@ -102,3 +187,5 @@ ProcessConfig = pMarineViewer
   //BUTTON_FOUR = RETURN_ALL=false # STATION_KEEP_ALL=false # LOITER_ALL=false
   BUTTON_FOUR = REFUEL_TIME_RESET_ALL=refueling
 }
+
+

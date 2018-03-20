@@ -30,11 +30,12 @@ START_POS2="80,0"
 LOITER_POS1="x=0,y=-75"
 LOITER_POS2="x=125,y=-50"
 #set random sequence region and points number
-# REGION_X_MIN=-25
-# REGION_X_MAX=200
-# REGION_Y_MIN=-175
-# REGION_Y_MAX=-25
-# RANDOM_POINT=100
+REGION_X_MIN=-25
+REGION_X_MAX=200
+REGION_Y_MIN=-175
+REGION_Y_MAX=-25
+RANDOM_POINT=100
+ASSIGN_BY_REGION="false" # assign point by region or not
 
 SHORE_LISTEN="9300"
 
@@ -55,10 +56,12 @@ nsplug meta_vehicle.bhv targ_$VNAME2.bhv -f VNAME=$VNAME2     \
     START_POS=$START_POS2 LOITER_POS=$LOITER_POS2       		
 
 nsplug meta_shoreside.moos targ_shoreside.moos -f WARP=$TIME_WARP \
-   VNAME="shoreside"  SHARE_LISTEN=$SHORE_LISTEN  VPORT="9000"  #\
-   # REGION_X_MIN=$REGION_X_MIN    REGION_X_MAX=$REGION_X_MAX
-   # REGION_Y_MIN=$REGION_Y_MIN    REGION_Y_MAX=$REGION_Y_MAX
-   # RANDOM_POINT=$RANDOM_POINT
+   VNAME="shoreside"  SHARE_LISTEN=$SHORE_LISTEN  VPORT="9000"  \
+   ASSIGN_BY_REGION=$ASSIGN_BY_REGION                           \
+   VNAME1=$VNAME1    VNAME2=$VNAME2                           \
+   REGION_X_MIN=$REGION_X_MIN    REGION_X_MAX=$REGION_X_MAX   \
+   REGION_Y_MIN=$REGION_Y_MIN    REGION_Y_MAX=$REGION_Y_MAX   \
+   RANDOM_POINT=$RANDOM_POINT
         
 if [ ${JUST_MAKE} = "yes" ] ; then
     exit 0
