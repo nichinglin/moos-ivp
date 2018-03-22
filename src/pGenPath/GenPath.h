@@ -1,21 +1,22 @@
 /************************************************************/
 /*    NAME: Monica Lin                                              */
 /*    ORGN: MIT                                             */
-/*    FILE: PointAssign.h                                          */
+/*    FILE: GenPath.h                                          */
 /*    DATE: December 29th, 1963                             */
 /************************************************************/
 
-#ifndef PointAssign_HEADER
-#define PointAssign_HEADER
+#ifndef GenPath_HEADER
+#define GenPath_HEADER
 
 #include <deque>
+#include "XYSegList.h"
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
 
-class PointAssign : public AppCastingMOOSApp
+class GenPath : public AppCastingMOOSApp
 {
  public:
-   PointAssign();
-   ~PointAssign();
+   GenPath();
+   ~GenPath();
 
  protected: // Standard MOOSApp functions to overload  
    bool OnNewMail(MOOSMSG_LIST &NewMail);
@@ -28,17 +29,11 @@ class PointAssign : public AppCastingMOOSApp
 
  protected:
    void registerVariables();
-   void assignByRegion();
-   void assignByEvenOdd();
-   void postViewPoint(double x, double y, int id, std::string color);
 
-   std::string m_vname[2];
-   bool m_assign_by_region;
    std::deque<std::string> m_visit_point_list;
-   int m_cnt;
-   bool m_state_run;
-
-
+   XYSegList m_seglist;
+   bool m_genpath_run;
+   
  private: // Configuration variables
 
  private: // State variables

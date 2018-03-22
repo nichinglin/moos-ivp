@@ -19,10 +19,11 @@ XYPointView::XYPointView(double x, double y)
 }
 
 string XYPointView::get_spec(){
+  //(" << m_id << ")
   stringstream view_point_msg;
   view_point_msg << "x=" << m_x << "," \
                  << "y=" << m_y << "," \
-                 << "label=(" << m_id << ")," \
+                 << "label=," \
                  << "vertex_color=" << m_color << "," \
                  << "vertex_size=" << m_size;
   return view_point_msg.str();
