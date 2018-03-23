@@ -34,13 +34,15 @@ public:
 	XYSegList();
 	~XYSegList() {}
 
-	void add_vertex(double x, double y);
-	std::string get_spec();
+	void add_vertex(double x, double y);     // add new point into list
+	std::string get_spec();                  // msg type for WayPoint BHV. such as "points = 10,50:-20,30:0,-10"
+	int get_points() {return m_points_num;}  // visit point number
 
 protected:
-	void greedy_path();
+	void greedy_path();                      // path planing
 
 	std::vector<XYPoint> m_xypoint_list;
+	int m_points_num;
 };
 
 #endif 
