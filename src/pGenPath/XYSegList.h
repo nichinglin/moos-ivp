@@ -1,16 +1,28 @@
 /************************************************************/
 /*    NAME: Monica Lin                                      */
 /*    ORGN: NCTU                                            */
-/*    FILE: XYPoint.h                                       */
+/*    FILE: XYSegList.h                                       */
 /*    DATE: March 20th, 2018                                */
 /************************************************************/
 
+#include <deque>
 #include <vector>
 #include <iterator>
 #include <sstream>
 
 #ifndef XYSegList_HEADER
 #define XYSegList_HEADER
+
+class XYPoint
+{
+public:
+	XYPoint() {}
+	~XYPoint() {}
+
+	double x;
+	double y;
+	double dis;
+};
 
 class XYSegList
 {
@@ -24,18 +36,9 @@ public:
 protected:
 	void greedy_path();
 
-	struct Activitiy
-	{
-		int start, finish;
-	};
-	bool activityCompare(Activitiy s1, Activitiy s2)
-	{
-		return (s1.finish < s2.finish);
-	}
-
-	std::vector<double> m_x;
-	std::vector<double> m_y;
 	std::vector<std::string> m_point_list;
+
+	std::deque<XYPoint> m_xypoint_list;
 };
 
 #endif 

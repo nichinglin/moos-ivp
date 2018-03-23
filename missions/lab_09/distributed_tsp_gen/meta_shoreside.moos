@@ -14,7 +14,7 @@ Processconfig = ANTLER
 
   Run = MOOSDB            @ NewConsole = false
   Run = pPointAssign      @ NewConsole = true
-  Run = pLogger           @ NewConsole = false
+  //Run = pLogger           @ NewConsole = false
   Run = pMarineViewer     @ NewConsole = false
   Run = pShare            @ NewConsole = false
   Run = pHostInfo         @ NewConsole = false

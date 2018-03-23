@@ -168,9 +168,10 @@ void GenPath::registerVariables()
 bool GenPath::buildReport() 
 {
   m_msgs << "============================================ \n";
-  m_msgs << "File:                                        \n";
+  m_msgs << "GenPath                                      \n";
   m_msgs << "============================================ \n";
 
+  m_msgs << "path: " << m_seglist.get_spec();
   //m_msgs << "Z_UPDATES_GENPATH: " << m_seglist.get_spec();
 
   // ACTable actab(4);

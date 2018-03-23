@@ -70,12 +70,12 @@ fi
 #-----------------------------------------------------------
 #  Part 3: Launch the processes
 #-----------------------------------------------------------
+printf "Launching $SNAME MOOS Community (WARP=%s) \n"  $TIME_WARP
+pAntler targ_shoreside.moos >& /dev/null &
 printf "Launching $VNAME1 MOOS Community (WARP=%s) \n" $TIME_WARP
 pAntler targ_$VNAME1.moos >& /dev/null &
 printf "Launching $VNAME2 MOOS Community (WARP=%s) \n" $TIME_WARP
 pAntler targ_$VNAME2.moos >& /dev/null &
-printf "Launching $SNAME MOOS Community (WARP=%s) \n"  $TIME_WARP
-pAntler targ_shoreside.moos >& /dev/null &
 printf "Done \n"
 
 #-----------------------------------------------------------

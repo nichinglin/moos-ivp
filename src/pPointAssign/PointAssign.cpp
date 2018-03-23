@@ -224,7 +224,7 @@ void PointAssign::registerVariables()
 bool PointAssign::buildReport() 
 {
   m_msgs << "============================================ \n";
-  m_msgs << "File:                                        \n";
+  m_msgs << "PointAssign                                  \n";
   m_msgs << "============================================ \n";
 
   m_msgs << "m_assign_by_region: " << m_assign_by_region << "\n";
