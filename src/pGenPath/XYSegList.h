@@ -9,14 +9,18 @@
 #include <vector>
 #include <iterator>
 #include <sstream>
+#include <math.h>
 
 #ifndef XYSegList_HEADER
 #define XYSegList_HEADER
 
+#define MAX 9999
+
 class XYPoint
 {
 public:
-	XYPoint() {}
+	XYPoint() :x(0.0),y(0.0),dis(MAX){}
+	XYPoint(double _x, double _y) :x(_x),y(_y),dis(MAX){}
 	~XYPoint() {}
 
 	double x;
@@ -36,9 +40,7 @@ public:
 protected:
 	void greedy_path();
 
-	std::vector<std::string> m_point_list;
-
-	std::deque<XYPoint> m_xypoint_list;
+	std::vector<XYPoint> m_xypoint_list;
 };
 
 #endif 

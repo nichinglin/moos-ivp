@@ -9,31 +9,45 @@
 
 using namespace std;
 
-#define MAX 9999
+//#define MAX 9999
 
 XYSegList::XYSegList() {
-  m_point_list.clear();
   m_xypoint_list.clear();
-  // m_start_x = 0.0;
-  // m_start_y = 0.0;
 }
 
 void XYSegList::add_vertex(double x, double y) {
-  XYPoint xy;
-  xy.x = x;
-  xy.y = y;
-  xy.dis = MAX;
-  m_xypoint_list.push_back(xy);
+  XYPoint p(x,y);
+  m_xypoint_list.push_back(p);
 
 }
 
 void XYSegList::greedy_path() {
+  XYPoint point_pre;
+  vector<XYPoint> path_list;
+  while(!m_xypoint_list.empty()){
+    vector<XYPoint>::iterator it;
+    vector<XYPoint>::iterator p_next;
+    double min_dis = MAX;
+    for(it=m_xypoint_list.begin(); it!=m_xypoint_list.end(); ++it) {
+      XYPoint &point_now = *it;
+      double d = pow((point_now.x-point_pre.x),2) + pow((point_now.y-point_pre.y),2);
+      d = sqrt(d);
+      if(d < min_dis) {
+        min_dis = d;
+        p_next = it;
+      }
+    }
+    path_list.push_back(*p_next);
+    m_xypoint_list.erase(p_next);
+  }
+  m_xypoint_list = path_list;
 }
 
 string XYSegList::get_spec() {
+  greedy_path();
   stringstream ss;
   ss << "points = ";
-  deque<XYPoint>::iterator it;
+  vector<XYPoint>::iterator it;
   for (it=m_xypoint_list.begin(); it!=m_xypoint_list.end(); ++it) {
     XYPoint &point_msg = *it;
     if(it != m_xypoint_list.begin())
