@@ -30,7 +30,7 @@ void XYSegList::greedy_path() {
     double min_dis = MAX;
     for(it=m_xypoint_list.begin(); it!=m_xypoint_list.end(); ++it) {
       XYPoint &point_now = *it;
-      double d = pow((point_now.x-point_pre.x),2) + pow((point_now.y-point_pre.y),2);
+      double d = (pow((point_now.x-point_pre.x),2) + pow((point_now.y-point_pre.y),2));
       d = sqrt(d);
       if(d < min_dis) {
         min_dis = d;
@@ -38,6 +38,7 @@ void XYSegList::greedy_path() {
       }
     }
     path_list.push_back(*p_next);
+    point_pre = *p_next;
     m_xypoint_list.erase(p_next);
   }
   m_xypoint_list = path_list;
