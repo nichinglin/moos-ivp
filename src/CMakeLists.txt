@@ -24,6 +24,7 @@ ADD_SUBDIRECTORY(pOdometry)
 ADD_SUBDIRECTORY(pTest)
 ADD_SUBDIRECTORY(pPointAssign)
 ADD_SUBDIRECTORY(pGenPath)
+ADD_SUBDIRECTORY(pGenPath_replan)
 
 ##############################################################################
 #                           END of CMakeLists.txt

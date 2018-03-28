@@ -12,8 +12,6 @@ ProcessConfig = uFldNodeBroker
   BRIDGE = src=VIEW_POINT
   BRIDGE = src=VIEW_SEGLIST
   BRIDGE = src=APPCAST
-  BRIDGE = src=GENPATH_RUN
-  
   BRIDGE = src=NODE_REPORT_LOCAL,  alias=NODE_REPORT
   BRIDGE = src=NODE_MESSAGE_LOCAL, alias=NODE_MESSAGE
   BRIDGE = src=DURATION_TIME_refueling, alias=$(VNAME)_TIME_refueling

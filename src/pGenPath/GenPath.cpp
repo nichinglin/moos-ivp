@@ -20,8 +20,9 @@ GenPath::GenPath()
 {
   m_visit_point_list.clear();
   m_genpath_run = true;
+  m_visit_radius = 5.0;
 
-  m_radius = 3;
+  m_radius = 5.0;
   m_points_received = 0;
   m_ivalid_point_recived = 0;
   m_first_received = "false";
@@ -56,6 +57,16 @@ bool GenPath::OnNewMail(MOOSMSG_LIST &NewMail)
       string sval  = msg.GetString(); 
       m_visit_point_list.push_back(sval);
       m_points_received++;
+    }
+    else if (key == "NAV_X") {
+      double dval  = msg.GetDouble();
+      m_nav_point.x = dval;
+      //if(DEBUG) cout << m_nav_point.x <<endl;
+    }
+    else if (key == "NAV_Y") {
+      double dval  = msg.GetDouble();
+      m_nav_point.y = dval;
+      //if(DEBUG) cout << m_nav_point.y <<endl;
     }
     else if(key != "APPCAST_REQ") // handled by AppCastingMOOSApp
       reportRunWarning("Unhandled Mail: " + key);
@@ -165,6 +176,9 @@ bool GenPath::OnStartUp()
     else if(param == "BAR") {
       handled = true;
     }
+    else if(param == "VISIT_RADIUS") {
+      handled = setDoubleOnString(m_radius, value);
+    }
 
     if(!handled)
       reportUnhandledConfigWarning(orig);
@@ -183,6 +197,8 @@ void GenPath::registerVariables()
   AppCastingMOOSApp::RegisterVariables();
   // Register("FOOBAR", 0);
   Register("VISIT_POINT", 0);
+  Register("NAV_X", 0);
+  Register("NAV_Y", 0);
 }
 
 
@@ -193,7 +209,8 @@ bool GenPath::buildReport()
 {
   m_visit_points = m_seglist.get_points();
   m_unvisit_points = m_points_received - m_visit_points -2; //-2 --> first and last point
-  //m_msgs << "Visit Radius: " << m_radius         << "                 \n";
+  m_msgs << "Visit Radius: " << m_radius         << "                 \n";
+  m_msgs << "NAV_X,NAV_Y: " << m_nav_point.x << "," << m_nav_point.y << "       \n";
   m_msgs << "Total Points Received: " << m_points_received << "       \n";
   m_msgs << "Invalid Points Received: " << m_ivalid_point_recived << "\n";
   m_msgs << "First Point Received: " << m_first_received << "         \n";

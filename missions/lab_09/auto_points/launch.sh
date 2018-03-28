@@ -35,7 +35,7 @@ REGION_X_MAX=200
 REGION_Y_MIN=-175
 REGION_Y_MAX=-25
 RANDOM_POINT=100
-ASSIGN_BY_REGION="true" # assign point by region or not
+ASSIGN_BY_REGION="false" # assign point by region or not
 
 SHORE_LISTEN="9300"
 

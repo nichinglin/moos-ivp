@@ -33,9 +33,11 @@ class GenPath : public AppCastingMOOSApp
    std::deque<std::string> m_visit_point_list;
    XYSegList m_seglist;
    bool m_genpath_run;
+   double m_visit_radius;
+   XYPoint m_nav_point;
 
    //app casting value
-   int m_radius;
+   double m_radius;
    int m_points_received;
    int m_ivalid_point_recived;
    std::string m_first_received;

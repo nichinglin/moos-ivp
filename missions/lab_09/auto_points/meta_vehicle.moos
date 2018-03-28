@@ -21,7 +21,6 @@ Processconfig = ANTLER
   Run = pShare             @ NewConsole = false
   Run = pHostInfo          @ NewConsole = false
   Run = uFldNodeBroker     @ NewConsole = false
-  Run = pGenPath           @ NewConsole = true
 }
  
 #include plug_uSimMarine.moos
@@ -33,9 +32,3 @@ Processconfig = ANTLER
 #include plug_pShare.moos
 #include plug_pHostInfo.moos
 #include plug_uFldNodeBroker.moos
-
-//------------------------------------------------------------
-Processconfig = pGenPath
-{
-
-}

@@ -7,8 +7,12 @@ ProcessConfig = uTimerScript
   CommsTick = 4
 
   paused=false
-  pause_var=(TSP_STATE == true)
-  //condition = (TSP_STATE == true)
+  //pause_var = ((POINTASSIGN_RUN == false) and (GENPATH_RUN == false))
+  condition = POINTASSIGN_RUN = 1
+  condition = GENPATH_RUN = 1
+  //pause_var= (!((POINTASSIGN_RUN == true) and (GENPATH_RUN == true)))
+  //condition = (POINTASSIGN_RUN = true)
+  //condition = (GENPATH_RUN = true)
   
   randvar = varname=RANDOM_X, min=$(REGION_X_MIN), max=$(REGION_X_MAX), key=at_post
   randvar = varname=RANDOM_Y, min=$(REGION_Y_MIN), max=$(REGION_Y_MAX), key=at_post

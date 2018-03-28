@@ -13,8 +13,8 @@ Processconfig = ANTLER
   MSBetweenLaunches = 100
 
   Run = MOOSDB            @ NewConsole = false
-  Run = pPointAssign      @ NewConsole = false
-  Run = pLogger           @ NewConsole = false
+  Run = pPointAssign      @ NewConsole = true
+  //Run = pLogger           @ NewConsole = false
   Run = pMarineViewer     @ NewConsole = false
   Run = pShare            @ NewConsole = false
   Run = pHostInfo         @ NewConsole = false
@@ -59,6 +59,7 @@ ProcessConfig = uFldShoreBroker
   BRIDGE   = src=RETURN_$V,  alias=RETURN
   BRIDGE   = src=REFUEL_NEEDED_ALL,  alias=REFUEL_NEEDED
   BRIDGE   = src=REFUEL_TIME_RESET_ALL, alias=REFUEL_TIME_RESET
+  //BRIDGE   = src=VISIT_POINT_HENRY, alias=VISIT_POINT
   BRIDGE   = src=VISIT_POINT_$V, alias=VISIT_POINT
 }
 

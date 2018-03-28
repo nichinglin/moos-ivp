@@ -30,17 +30,36 @@ set MODE = RETURNING {
   REFUEL_NEEDED = false
 }
 
-set MODE = LOITERING {
+set MODE = GENPATHING {
   MODE = ACTIVE
   LOITER = true
   REFUEL_NEEDED = false
-}     
+} 
+
+//----------------------------------------------
+Behavior = BHV_Waypoint
+{
+  name      = waypt_genpath
+  pwt       = 100
+  condition = MODE==GENPATHING
+  updates      = UPDATES_GENPATH
+
+  slip_radius = 15
+
+  perpetual = true
+
+      speed = 1.2
+     radius = 3.0
+  nm_radius = 15.0
+     points = $(START_POS)
+       lead = 8
+}
 
 //----------------------------------------------
 Behavior = BHV_Timer
 {
   name      = bhv_running
-  condition = ((MODE==RETURNING) or (MODE==LOITERING))
+  condition = ((MODE==RETURNING) or (MODE==GENPATHING))
   condition = MODE!=STATION-KEEPING
   endflag   = LOITER=false
   endflag   = REFUEL_NEEDED=true
@@ -51,7 +70,7 @@ Behavior = BHV_Timer
   duration_reset = REFUEL_TIME_RESET=running
 
   perpetual = true
-  duration  = 300
+  duration  = 600
   duration_status =  DURATION_TIME_running
  }
 
@@ -112,24 +131,24 @@ Behavior = BHV_Waypoint
        lead = 8
 }
 
-//----------------------------------------------
-Behavior = BHV_Loiter
-{
-  name      = loiter
-  pwt       = 100
-  condition = MODE==LOITERING
+// //----------------------------------------------
+// Behavior = BHV_Loiter
+// {
+//   name      = loiter
+//   pwt       = 100
+//   condition = MODE==GENPATHING
 
-   post_suffix = A
-         speed = 1.3
-     clockwise = false
-        radius = 8.0
-     nm_radius = 15.0
-       polygon = radial::$(LOITER_POS), radius=20, pts=8, snap=1, label=$(VNAME)_LOITER
+//    post_suffix = A
+//          speed = 1.3
+//      clockwise = false
+//         radius = 8.0
+//      nm_radius = 15.0
+//        polygon = radial::$(LOITER_POS), radius=20, pts=8, snap=1, label=$(VNAME)_LOITER
 
-  visual_hints = nextpt_color=white, nextpt_lcolor=khaki
-  visual_hints = edge_color=orange, vertex_color=white
-  visual_hints = edge_size=1, vertex_size=2
-}
+//   visual_hints = nextpt_color=white, nextpt_lcolor=khaki
+//   visual_hints = edge_color=orange, vertex_color=white
+//   visual_hints = edge_size=1, vertex_size=2
+// }
 
 
 //----------------------------------------------

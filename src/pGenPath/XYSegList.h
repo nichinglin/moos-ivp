@@ -42,6 +42,7 @@ protected:
 	void greedy_path();                      // path planing
 
 	std::vector<XYPoint> m_xypoint_list;
+	std::vector<XYPoint> m_genpath_regenerate_list;
 	int m_points_num;
 };
 
