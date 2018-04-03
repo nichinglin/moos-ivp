@@ -161,3 +161,4 @@ ProcessConfig = pShare
   output = src_name=VIEW_SEGLIST, dest_name=VIEW_SEGLIST, route=localhost:9200
   output = src_name=VIEW_POINT, dest_name=VIEW_POINT, route=localhost:9200
 }
+}

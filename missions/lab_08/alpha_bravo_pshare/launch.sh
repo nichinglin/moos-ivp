@@ -1,5 +1,7 @@
 #!/bin/bash -e
-COMMUNITY="alpha"
+COMMUNITY="shoreside"
+VNAME1="alpha"  
+VNAME2="bravo"  
 
 #-------------------------------------------------------
 #  Part 1: Check for and handle command-line arguments
@@ -24,6 +26,11 @@ done
 #-------------------------------------------------------
 printf "Launching the %s MOOS Community (WARP=%s) \n"  $COMMUNITY $TIME_WARP
 pAntler $COMMUNITY.moos --MOOSTimeWarp=$TIME_WARP >& /dev/null &
+printf "Launching $VNAME1 MOOS Community (WARP=%s) \n" $TIME_WARP
+pAntler $VNAME1.moos --MOOSTimeWarp=$TIME_WARP >& /dev/null &
+printf "Launching $VNAME2 MOOS Community (WARP=%s) \n" $TIME_WARP
+pAntler $VNAME2.moos --MOOSTimeWarp=$TIME_WARP >& /dev/null &
+printf "Done \n"
 
 uMAC -t $COMMUNITY.moos
 
