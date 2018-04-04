@@ -1,0 +1,82 @@
+ServerHost = localhost
+ServerPort = 9000
+Community  = alpha
+
+ProcessConfig = ANTLER
+{
+  MSBetweenLaunches = 200
+  
+  Run = MOOSDB       @ NewConsole = false
+  Run = uXMS         @ NewConsole = true
+  Run = uTimerScript @ NewConsole = false ~uTimerScript_A
+  Run = uTimerScript @ NewConsole = false ~uTimerScript_B
+  Run = pLogger      @ NewConsole = false
+}
+
+ProcessConfig = uXMS
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  VAR            = COUNTER_A, COUNTER_B, DB_CLIENTS, DB_UPTIME
+  COLOR_MAP      = COUNTER_A, red
+  COLOR_MAP      = COUNTER_B, blue
+  HISTORY_VAR    = COUNTER_A
+  HISTORY_VAR    = COUNTER_B
+}
+
+ProcessConfig = uTimerScript_A
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  paused = false
+  pause_var = UTS_PAUSE // this is default you can change the name for the config
+
+  event  = var=COUNTER_A, val=1,  time=0.5 
+  event  = var=COUNTER_A, val=2,  time=1.0
+  event  = var=COUNTER_A, val=3,  time=1.5 
+  event  = var=COUNTER_A, val=4,  time=2.0 
+  event  = var=COUNTER_A, val=5,  time=2.5 
+  event  = var=COUNTER_A, val=6,  time=3.0 
+  event  = var=COUNTER_A, val=7,  time=3.5 
+  event  = var=COUNTER_A, val=8,  time=4.0 
+  event  = var=COUNTER_A, val=9,  time=4.5 
+  event  = var=COUNTER_A, val=10, time=5:10 
+  
+  reset_max  = nolimit
+  reset_time = all-posted
+}
+
+
+ProcessConfig = uTimerScript_B
+{
+  AppTick   = 4
+  CommsTick = 4
+
+  condition = COUNTER_A > 5
+
+  paused = false
+  pause_var = UTS_PAUSE // this is default you can change the name for the config
+
+  event  = var=COUNTER_B, val=1,  time=1.0 
+  event  = var=COUNTER_B, val=2,  time=2.0
+  event  = var=COUNTER_B, val=3,  time=3.0 
+  event  = var=COUNTER_B, val=4,  time=4.0 
+  event  = var=COUNTER_B, val=5,  time=5.0 
+  event  = var=COUNTER_B, val=6,  time=6.0
+  event  = var=COUNTER_B, val=7,  time=7.0 
+  event  = var=COUNTER_B, val=8,  time=8.0
+  event  = var=COUNTER_B, val=9,  time=9.0
+  event  = var=COUNTER_B, val=10, time=10.0 
+  
+  reset_max  = nolimit
+  reset_time = all-posted
+}
+
+ProcessConfig = pLogger
+{
+  AsyncLog = true
+  WildCardLogging = true
+  WildCardOmitPattern = *_STATUS
+}
