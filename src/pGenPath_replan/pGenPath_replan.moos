@@ -1,0 +1,9 @@
+//------------------------------------------------
+// pGenPath_replan config block
+
+ProcessConfig = pGenPath_replan
+{
+   AppTick   = 4
+   CommsTick = 4
+}
+
