@@ -4,6 +4,7 @@ build/*
 /data/
 lib/*
 */MOOS*/
+*/LOG*/
 
 # file
 *.moos++
