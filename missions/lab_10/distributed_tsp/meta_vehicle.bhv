@@ -43,8 +43,11 @@ Behavior = BHV_Waypoint
   pwt       = 100
   condition = MODE==GENPATHING
   updates      = UPDATES_GENPATH
+  endflag      = ARRIVE_END = true
 
   slip_radius = 15
+
+  //wptflag = TARG_POINT = $(X),$(Y)
 
   perpetual = true
 

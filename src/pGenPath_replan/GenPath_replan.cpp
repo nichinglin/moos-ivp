@@ -75,6 +75,12 @@ bool GenPath_replan::OnNewMail(MOOSMSG_LIST &NewMail)
       double dval  = msg.GetDouble();
       m_wpt_index = dval;
     }
+    else if (key == "ARRIVE_END") {
+      string sval  = msg.GetString();
+      m_arrive_end = false;
+      if(sval == "true")
+        m_arrive_end = true;
+    }
 
     else if(key != "APPCAST_REQ") // handled by AppCastingMOOSApp
       reportRunWarning("Unhandled Mail: " + key);
@@ -156,10 +162,21 @@ bool GenPath_replan::Iterate()
       // string update_str = m_seglist.get_spec();
       // Notify("UPDATES_GENPATH", update_str);
     }
-    if(m_wpt_index == (m_visit_points-1)) {
+    //if(m_wpt_index == (m_visit_points-1)) {
+    if(m_arrive_end) {
       //cout << "wpt-index == points received" << endl;
       string update_str = m_seglist.get_spec();
-      Notify("UPDATES_GENPATH", update_str);
+      if(update_str != "points = ") {
+        Notify("UPDATES_GENPATH", update_str);
+        m_arrive_end = false;
+        Notify("ARRIVE_END", "false");
+      }
+      else {
+        Notify("UPDATES_GENPATH", "");
+        Notify("LOITER", "false");
+        Notify("RETURN", "true");
+        //otify("RETURN", "true");
+      }
     }
 
   AppCastingMOOSApp::PostReport();
@@ -197,13 +214,17 @@ bool GenPath_replan::OnStartUp()
       handled = setDoubleOnString(m_radius, value);
       m_seglist.set_visit_radius(m_radius);
     }
+    else if(param == "VISIT_RADIUS") {
+      handled = setDoubleOnString(m_radius, value);
+      m_seglist.set_visit_radius(m_radius);
+    }
 
     if(!handled)
       reportUnhandledConfigWarning(orig);
 
   }
   
-  registerVariables();	
+  registerVariables();
   return(true);
 }
 
@@ -218,6 +239,7 @@ void GenPath_replan::registerVariables()
   Register("NAV_X", 0);
   Register("NAV_Y", 0);
   Register("WPT_INDEX", 0);
+  Register("ARRIVE_END", 0);
 }
 
 

@@ -36,6 +36,7 @@ class GenPath_replan : public AppCastingMOOSApp
    int m_wpt_index;  // next point index
    //double m_visit_radius;
    bool m_genpath_run;
+   bool m_arrive_end;
 
    //app casting value
    double m_radius;

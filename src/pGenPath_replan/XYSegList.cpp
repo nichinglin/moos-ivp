@@ -31,19 +31,15 @@ void XYSegList::rm_visit_vertex(int index, double nav_x, double nav_y) {
   //if(DEBUG) cout << "nav (x,y): " << nav_x << "," << nav_y << endl;
   double d = (pow((point.x-nav_x),2) + pow((point.y-nav_y),2));
   d = sqrt(d);
-  //cout << d << endl;
   if(d < m_visit_radius) {
     int tmp;
     if(!m_rm_list.empty())
       tmp = m_rm_list.back();
     else
       tmp = -1;
-    //cout << "delete: " << tmp << "," << index << endl;
     if(tmp != index) {
       m_rm_list.push_back(index);
-      cout << "DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
     }
-    //m_xypoint_list.erase(it);
   }
 }
 
@@ -96,7 +92,9 @@ string XYSegList::get_spec() {
   m_rm_list.clear();
 
   if(m_xypoint_list.empty())
-    return "points = 0.0,0.0";
+    //cout << "m_xypoint_list is empty ..." << endl;
+    return "points = ";
+    //return "arrive_end";
   else {
     greedy_path();
     stringstream ss;
