@@ -25,6 +25,7 @@ ADD_SUBDIRECTORY(pTest)
 ADD_SUBDIRECTORY(pPointAssign)
 ADD_SUBDIRECTORY(pGenPath)
 ADD_SUBDIRECTORY(pGenPath_replan)
+ADD_SUBDIRECTORY(uFldHazardMgrX)
 
 ##############################################################################
 #                           END of CMakeLists.txt
