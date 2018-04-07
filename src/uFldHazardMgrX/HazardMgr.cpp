@@ -96,8 +96,10 @@ bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
     // get message form the other veh when they are able to communicate
     else if(key == "NODE_MESSAGE_OTHER") {
       handleMailGetOthersReport(sval);
-      string rep = "NODE MESSAGE FROM OTHER: " + sval;
-      reportEvent(rep);
+      // if (DEBUG) {
+      //   string rep = "NODE MESSAGE FROM OTHER: " + sval;
+      //   reportEvent(rep);
+      // }
     }
 
 
@@ -205,8 +207,6 @@ void HazardMgr::registerVariables()
   Register("UHZ_MISSION_PARAMS", 0);
   Register("HAZARDSET_REQUEST", 0);
   // add form monica
-  //Register("NODE_MESSAGE_LOCAL", 0);
-  Register("COMMUTICATE_OPEN", 0);
   Register("NODE_MESSAGE_OTHER", 0);
 }
 
@@ -343,8 +343,7 @@ void HazardMgr::handleMailReportRequest()
   
   Notify("HAZARDSET_REPORT", summary_report);
 
-  // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + summary_report + "\"";
-  // Notify("NODE_MESSAGE_LOCAL", req);
+  // send hazard set to the other vehicle
   postHazardSet2Other();
 }
 
@@ -386,9 +385,29 @@ void HazardMgr::postHazardSet2Other()
 
 void HazardMgr::handleMailGetOthersReport(string str)
 {
-  if(DEBUG) {
-    string repo = "getting msg " + str;
-    //reportEvent(repo);
+  // if(DEBUG) {
+  //   string repo = "getting msg " + str;
+  //   reportEvent(repo);
+  // }
+  vector<string> contenor = parseString(str, '#');
+  for (int i =0; i<contenor.size(); i++) {
+    string value = contenor[i];
+    string param = biteStringX(contenor[i], '=');
+    param = tolower(param);
+    // string repo = "param: " + param + ", value: " + value;
+    // reportEvent(repo);
+    if(param == "x") {
+      XYHazard new_hazard = string2Hazard(value);
+      new_hazard.setType("hazard");
+
+      string hazlabel = new_hazard.getLabel();
+      bool has_hazard = m_hazard_set.hasHazard(hazlabel);
+      if(!has_hazard) {
+        m_hazard_set.addHazard(new_hazard);
+        string summary_report = "summary: " + m_hazard_set.getSpec("final_report");
+        reportEvent(summary_report);
+      }
+    }
   }
 }
 
