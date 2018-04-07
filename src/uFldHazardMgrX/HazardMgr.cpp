@@ -94,11 +94,12 @@ bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
 
     // add by monica
     // get message form the other veh when they are able to communicate
-    //else if (key == "NODE_MESSAGE_LOCAL")
-    else if (key == "COMMUTICATE_OPEN") {
-      handleMailSentReport2Other(sval);
+    else if(key == "NODE_MESSAGE_OTHER") {
       handleMailGetOthersReport(sval);
+      string rep = "NODE MESSAGE FROM OTHER: " + sval;
+      reportEvent(rep);
     }
+
 
 
     else
@@ -132,9 +133,7 @@ bool HazardMgr::Iterate()
     postSensorInfoRequest();
 
   // send message to other vehicle if this and the other vehivle are able to communicate
-  string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=COMMUTICATE_OPEN,string_val=\"true\"";
-  Notify("NODE_MESSAGE_LOCAL", req);
-  // req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=TEST,string_val=this is a test";
+  // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=COMMUTICATE_OPEN,string_val=\"true\"";
   // Notify("NODE_MESSAGE_LOCAL", req);
 
   AppCastingMOOSApp::PostReport();
@@ -208,6 +207,7 @@ void HazardMgr::registerVariables()
   // add form monica
   //Register("NODE_MESSAGE_LOCAL", 0);
   Register("COMMUTICATE_OPEN", 0);
+  Register("NODE_MESSAGE_OTHER", 0);
 }
 
 //---------------------------------------------------------
@@ -323,10 +323,8 @@ bool HazardMgr::handleMailDetectionReport(string str)
 
   Notify("UHZ_CLASSIFY_REQUEST", req);
 
-
-  //req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=" + doubleToString(new_hazard.getX(),1);
-  req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + doubleToString(new_hazard.getX(),1) + "\"";
-  Notify("NODE_MESSAGE_LOCAL", req);
+  // req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + event + "\"";
+  // Notify("NODE_MESSAGE_LOCAL", req);
 
   return(true);
 }
@@ -340,10 +338,14 @@ void HazardMgr::handleMailReportRequest()
   m_summary_reports++;
 
   m_hazard_set.findMinXPath(20);
-  //unsigned int count    = m_hazard_set.findMinXPath(20);
+  //  unsigned int count    = m_hazard_set.findMinXPath(20);
   string summary_report = m_hazard_set.getSpec("final_report");
   
   Notify("HAZARDSET_REPORT", summary_report);
+
+  // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + summary_report + "\"";
+  // Notify("NODE_MESSAGE_LOCAL", req);
+  postHazardSet2Other();
 }
 
 
@@ -369,10 +371,15 @@ void HazardMgr::handleMailMissionParams(string str)
   }
 }
 
-void HazardMgr::handleMailSentReport2Other(string str)
+void HazardMgr::postHazardSet2Other()
 {
+  string summary_report = m_hazard_set.getSpec("final_report");
+
+  string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + summary_report + "\"";
+  Notify("NODE_MESSAGE_LOCAL", req);
+
   if(DEBUG) {
-    string repo = "sending msg: " + str;
+    string repo = "sending msg: " + summary_report;
     //reportEvent(repo);
   }
 }

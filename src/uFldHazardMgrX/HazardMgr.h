@@ -54,12 +54,12 @@ class HazardMgr : public AppCastingMOOSApp
    // add by monica
    // get message form the other veh when they are able to communicate
    void handleMailGetOthersReport(std::string);  // if two vehicle can communicate, get others detection report
-   void handleMailSentReport2Other(std::string); // if two vehicle can communicate, sent detection report to the other vehhicle
 
  protected: 
    void postSensorConfigRequest();
    void postSensorInfoRequest();
    void postHazardSetReport();
+   void postHazardSet2Other();            // if two vehicle can communicate, sent detection report to the other vehhicle
    
  private: // Configuration variables
    double      m_swath_width_desired;
