@@ -10,3 +10,8 @@ lib/*
 *.moos++
 *.LastOpenedMOOSLogDirectory
 *targ_*
+*.alog
+*.blog
+*.slog
+*.ylog
+*._moos
