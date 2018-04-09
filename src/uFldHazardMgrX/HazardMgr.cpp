@@ -40,6 +40,7 @@ HazardMgr::HazardMgr()
   // Config variables
   m_swath_width_desired = 25;
   m_pd_desired          = 0.9;
+  m_max_msg_length = 5;
 
   // State Variables 
   m_sensor_config_requested = false;
@@ -53,8 +54,6 @@ HazardMgr::HazardMgr()
   m_detection_reports  = 0;
 
   m_summary_reports = 0;
-
-  //m_max_msg_length = 0;
 
   m_hazard_set_index_to_send = 0;
   m_hazard_set_button = false;
@@ -101,18 +100,10 @@ bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
     // get message form the other veh when they are able to communicate
     else if(key == "NODE_MESSAGE_OTHER") {
       handleMailGetOthersReport(sval);
-      // if (DEBUG) {
-      //   string rep = "NODE MESSAGE FROM OTHER: " + sval;
-      //   reportEvent(rep);
-      // }
     }
     else if(key == "TESTING_MESSAGE_LENGTH") {
       //handleMailTestMsgLength(sval);
     }
-    // else if(key == "NODE_REPORT")
-    //   handleMailGetOtherVname(sval);
-
-
 
     else
       reportRunWarning("Unhandled Mail: " + key);
@@ -220,7 +211,6 @@ void HazardMgr::registerVariables()
   // add form monica
   Register("NODE_MESSAGE_OTHER", 0);
   Register("TESTING_MESSAGE_LENGTH", 0);
-  //Register("NODE_REPORT", 0);
 }
 
 //---------------------------------------------------------
@@ -252,24 +242,32 @@ void HazardMgr::postSensorInfoRequest()
 void HazardMgr::postHazardSet2Other()
 {
   if(m_hazard_set.size() > m_hazard_set_index_to_send) {
-    XYHazard new_hazard = m_hazard_set.getHazard(m_hazard_set_index_to_send);
-    new_hazard.setType("hazard");
+    string repo = "";
+    while(m_max_msg_length--) {
+      XYHazard new_hazard = m_hazard_set.getHazard(m_hazard_set_index_to_send);
+      new_hazard.setType("hazard");
 
-    string event = "#x=" + doubleToString(new_hazard.getX(),1);
-    event += ",y=" + doubleToString(new_hazard.getY(),1);
-    event += ",label=" + new_hazard.getLabel();
-    reportEvent(event);
+      string event = "#x=" + doubleToString(new_hazard.getX(),1);
+      event += ",y=" + doubleToString(new_hazard.getY(),1);
+      event += ",label=" + new_hazard.getLabel();
+      
+      repo += event;
+      m_hazard_set_index_to_send++;
+      if(m_hazard_set_index_to_send >=m_hazard_set.size())
+        break;
+    }
+    m_max_msg_length = 5;
+    reportEvent(repo);
 
-    string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + event + "\"";
+    string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + repo + "\"";
     Notify("NODE_MESSAGE_LOCAL", req);
     m_hazard_set_button = false;
     m_hazard_set_index_to_send ++;
   }
-  else if (m_hazard_set.size() == m_hazard_set_index_to_send){
+  else if (m_hazard_set.size() <= m_hazard_set_index_to_send){
     reportEvent("no msg is needed to end");
     m_hazard_set_button = false;
   }
-
 
   // string summary_report = m_hazard_set.getSpec("final_report");
 
@@ -379,6 +377,7 @@ void HazardMgr::handleMailReportRequest()
   m_summary_reports++;
 
   m_hazard_set.findMinXPath(20);
+
   //  unsigned int count    = m_hazard_set.findMinXPath(20);
   string summary_report = m_hazard_set.getSpec("final_report");
   

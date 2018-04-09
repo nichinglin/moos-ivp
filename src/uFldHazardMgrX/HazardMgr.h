@@ -68,7 +68,7 @@ class HazardMgr : public AppCastingMOOSApp
  private: // Configuration variables
    double      m_swath_width_desired;
    double      m_pd_desired;
-   //unsigned int m_max_msg_length;
+   unsigned int m_max_msg_length;
    std::string m_report_name;
    //std::string m_other_community;
 
