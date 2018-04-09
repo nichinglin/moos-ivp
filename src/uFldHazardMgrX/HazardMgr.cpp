@@ -53,6 +53,15 @@ HazardMgr::HazardMgr()
   m_detection_reports  = 0;
 
   m_summary_reports = 0;
+
+  m_msg_length_test_start = false;
+  m_max_msg_length = 0;
+
+  m_hazard_set_index_to_send = 0;
+  m_hazard_set_button = false;
+
+  // m_other_community = "";
+  // m_get_other_vname = false;
 }
 
 //---------------------------------------------------------
@@ -101,6 +110,11 @@ bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
       //   reportEvent(rep);
       // }
     }
+    else if(key == "TESTING_MESSAGE_LENGTH") {
+      //handleMailTestMsgLength(sval);
+    }
+    // else if(key == "NODE_REPORT")
+    //   handleMailGetOtherVname(sval);
 
 
 
@@ -133,6 +147,19 @@ bool HazardMgr::Iterate()
 
   if(m_sensor_config_set)
     postSensorInfoRequest();
+
+  if(m_hazard_set_button) {
+    // send hazard set to the other vehicle
+    postHazardSet2Other();
+  }
+
+  // if(!m_msg_length_test_start) {
+  //   string str;
+  //   str.resize (str.size()+50, 't');
+  //   string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=TESTING_MESSAGE_LENGTH,string_val=" + str;
+  //   Notify("NODE_MESSAGE_LOCAL", req);
+  //   m_msg_length_test_start = true;
+  // }
 
   // send message to other vehicle if this and the other vehivle are able to communicate
   // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=COMMUTICATE_OPEN,string_val=\"true\"";
@@ -208,6 +235,8 @@ void HazardMgr::registerVariables()
   Register("HAZARDSET_REQUEST", 0);
   // add form monica
   Register("NODE_MESSAGE_OTHER", 0);
+  Register("TESTING_MESSAGE_LENGTH", 0);
+  //Register("NODE_REPORT", 0);
 }
 
 //---------------------------------------------------------
@@ -234,6 +263,34 @@ void HazardMgr::postSensorInfoRequest()
 
   m_sensor_report_reqs++;
   Notify("UHZ_SENSOR_REQUEST", request);
+}
+
+void HazardMgr::postHazardSet2Other()
+{
+  if(m_hazard_set.size() > m_hazard_set_index_to_send) {
+    XYHazard new_hazard = m_hazard_set.getHazard(m_hazard_set_index_to_send);
+    new_hazard.setType("hazard");
+
+    string event = "#x=" + doubleToString(new_hazard.getX(),1);
+    event += ",y=" + doubleToString(new_hazard.getY(),1);
+    event += ",label=" + new_hazard.getLabel();
+    reportEvent(event);
+
+    string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + event + "\"";
+    Notify("NODE_MESSAGE_LOCAL", req);
+    m_hazard_set_button = false;
+    m_hazard_set_index_to_send ++;
+  }
+  else if (m_hazard_set.size() == m_hazard_set_index_to_send){
+    reportEvent("no msg is needed to end");
+    m_hazard_set_button = false;
+  }
+
+
+  // string summary_report = m_hazard_set.getSpec("final_report");
+
+  // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + summary_report + "\"";
+  // Notify("NODE_MESSAGE_LOCAL", req);
 }
 
 //---------------------------------------------------------
@@ -317,7 +374,7 @@ bool HazardMgr::handleMailDetectionReport(string str)
   event += ", x=" + doubleToString(new_hazard.getX(),1);
   event += ", y=" + doubleToString(new_hazard.getY(),1);
 
-  reportEvent(event);
+  //reportEvent(event);
 
   string req = "vname=" + m_host_community + ",label=" + hazlabel;
 
@@ -343,8 +400,8 @@ void HazardMgr::handleMailReportRequest()
   
   Notify("HAZARDSET_REPORT", summary_report);
 
-  // send hazard set to the other vehicle
-  postHazardSet2Other();
+  // send msg to other = true
+  m_hazard_set_button = true;
 }
 
 
@@ -370,32 +427,15 @@ void HazardMgr::handleMailMissionParams(string str)
   }
 }
 
-void HazardMgr::postHazardSet2Other()
-{
-  string summary_report = m_hazard_set.getSpec("final_report");
-
-  string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + summary_report + "\"";
-  Notify("NODE_MESSAGE_LOCAL", req);
-
-  if(DEBUG) {
-    string repo = "sending msg: " + summary_report;
-    //reportEvent(repo);
-  }
-}
-
 void HazardMgr::handleMailGetOthersReport(string str)
 {
-  // if(DEBUG) {
-  //   string repo = "getting msg " + str;
-  //   reportEvent(repo);
-  // }
+  // str msg example: 
+  // get msg start with x=
   vector<string> contenor = parseString(str, '#');
   for (int i =0; i<contenor.size(); i++) {
     string value = contenor[i];
     string param = biteStringX(contenor[i], '=');
     param = tolower(param);
-    // string repo = "param: " + param + ", value: " + value;
-    // reportEvent(repo);
     if(param == "x") {
       XYHazard new_hazard = string2Hazard(value);
       new_hazard.setType("hazard");
@@ -404,13 +444,52 @@ void HazardMgr::handleMailGetOthersReport(string str)
       bool has_hazard = m_hazard_set.hasHazard(hazlabel);
       if(!has_hazard) {
         m_hazard_set.addHazard(new_hazard);
-        string summary_report = "summary: " + m_hazard_set.getSpec("final_report");
-        reportEvent(summary_report);
       }
     }
   }
+  string summary_report = m_hazard_set.getSpec("final_report");
+  Notify("FINAL_HAZARDSET_REPORT", summary_report);
+  summary_report = "summary: " + m_hazard_set.getSpec("final_report");
+  //reportEvent(summary_report);
 }
 
+//---------------------------------------------------------
+// Procedure: registerVariables
+
+void HazardMgr::handleMailTestMsgLength(string str)
+{
+  // ss << str.size() << "," << m_max_msg_length;
+  // reportEvent(ss.str());
+  int string_size = str.size();
+  if(string_size != m_max_msg_length) {
+    m_max_msg_length = string_size + 100;
+    str.resize (string_size + 50, 't');
+
+    stringstream ss;
+    ss << str.size() << "," << m_max_msg_length;
+    //reportEvent(ss.str());
+
+    string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=TESTING_MESSAGE_LENGTH,string_val=" + str;
+    //reportEvent(req);
+    Notify("NODE_MESSAGE_LOCAL", req);
+  }
+}
+
+// void HazardMgr::handleMailGetOtherVname(string str)
+// {
+//   if(!m_get_other_vname) {
+//     vector<string> contenor = parseString(str, ',');
+//     for (int i =0; i<contenor.size(); i++) {
+//       string param = biteStringX(contenor[i], '=');
+//       string value = contenor[i];
+//       param = tolower(param);
+//       if (param == "name")
+//         m_other_community = value;
+//     }
+//     reportEvent(m_other_community);
+//     m_get_other_vname = true;
+//   }
+// }
 
 
 //------------------------------------------------------------
