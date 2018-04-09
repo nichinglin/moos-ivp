@@ -54,14 +54,10 @@ HazardMgr::HazardMgr()
 
   m_summary_reports = 0;
 
-  m_msg_length_test_start = false;
-  m_max_msg_length = 0;
+  //m_max_msg_length = 0;
 
   m_hazard_set_index_to_send = 0;
   m_hazard_set_button = false;
-
-  // m_other_community = "";
-  // m_get_other_vname = false;
 }
 
 //---------------------------------------------------------
@@ -152,18 +148,6 @@ bool HazardMgr::Iterate()
     // send hazard set to the other vehicle
     postHazardSet2Other();
   }
-
-  // if(!m_msg_length_test_start) {
-  //   string str;
-  //   str.resize (str.size()+50, 't');
-  //   string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=TESTING_MESSAGE_LENGTH,string_val=" + str;
-  //   Notify("NODE_MESSAGE_LOCAL", req);
-  //   m_msg_length_test_start = true;
-  // }
-
-  // send message to other vehicle if this and the other vehivle are able to communicate
-  // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=COMMUTICATE_OPEN,string_val=\"true\"";
-  // Notify("NODE_MESSAGE_LOCAL", req);
 
   AppCastingMOOSApp::PostReport();
   return(true);
@@ -452,45 +436,6 @@ void HazardMgr::handleMailGetOthersReport(string str)
   summary_report = "summary: " + m_hazard_set.getSpec("final_report");
   //reportEvent(summary_report);
 }
-
-//---------------------------------------------------------
-// Procedure: registerVariables
-
-void HazardMgr::handleMailTestMsgLength(string str)
-{
-  // ss << str.size() << "," << m_max_msg_length;
-  // reportEvent(ss.str());
-  int string_size = str.size();
-  if(string_size != m_max_msg_length) {
-    m_max_msg_length = string_size + 100;
-    str.resize (string_size + 50, 't');
-
-    stringstream ss;
-    ss << str.size() << "," << m_max_msg_length;
-    //reportEvent(ss.str());
-
-    string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=TESTING_MESSAGE_LENGTH,string_val=" + str;
-    //reportEvent(req);
-    Notify("NODE_MESSAGE_LOCAL", req);
-  }
-}
-
-// void HazardMgr::handleMailGetOtherVname(string str)
-// {
-//   if(!m_get_other_vname) {
-//     vector<string> contenor = parseString(str, ',');
-//     for (int i =0; i<contenor.size(); i++) {
-//       string param = biteStringX(contenor[i], '=');
-//       string value = contenor[i];
-//       param = tolower(param);
-//       if (param == "name")
-//         m_other_community = value;
-//     }
-//     reportEvent(m_other_community);
-//     m_get_other_vname = true;
-//   }
-// }
-
 
 //------------------------------------------------------------
 // Procedure: buildReport()
