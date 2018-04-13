@@ -1,11 +1,11 @@
 #--------------------------------------------------------
-# The CMakeLists.txt for:                       uFldHazardMgrX
-# Author(s):                              
+# The CMakeLists.txt for:           uFldHazardMgrX
+# Author(s):                        monica
 #--------------------------------------------------------
 
 SET(SRC
-  HazardMgr.cpp
-  HazardMgr_Info.cpp
+  HazardMgrX.cpp
+  HazardMgrX_Info.cpp
   main.cpp
 )
 

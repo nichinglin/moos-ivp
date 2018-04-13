@@ -1,7 +1,7 @@
 /*****************************************************************/
 /*    NAME: Michael Benjamin                                     */
 /*    ORGN: Dept of Mechanical Eng / CSAIL, MIT Cambridge MA     */
-/*    FILE: HazardMgr_Info.h                                     */
+/*    FILE: HazardMgrX_Info.h                                     */
 /*    DATE: Oct 26th 2012                                        */
 /*                                                               */
 /* This file is part of MOOS-IvP                                 */

@@ -1,7 +1,7 @@
 /*****************************************************************/
 /*    NAME: Michael Benjamin                                     */
 /*    ORGN: Dept of Mechanical Eng / CSAIL, MIT Cambridge MA     */
-/*    FILE: HazardMgr.h                                          */
+/*    FILE: HazardMgrX.h                                          */
 /*    DATE: Oct 26th 2012                                        */
 /*                                                               */
 /* This file is part of MOOS-IvP                                 */
@@ -27,12 +27,13 @@
 #include "MOOS/libMOOS/Thirdparty/AppCasting/AppCastingMOOSApp.h"
 #include "XYHazardSet.h"
 #include "XYPolygon.h"
+#include <deque>
 
-class HazardMgr : public AppCastingMOOSApp
+class HazardMgrX : public AppCastingMOOSApp
 {
  public:
-   HazardMgr();
-   ~HazardMgr() {}
+   HazardMgrX();
+   ~HazardMgrX() {}
 
  protected: // Standard MOOSApp functions to overload  
    bool OnNewMail(MOOSMSG_LIST &NewMail);
@@ -51,48 +52,52 @@ class HazardMgr : public AppCastingMOOSApp
    bool handleMailHazardReport(std::string) {return(true);}
    void handleMailReportRequest();
    void handleMailMissionParams(std::string);
-   // add by monica
-   // get message form the other veh when they are able to communicate
-   void handleMailGetOthersReport(std::string);  // if two vehicle can communicate, get others detection report
-   void handleMailTestMsgLength(std::string);
-   void handleMailGetOtherVname(std::string);
-
+   void handleMailSend2Other();
+   void getHazardToOutput(std::string);
+ 
  protected: 
    void postSensorConfigRequest();
    void postSensorInfoRequest();
    void postHazardSetReport();
-   // add by monica
-   // get message form the other veh when they are able to communicate
-   void postHazardSet2Other();            // if two vehicle can communicate, sent detection report to the other vehhicle
+   void postHistoryDetectList();
    
  private: // Configuration variables
    double      m_swath_width_desired;
    double      m_pd_desired;
-   unsigned int m_max_msg_length;
    std::string m_report_name;
-   //std::string m_other_community;
-
+   std::string m_col_result;
+   //unsigned int m_col_send_time;
+   bool        m_need_station_keep;
+   bool        m_hit_communicate_point;
  private: // State variables
    bool   m_sensor_config_requested;
    bool   m_sensor_config_set;
-   bool   m_hazard_set_button;
+   bool   m_survey_redetect;
 
    unsigned int m_sensor_config_reqs;
    unsigned int m_sensor_config_acks;
+   unsigned int m_wpt_index;
 
    unsigned int m_sensor_report_reqs;
    unsigned int m_detection_reports;
-
    unsigned int m_summary_reports;
-   unsigned int m_hazard_set_index_to_send;
-
+   std::deque<std::string>  m_detection_reports_str_buff;
+   std::deque<std::string> m_history_detect_buff;
+   std::deque<std::string>  m_output_buff;
+   std::vector<XYPoint> m_xypoint_list;
    double m_swath_width_granted;
    double m_pd_granted;
 
+   double m_nav_x;
+   double m_nav_y;
+    
+   bool m_self_result; // if it's from own vehicle, not collaborator
    XYHazardSet m_hazard_set;
    XYPolygon   m_search_region;
-   
    double      m_transit_path_width;
+   std::string m_message_in;
+   std::string m_sec_detect_width;
+   std::string m_sec_pd; 
 };
 
 #endif 

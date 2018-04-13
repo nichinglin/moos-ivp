@@ -1,7 +1,7 @@
 /*****************************************************************/
 /*    NAME: Michael Benjamin                                     */
 /*    ORGN: Dept of Mechanical Eng / CSAIL, MIT Cambridge MA     */
-/*    FILE: HazardMgr.cpp                                        */
+/*    FILE: HazardMgrX.cpp                                        */
 /*    DATE: Oct 26th 2012                                        */
 /*                                                               */
 /* This file is part of MOOS-IvP                                 */
@@ -23,30 +23,27 @@
 
 #include <iterator>
 #include "MBUtils.h"
-#include "HazardMgr.h"
+#include "HazardMgrX.h"
 #include "XYFormatUtilsHazard.h"
 #include "XYFormatUtilsPoly.h"
 #include "ACTable.h"
-
-#define DEBUG true
-
 using namespace std;
 
 //---------------------------------------------------------
 // Constructor
 
-HazardMgr::HazardMgr()
+HazardMgrX::HazardMgrX()
 {
   // Config variables
   m_swath_width_desired = 25;
   m_pd_desired          = 0.9;
-  m_max_msg_length = 5;
 
   // State Variables 
   m_sensor_config_requested = false;
   m_sensor_config_set   = false;
   m_swath_width_granted = 0;
   m_pd_granted          = 0;
+  m_share_msg           = true;
 
   m_sensor_config_reqs = 0;
   m_sensor_config_acks = 0;
@@ -55,14 +52,15 @@ HazardMgr::HazardMgr()
 
   m_summary_reports = 0;
 
-  m_hazard_set_index_to_send = 0;
-  m_hazard_set_button = false;
+  m_detection_reports_str_buff.clear();
+  m_history_detect_buff.clear();
+  m_self_result = true;
 }
 
 //---------------------------------------------------------
 // Procedure: OnNewMail
 
-bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
+bool HazardMgrX::OnNewMail(MOOSMSG_LIST &NewMail)
 {
   AppCastingMOOSApp::OnNewMail(NewMail);
 
@@ -87,25 +85,36 @@ bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
     else if(key == "UHZ_OPTIONS_SUMMARY") 
       handleMailSensorOptionsSummary(sval);
 
-    else if(key == "UHZ_DETECTION_REPORT") 
+    else if(key == "UHZ_DETECTION_REPORT"){ 
       handleMailDetectionReport(sval);
 
-    else if(key == "HAZARDSET_REQUEST") 
+  string buff_input = sval;    
+        m_detection_reports_str_buff.push_back(buff_input);
+    }
+
+    else if(key == "HAZARDSET_REQUEST") {
       handleMailReportRequest();
+        Notify("WAPOINTING","true");
+        Notify("STATION", "false");
+    }
 
     else if(key == "UHZ_MISSION_PARAMS") 
       handleMailMissionParams(sval);
-
-    // add by monica
-    // get message form the other veh when they are able to communicate
-    else if(key == "NODE_MESSAGE_OTHER") {
-      handleMailGetOthersReport(sval);
+    
+    else if(key == "COL_RESULT"){
+     //  if(sval != "\""){
+        vector<string> col_parse_buff = parseString(sval, '#');
+            while(!col_parse_buff.empty()){
+                string message_in = col_parse_buff.back();
+                    m_self_result = false;
+                    handleMailDetectionReport(message_in);
+                    col_parse_buff.pop_back();
+                    string summary_report = m_hazard_set.getSpec("final_report");
+                Notify("HAZARDSET_REPORT", summary_report);
+            }
+     //  }
     }
-    else if(key == "TESTING_MESSAGE_LENGTH") {
-      //handleMailTestMsgLength(sval);
-    }
-
-    else
+    else 
       reportRunWarning("Unhandled Mail: " + key);
   }
 	
@@ -115,7 +124,7 @@ bool HazardMgr::OnNewMail(MOOSMSG_LIST &NewMail)
 //---------------------------------------------------------
 // Procedure: OnConnectToServer
 
-bool HazardMgr::OnConnectToServer()
+bool HazardMgrX::OnConnectToServer()
 {
    registerVariables();
    return(true);
@@ -125,7 +134,7 @@ bool HazardMgr::OnConnectToServer()
 // Procedure: Iterate()
 //            happens AppTick times per second
 
-bool HazardMgr::Iterate()
+bool HazardMgrX::Iterate()
 {
   AppCastingMOOSApp::Iterate();
 
@@ -135,11 +144,6 @@ bool HazardMgr::Iterate()
   if(m_sensor_config_set)
     postSensorInfoRequest();
 
-  if(m_hazard_set_button) {
-    // send hazard set to the other vehicle
-    postHazardSet2Other();
-  }
-
   AppCastingMOOSApp::PostReport();
   return(true);
 }
@@ -148,7 +152,7 @@ bool HazardMgr::Iterate()
 // Procedure: OnStartUp()
 //            happens before connection is open
 
-bool HazardMgr::OnStartUp()
+bool HazardMgrX::OnStartUp()
 {
   AppCastingMOOSApp::OnStartUp();
 
@@ -178,6 +182,17 @@ bool HazardMgr::OnStartUp()
       m_report_name = value;
       handled = true;
     }
+    else if(param == "share_msg") {
+      if(value == "true" || value == "\"true\"") {
+        m_share_msg = true;
+        handled = true;
+      }
+      else if (value == "false" || value == "\"false\"") {
+        m_share_msg = false;
+        handled = true;
+      }
+      reportEvent(value);
+    }
     else if(param == "region") {
       XYPolygon poly = string2Poly(value);
       if(poly.is_convex())
@@ -200,7 +215,7 @@ bool HazardMgr::OnStartUp()
 //---------------------------------------------------------
 // Procedure: registerVariables
 
-void HazardMgr::registerVariables()
+void HazardMgrX::registerVariables()
 {
   AppCastingMOOSApp::RegisterVariables();
   Register("UHZ_DETECTION_REPORT", 0);
@@ -208,15 +223,13 @@ void HazardMgr::registerVariables()
   Register("UHZ_OPTIONS_SUMMARY", 0);
   Register("UHZ_MISSION_PARAMS", 0);
   Register("HAZARDSET_REQUEST", 0);
-  // add form monica
-  Register("NODE_MESSAGE_OTHER", 0);
-  Register("TESTING_MESSAGE_LENGTH", 0);
+  Register("COL_RESULT",0);
 }
 
 //---------------------------------------------------------
 // Procedure: postSensorConfigRequest
 
-void HazardMgr::postSensorConfigRequest()
+void HazardMgrX::postSensorConfigRequest()
 {
   string request = "vname=" + m_host_community;
   
@@ -231,7 +244,7 @@ void HazardMgr::postSensorConfigRequest()
 //---------------------------------------------------------
 // Procedure: postSensorInfoRequest
 
-void HazardMgr::postSensorInfoRequest()
+void HazardMgrX::postSensorInfoRequest()
 {
   string request = "vname=" + m_host_community;
 
@@ -239,46 +252,10 @@ void HazardMgr::postSensorInfoRequest()
   Notify("UHZ_SENSOR_REQUEST", request);
 }
 
-void HazardMgr::postHazardSet2Other()
-{
-  if(m_hazard_set.size() > m_hazard_set_index_to_send) {
-    string repo = "";
-    while(m_max_msg_length--) {
-      XYHazard new_hazard = m_hazard_set.getHazard(m_hazard_set_index_to_send);
-      new_hazard.setType("hazard");
-
-      string event = "#x=" + doubleToString(new_hazard.getX(),1);
-      event += ",y=" + doubleToString(new_hazard.getY(),1);
-      event += ",label=" + new_hazard.getLabel();
-      
-      repo += event;
-      m_hazard_set_index_to_send++;
-      if(m_hazard_set_index_to_send >=m_hazard_set.size())
-        break;
-    }
-    m_max_msg_length = 5;
-    reportEvent(repo);
-
-    string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + repo + "\"";
-    Notify("NODE_MESSAGE_LOCAL", req);
-    m_hazard_set_button = false;
-    m_hazard_set_index_to_send ++;
-  }
-  else if (m_hazard_set.size() <= m_hazard_set_index_to_send){
-    reportEvent("no msg is needed to end");
-    m_hazard_set_button = false;
-  }
-
-  // string summary_report = m_hazard_set.getSpec("final_report");
-
-  // string req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + summary_report + "\"";
-  // Notify("NODE_MESSAGE_LOCAL", req);
-}
-
 //---------------------------------------------------------
 // Procedure: handleMailSensorConfigAck
 
-bool HazardMgr::handleMailSensorConfigAck(string str)
+bool HazardMgrX::handleMailSensorConfigAck(string str)
 {
   // Expected ack parameters:
   string vname, width, pd, pfa, pclass;
@@ -331,7 +308,7 @@ bool HazardMgr::handleMailSensorConfigAck(string str)
 //      Note: The detection report should look something like:
 //            UHZ_DETECTION_REPORT = vname=betty,x=51,y=11.3,label=12 
 
-bool HazardMgr::handleMailDetectionReport(string str)
+bool HazardMgrX::handleMailDetectionReport(string str)
 {
   m_detection_reports++;
 
@@ -351,20 +328,20 @@ bool HazardMgr::handleMailDetectionReport(string str)
   else
     m_hazard_set.setHazard(ix, new_hazard);
 
-  string event = "New Detection";
-  event += ", label=" + new_hazard.getLabel();
+  string event = "New Detection, label=" + new_hazard.getLabel();
   event += ", x=" + doubleToString(new_hazard.getX(),1);
   event += ", y=" + doubleToString(new_hazard.getY(),1);
 
-  //reportEvent(event);
+  reportEvent(event);
+    if(m_self_result){
+        string req = "vname=" + m_host_community + ",label=" + hazlabel;
 
-  string req = "vname=" + m_host_community + ",label=" + hazlabel;
-
-  Notify("UHZ_CLASSIFY_REQUEST", req);
-
-  // req = "src_node=" + m_host_community + ",dest_node=all" + ",var_name=NODE_MESSAGE_OTHER,string_val=\"" + event + "\"";
-  // Notify("NODE_MESSAGE_LOCAL", req);
-
+        Notify("UHZ_CLASSIFY_REQUEST", req);
+    }
+    else{
+    
+        m_self_result = true;    // change back to true
+    }
   return(true);
 }
 
@@ -372,19 +349,78 @@ bool HazardMgr::handleMailDetectionReport(string str)
 //---------------------------------------------------------
 // Procedure: handleMailReportRequest
 
-void HazardMgr::handleMailReportRequest()
+// modify by YHH for merging two vehicle report
+void HazardMgrX::handleMailReportRequest()
 {
   m_summary_reports++;
 
   m_hazard_set.findMinXPath(20);
+  //unsigned int count    = m_hazard_set.findMinXPath(20);
+//  string summary_report_local = m_hazard_set.getSpec("final_report");
 
-  //  unsigned int count    = m_hazard_set.findMinXPath(20);
-  string summary_report = m_hazard_set.getSpec("final_report");
-  
-  Notify("HAZARDSET_REPORT", summary_report);
+//sending report to another vehicle  
+  if (m_share_msg) {
+   string hostname=m_report_name;      
+   string dest_name="all";     
+   string moos_varname="COL_RESULT";
+   string msg_contents="\"";
+   
+   if(!m_detection_reports_str_buff.empty()){
+        
+       while(!m_detection_reports_str_buff.empty()){
+        bool repetitive = false;
+        string input = m_detection_reports_str_buff.front();
+         if(!m_history_detect_buff.empty()){
+           for(int i=0;i<m_history_detect_buff.size();){
+               if( input == m_history_detect_buff[i]){
+                repetitive = true;
+                break;
+            }
+                else{
+                i++;
+                }
+           }
+         }
 
-  // send msg to other = true
-  m_hazard_set_button = true;
+           if(!repetitive){
+               m_output_buff.push_back(input);
+               m_history_detect_buff.push_back(input);
+           }
+               m_detection_reports_str_buff.pop_front();
+        
+        } 
+   }
+   if(!m_output_buff.empty()){
+       
+       for(int i=0;i<m_output_buff.size();i++){    
+        
+        if(!m_output_buff.empty()){
+          string elemet = m_output_buff.front();
+              msg_contents += elemet;
+              m_output_buff.pop_front();
+            if(!m_output_buff.empty())
+             msg_contents+="#";
+        }
+        if(i>4)
+            break;
+       }
+             msg_contents+="\"";
+        string msg;
+        msg += "src_node="   + hostname;
+        msg += ",dest_node=" + dest_name;
+        msg += ",var_name="  + moos_varname;
+        msg += ",string_val="+ msg_contents; 
+
+            Notify("NODE_MESSAGE_LOCAL", msg);
+       }
+     }
+   
+//checking if the label is the same
+
+        string summary_report = m_hazard_set.getSpec("final_report");
+          //  Notify("HAZARDSET_REPORT", summary_report);
+            Notify("HAZARDSET_REPORT", summary_report);
+    
 }
 
 
@@ -399,7 +435,7 @@ void HazardMgr::handleMailReportRequest()
 //                       search_region = pts={-150,-75:-150,-50:40,-50:40,-75}
 
 
-void HazardMgr::handleMailMissionParams(string str)
+void HazardMgrX::handleMailMissionParams(string str)
 {
   vector<string> svector = parseStringZ(str, ',', "{");
   unsigned int i, vsize = svector.size();
@@ -410,36 +446,11 @@ void HazardMgr::handleMailMissionParams(string str)
   }
 }
 
-void HazardMgr::handleMailGetOthersReport(string str)
-{
-  // str msg example: 
-  // get msg start with x=
-  vector<string> contenor = parseString(str, '#');
-  for (int i =0; i<contenor.size(); i++) {
-    string value = contenor[i];
-    string param = biteStringX(contenor[i], '=');
-    param = tolower(param);
-    if(param == "x") {
-      XYHazard new_hazard = string2Hazard(value);
-      new_hazard.setType("hazard");
-
-      string hazlabel = new_hazard.getLabel();
-      bool has_hazard = m_hazard_set.hasHazard(hazlabel);
-      if(!has_hazard) {
-        m_hazard_set.addHazard(new_hazard);
-      }
-    }
-  }
-  string summary_report = m_hazard_set.getSpec("final_report");
-  Notify("FINAL_HAZARDSET_REPORT", summary_report);
-  summary_report = "summary: " + m_hazard_set.getSpec("final_report");
-  //reportEvent(summary_report);
-}
 
 //------------------------------------------------------------
 // Procedure: buildReport()
 
-bool HazardMgr::buildReport() 
+bool HazardMgrX::buildReport() 
 {
   m_msgs << "Config Requested:"                                  << endl;
   m_msgs << "    swath_width_desired: " << m_swath_width_desired << endl;
@@ -459,16 +470,12 @@ bool HazardMgr::buildReport()
   m_msgs << "   Hazardset Reports Requested: " << m_summary_reports << endl;
   m_msgs << "      Hazardset Reports Posted: " << m_summary_reports << endl;
   m_msgs << "                   Report Name: " << m_report_name << endl;
-
+  m_msgs << "                    Message in: " << m_message_in<<endl;
+  m_msgs << "History Buffer Size:"<<m_history_detect_buff.size()<<endl;
+  m_msgs << "Detection Buffer Size:"<<m_detection_reports_str_buff.size()<<endl;
+  m_msgs << "Output Buffer Size:"<<m_output_buff.size()<<endl;
   return(true);
 }
-
-
-
-
-
-
-
 
 
 

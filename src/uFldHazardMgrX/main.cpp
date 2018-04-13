@@ -24,8 +24,8 @@
 #include <string>
 #include "MBUtils.h"
 #include "ColorParse.h"
-#include "HazardMgr.h"
-#include "HazardMgr_Info.h"
+#include "HazardMgrX.h"
+#include "HazardMgrX_Info.h"
 
 using namespace std;
 
@@ -56,12 +56,12 @@ int main(int argc, char *argv[])
     showHelpAndExit();
 
   cout << termColor("green");
-  cout << "uFldHazardMgr launching as " << run_command << endl;
+  cout << "uFldHazardMgrX launching as " << run_command << endl;
   cout << termColor() << endl;
 
-  HazardMgr HazardMgr;
+  HazardMgrX HazardMgrX;
 
-  HazardMgr.Run(run_command.c_str(), mission_file.c_str(), argc, argv);
+  HazardMgrX.Run(run_command.c_str(), mission_file.c_str(), argc, argv);
   
   return(0);
 }
