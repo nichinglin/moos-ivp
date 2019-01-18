@@ -108,8 +108,16 @@ ProcessConfig = pMarineViewer
 
   //circle_viewable_all = false
   
+  point_viewable_labels=false
+  seglist_viewable_all=false
   appcast_viewable = true
   appcast_color_scheme = indigo
+
+  trails_length = 250
+  trails_point_size = 1
+  seglist_viewable_all = false
+  point_viewable_all = false
+  trails_color = white
 
   SCOPE = NODE_MESSAGE
   SCOPE = DEPLOY_ALL

@@ -29,7 +29,9 @@ VNAME3="veh_3"
 VNAME4="veh_4"
 VNAME5="veh_5"
 VNAME6="veh_6"
-VNAME6="veh_7"
+VNAME7="veh_7"
+VNAME8="veh_8"
+VNAME9="veh_9"
 START_POS1="2509,-1413"         
 START_POS2="795,-171"          
 START_POS3="3768,-1154"         
@@ -37,6 +39,8 @@ START_POS4="3105,-766"
 START_POS5="3392,-153"   
 START_POS6="1292,-233"  
 START_POS7="2891,-2080"
+START_POS8="241,10"
+START_POS9="0,0"
 #LOITER_POS1="0,-75:10,10"
 LOITER_POS1="2509,-1413:2180,-1620"
 LOITER_POS2="795,-171:1856,-42:3768,-1154:4051,-2101:3768,-1154"
@@ -45,6 +49,8 @@ LOITER_POS4="3105,-766:3392,-153"
 LOITER_POS5="3105,-766:3392,-153"
 LOITER_POS6="1292,-233:1731,-450:2274,-957:2891,-2080:3194,-2618"
 LOITER_POS7="1292,-233:1731,-450:2274,-957:2891,-2080:3194,-2618"
+LOITER_POS8="241,10:1292,-233"
+LOITER_POS9="0,0:241,10"
 SHORE_LISTEN="9300"
 BOAT_LEN_DEF="8"
 
@@ -97,6 +103,20 @@ nsplug meta_vehicle.moos targ_$VNAME7.moos -f WARP=$TIME_WARP \
 nsplug meta_vehicle.bhv targ_$VNAME7.bhv -f VNAME=$VNAME7     \
     START_POS=$START_POS7 LOITER_POS=$LOITER_POS7   
 
+nsplug meta_vehicle.moos targ_$VNAME8.moos -f WARP=$TIME_WARP \
+    VNAME=$VNAME8          SHARE_LISTEN="9308"              \
+    VPORT="9008"           SHORE_LISTEN=$SHORE_LISTEN       \
+    START_POS=$START_POS8  BOAT=kayak BOAT_LEN=52 
+nsplug meta_vehicle.bhv targ_$VNAME8.bhv -f VNAME=$VNAME8     \
+    START_POS=$START_POS8 LOITER_POS=$LOITER_POS8   
+
+nsplug meta_vehicle.moos targ_$VNAME9.moos -f WARP=$TIME_WARP \
+    VNAME=$VNAME9          SHARE_LISTEN="9309"              \
+    VPORT="9009"           SHORE_LISTEN=$SHORE_LISTEN       \
+    START_POS=$START_POS9  BOAT=kayak BOAT_LEN=52 
+nsplug meta_vehicle.bhv targ_$VNAME9.bhv -f VNAME=$VNAME9     \
+    START_POS=$START_POS9 LOITER_POS=$LOITER_POS9   
+
 nsplug meta_shoreside.moos targ_shoreside.moos -f WARP=$TIME_WARP \
     SNAME="shoreside"  SHARE_LISTEN=$SHORE_LISTEN                 \
     SPORT="9000"       
@@ -126,6 +146,10 @@ printf "Launching $VNAME6 MOOS Community (WARP=%s) \n" $TIME_WARP
 pAntler targ_$VNAME6.moos >& /dev/null &
 printf "Launching $VNAME7 MOOS Community (WARP=%s) \n" $TIME_WARP
 pAntler targ_$VNAME7.moos >& /dev/null &
+printf "Launching $VNAME8 MOOS Community (WARP=%s) \n" $TIME_WARP
+pAntler targ_$VNAME8.moos >& /dev/null &
+printf "Launching $VNAME9 MOOS Community (WARP=%s) \n" $TIME_WARP
+pAntler targ_$VNAME9.moos >& /dev/null &
 printf "Done \n"
 
 uMAC targ_shoreside.moos
