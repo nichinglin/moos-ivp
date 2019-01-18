@@ -102,11 +102,11 @@ ProcessConfig = pMarineViewer
   TIFF_FILE            = twkao.tif
   set_pan_x            = -90
   set_pan_y            = -280
-  zoom                 = 0.65
+  zoom                 = 0.3
   vehicles_shape_scale = 1.5
   vehicles_name_viewable = names
 
-  circle_viewable_all = false
+  //circle_viewable_all = false
   
   appcast_viewable = true
   appcast_color_scheme = indigo
