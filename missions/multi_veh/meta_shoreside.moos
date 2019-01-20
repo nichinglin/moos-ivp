@@ -21,9 +21,24 @@ Processconfig = ANTLER
   Run = pShare          @ NewConsole = false
   Run = pHostInfo       @ NewConsole = false
   Run = uFldShoreBroker @ NewConsole = false
+  Run = uFldNodeComms @ NewConsole = false
 }
 
 #include plug_pShare.moos
+
+//
+ProcessConfig = uFldNodeComms
+{
+  AppTick   = 2
+  CommsTick = 2
+
+  comms_range      = 500
+  critical_range   = 150
+  min_msg_interval = 15
+  max_msg_length   = 2048
+  groups           = true
+  view_node_rpt_pulses = true
+}
 
 //--------------------------------------------------
 // uMAC Configuration Block
