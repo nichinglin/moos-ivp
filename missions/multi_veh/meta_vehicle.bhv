@@ -30,12 +30,15 @@ set MODE = LOITERING {
 Behavior = BHV_AvoidCollision
 {
   name       = avdcollision_
-  pwt        = 300
+  pwt        = 0
 
   condition = AVOID == true
 
+  
   updates    = CONTACT_INFO
   endflag    = CONTACT_RESOLVED = $[CONTACT]
+
+
   templating = spawn
 
                contact = to-be-set
@@ -43,12 +46,12 @@ Behavior = BHV_AvoidCollision
          //  extrapolate = true
               //   decay = 30,60
 
-        pwt_outer_dist = 600
-        pwt_inner_dist = 150
-        completed_dist = 600
+        pwt_outer_dist = 200
+        pwt_inner_dist = 10
+        completed_dist = 200
 
-     min_util_cpa_dist = 10
-     max_util_cpa_dist = 200
+     min_util_cpa_dist = 50
+     max_util_cpa_dist = 400
              pwt_grade = quadratic
              //no_alert_request = true
    bearing_line_config = white:0, green:0.65, yellow:0.8, red:1.0
@@ -68,7 +71,7 @@ Behavior = BHV_Waypoint
      radius = 3.0
   nm_radius = 15.0
      points = pts={$(LOITER_POS),edge_size=0}
-     repeat = 10
+     repeat = 0
        lead = 8
 }
 
