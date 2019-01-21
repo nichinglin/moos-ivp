@@ -8,4 +8,5 @@ ProcessConfig = pNodeReporter
   
   VESSEL_TYPE = $(BOAT) // or {uuv,auv,ship,kayak,glider}
   platform_length    = $(BOAT_LEN) //default 8 {meters.  Range [0,inf) }
+  platform_color = $(COLOR)
 }

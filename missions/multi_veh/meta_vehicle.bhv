@@ -30,7 +30,7 @@ set MODE = LOITERING {
 Behavior = BHV_AvoidCollision
 {
   name       = avdcollision_
-  pwt        = 200
+  pwt        = 300
 
   condition = AVOID == true
 
@@ -43,13 +43,14 @@ Behavior = BHV_AvoidCollision
          //  extrapolate = true
               //   decay = 30,60
 
-        pwt_outer_dist = 200
-        pwt_inner_dist = 50
-        completed_dist = 200
+        pwt_outer_dist = 600
+        pwt_inner_dist = 150
+        completed_dist = 600
 
-     min_util_cpa_dist = 50
+     min_util_cpa_dist = 10
      max_util_cpa_dist = 200
-             pwt_grade = linear
+             pwt_grade = quadratic
+             //no_alert_request = true
    bearing_line_config = white:0, green:0.65, yellow:0.8, red:1.0
 }
 

@@ -32,8 +32,8 @@ ProcessConfig = uFldNodeComms
   AppTick   = 2
   CommsTick = 2
 
-  comms_range      = 500
-  critical_range   = 150
+  comms_range      = 600
+  critical_range   = 200
   min_msg_interval = 15
   max_msg_length   = 2048
   groups           = true
@@ -128,7 +128,7 @@ ProcessConfig = pMarineViewer
   appcast_viewable = true
   appcast_color_scheme = indigo
 
-  trails_length = 250
+  trails_length = 350
   trails_point_size = 1
   seglist_viewable_all = false
   point_viewable_all = false
